@@ -7,8 +7,8 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         UserMailer.user_mail(@user).deliver
-        redirect_to new_session_path(@user.id), notice: "登録しました"
-        # redirect_to user_path(@user.id)
+        # redirect_to new_session_path(@user.id), notice: "登録しました"
+        redirect_to new_user_path, notice: "会員登録が完了しました"
       else
         render 'new'
       end

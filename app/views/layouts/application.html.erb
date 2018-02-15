@@ -55,13 +55,12 @@
     </header>
     
     
-    <!--エラーメッセージ-->
     <!--<div calss="flash-message">-->
     <!--  <% flash.each do |key, value| %>-->
-    <!--    <%= content_tag(:div, value, class: "#{key}") %>-->
+    <!--    <li><%= content_tag(:div, value, class: "#{key}") %></li>-->
     <!--  <% end %>-->
     <!--</div>-->
-  
+    <li class="notice"><%= notice %></li>
     <%= yield %>
   
     <footer>
