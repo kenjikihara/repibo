@@ -1,5 +1,3 @@
-
-
 <%= form_with(model: contact, local: true) do |form| %>
   <% if contact.errors.any? %>
     <div id="error_explanation">
@@ -30,7 +28,7 @@
 						<%= form.text_field :email, id: :contact_email,placeholder: :Eメール,class: "form-control" %>
 					</div>
           <div class="form-group">
-            <%= form.text_area :content, id: :contact_content ,placeholder: :お問い合わせ内容,class: "form-control",:rows =>"7" %>
+            <%= form.text_area :content, id: :contact_content ,placeholder: :お問い合わせ内容（３００文字まで）,class: "form-control",:rows =>"7" %>
           </div>
             <%= form.submit "送信",class: 'btn btn-default pull-right'%>
       </div>

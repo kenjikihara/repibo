@@ -29,7 +29,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         ContactMailer.contact_mail(@contact).deliver 
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to new_contact_path, notice: 'お問い合わせが完了しました。' }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }

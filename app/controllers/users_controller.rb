@@ -7,7 +7,6 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         UserMailer.user_mail(@user).deliver
-        # redirect_to new_session_path(@user.id), notice: "登録しました"
         redirect_to new_user_path, notice: "会員登録が完了しました"
       else
         render 'new'
@@ -16,12 +15,9 @@ class UsersController < ApplicationController
     
     def show
       @user = User.find(params[:id])
-      # @favorites = current_user.favorite_pictures
     end
     private
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation,
-                                   :image)
+      params.require(:user).permit(:name, :email, :password,:password_confirmation,:image)
     end
 end

@@ -9,8 +9,4 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :messages, dependent: :destroy
   has_many :message_books, through: :messages, source: :book
-  # has_many :favorites, dependent: :destroy
-  # has_many :favorite_books, through: :favorites, source: :book
-  
-#   mount_uploader :image, ImageUploader
 end

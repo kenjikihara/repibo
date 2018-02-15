@@ -7,13 +7,8 @@ class Book < ApplicationRecord
     has_many :comments
     has_many :messages, dependent: :destroy
     has_many :message_users, through: :messages, source: :user
-    # has_many :favorites, dependent: :destroy
-    # has_many :favorite_users, through: :favorites, source: :user
     
     mount_uploader :image, ImageUploader
-    
-    
     acts_as_taggable
-    # acts_as_taggable_on :categories, :qualities
     
 end
