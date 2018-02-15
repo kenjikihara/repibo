@@ -1,0 +1,59 @@
+<!--<div class="contents_detail">-->
+  
+<!--</div>-->
+
+<div class="book_show_image">
+  
+  
+  <%= image_tag(@book.image.url) %>
+  <p><%= @book.title %></p>
+  <p><%= @book.content %></p>
+   <p>カテゴリ</p>
+  <!--<p><%= @book.tag_list %></p>-->
+  <!--<p><%= raw @book.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>-->
+</div>
+
+
+
+<!--コメント-->
+<div>
+  <% @comments.each do |comment| %>
+    <div>
+      <strong><%= comment.user.name %></strong>
+      <br />
+      <p><%= comment.body %></p>
+      <% if comment.user == current_user %>
+          <td><%= link_to '削除', comment, method: :delete, data: { confirm: '削除してよろしいですか?' } %></td>
+      <% end %>
+    </div>
+  <% end %>
+  <% if user_logged_in? %>
+    <%= render 'comments/form' %>
+  <% end %>
+</div>
+
+<%= form_with(model: @comment, local: true) do |form| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :user_id %>
+  <%= form.hidden_field :book_id %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :comment_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="user_show container-fluid">
+  <h3>アカウント</h3>
+  <% if @user.id == current_user.id %>
+  <!--<div class="col-md-5">-->
+  <!--</div>-->
+  <div class="user_show_contents col-md-12">
+    <h4>名前</h4>
+    <li><%= @user.name %></li>
+    <h4>Eメール</h4>
+    <li><%= @user.email %></li>
+  </div>
+<% end %>
+</div>

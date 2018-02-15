@@ -1,0 +1,103 @@
+<div class="container-fluid book-show-field">
+  
+  <div class="book-show-panel">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-img">
+    <%= image_tag(@book.image.url,class:"img-responsive") %>
+    </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-contents">
+      <h4>タイトル</h4>
+      <h1><%= @book.title %></h1>
+      <h4>コメント</h4>
+      <h2><%= @book.content %></h2>
+      <h4>ジャンル</h4>
+      <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
+      <li>投稿者:<%= @book.user.name %> さん</li>
+      
+        <% if @book.user == current_user %>
+      <li>
+        投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
+        <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+      </li>
+          <%= form_with(model: @book, local: true ) do |form| %>
+            <li>
+            <label>
+            取引を完了する
+          　<%= form.check_box :transfer_complete, {}, "true", "false" %>
+            <%= form.submit "更新",class: 'btn btn-info' %>
+            </label>
+            </li>
+          <% end %>
+        <% end %>
+ 
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!--メッセージ-->
+<div class="container-fluid message-field">
+  <%= form_with(model: @message, local: true) do |form| %>
+    <% if @message.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+        <ul>
+          <% message.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.hidden_field :user_id %>
+    <%= form.hidden_field :book_id %>
+  
+    <div class="message-contents row">
+        <div class="message-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="message-text_1">
+            <!--<h3>メッセージを送る</h3>-->
+            <h4>この絵本をゆずり受けたい方は<h4>
+            <h4><%= @book.user.name %> さんへメッセージを送りましょう。</h4>
+          </div>
+          <div class="message-text_2">
+            <li>Re:pibo は寄付の考えにもとづいたサイトです。</li>
+            <li>送料は基本的には絵本の受け取り側がお支払いください。</li>
+            <li>メールにてやりとりを行いましょう。</li>
+          </div>
+        </div>
+      
+      <% if logged_in? %>
+        
+        <% if @book.transfer_complete == true %>
+          <li class="complete_message alert alert-info">この絵本の取引は終了しました。</li>
+        <% else %>
+          <div class="message-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="message-form form-area"> 
+              <div id="message-name">
+                <li>名前</li>
+                <%= form.text_field :name, id: :message_name,placeholder: :名前,class: "form-control" %>
+              </div>
+            
+              <div class="message-email">
+                <li>Eメール</li>
+                <%= form.text_field :email, id: :message_email,placeholder: :Eメール,class: "form-control" %>
+              </div>
+            
+              <div class="message-content">
+                <li>メッセージ内容</li>
+                <%= form.text_area :content, id: :message_content,placeholder: :メッセージ（最大300文字）,class: "form-control",:rows =>"7" %>
+              </div>
+              <div class="message-action">
+                <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-right' %>
+              </div>
+  
+            </div>
+          </div>
+        <% end %> 
+      <% else %>
+        <li>メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
+      <% end %>
+      
+    </div>
+  <% end %>
+</div>

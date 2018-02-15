@@ -1,0 +1,124 @@
+.book-show-field{
+    color: #404040;
+    font-size: 16px;
+    margin: 0 auto;
+    // padding-bottom: 70px;
+    background-color: #fdfefe;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.book-show-panel{
+    width: 100%;
+    margin: 0 auto;
+    
+    padding-left: 5px;
+}
+.book-show-panel:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.book-show-img{
+  padding-top: 20px;
+    // float: left;
+    // width: 49%;
+}
+
+.book-show-contents{
+  
+  padding-top: 20px;
+    // float: right;
+    // width: 49%;
+}
+.book-show-contents li{
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.book-show-contents h1{
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.book-show-contents h2{
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.book-show-contents h3{
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.book-show-contents h4{
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+
+
+// コメントフィールド////////
+
+// .comment-field{
+//     width: 100%;
+//     margin: 0 auto;
+//     height: auto;
+    
+// }
+// .comment-contents{
+//     text-align: center;
+//     margin: 15px auto;
+// }
+// .comment-contents-field{
+//     margin-bottom: 5px;
+// }
+// .comment-body{
+//     width: 50%;
+// }
+
+
+
+// メッセージフィールド/////////////
+.message-field{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    background-color: #fafafa;
+    border-top: solid 0.05ex #f9fafb;
+    padding-bottom: 60px;
+}
+.message-contents{
+    // text-align: center;
+    padding-top: 20px;
+    margin: 20px auto;
+    height: 400px;
+}
+
+.message-left{
+  padding-top: 30px;
+  padding-left: 20px;
+  // width: 45%;
+}
+
+.message-text_1{
+  // text-align: left;
+}
+.message-text_2{
+  padding-top: 20px;
+  color: grey;
+}
+
+.message-right{
+  padding-left: 20px;
+  width: 45%;
+}
+
+.message-form{
+  // height: 100%;
+}
+.message-form li{
+  padding-top: 10px;
+}
+
+.message-action{
+  padding-top: 10px;
+}
+

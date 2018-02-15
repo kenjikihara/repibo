@@ -1,0 +1,112 @@
+<div class="container-fluid book-show-field">
+  
+  <div class="book-show-panel">
+    <div class="book-show-img">
+    <%= image_tag(@book.image.url,class:"img-responsive") %>
+    </div>
+    
+    <div class="book-show-contents">
+      <h4>タイトル</h4>
+      <h1><%= @book.title %></h1>
+      <h4>コメント</h4>
+      <h2><%= @book.content %></h2>
+      <li>ジャンル</li>
+      <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
+      <li>投稿:<%= @book.user.name %> さん</li>
+      <li>
+        <% if @book.user == current_user %>
+          投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
+          <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+        <% end %>
+      </li>
+    </div>
+  </div>
+</div>
+
+
+
+<!--コメント-->
+<div class="container-fluid comment-field">
+  
+  <%= form_with(model: @comment, local: true) do |form| %>
+    <% if @comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+        <ul>
+        <% comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.hidden_field :user_id %>
+    <%= form.hidden_field :book_id %>
+    <div class="comment-contents">
+      <div class="comment-contents-field">
+        <%= form.text_area :body, id: :comment_body, :size=>"100" %>
+      </div>
+      <div class="actions">
+        <%= form.submit "送信",class: 'btn btn-default' %>
+      </div>
+    </div>
+  <% end %>
+  
+  <div class="comment-body">
+  <% @comments.each do |comment| %>
+      <div>
+        <strong><%= comment.user.name %></strong>
+        <br />
+        <p><%= comment.body %></p>
+        <% if comment.user == current_user %>
+            <td><%= link_to '削除', comment, method: :delete, data: { confirm: '削除してよろしいですか?' } %></td>
+        <% end %>
+      </div>
+    <% end %>
+    <% if user_logged_in? %>
+      <%= render 'comments/form' %>
+    <% end %>
+  </div>
+</div>
+
+
+
+</div>
+
+<!--メッセージ-->
+<div class="container-fluid message-field">
+  <%= form_with(model: @message, local: true) do |form| %>
+    <% if @message.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+        <ul>
+          <% message.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.hidden_field :user_id %>
+    <%= form.hidden_field :book_id %>
+  
+    <div class="message-contents">
+      <div id="name">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :message_name %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :email %>
+        <%= form.text_field :email, id: :message_email %>
+      </div>
+    
+      <div class="field">
+        <%= form.label :content %>
+        <%= form.text_area :content, id: :message_content %>
+      </div>
+    
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
+  <% end %>
+</div>

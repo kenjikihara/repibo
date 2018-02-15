@@ -1,0 +1,77 @@
+<div class="books-new container-fluid">
+  <div class="row">
+    <h3>新規投稿</h3>
+    <hr width="17%">
+  </div>  
+  
+  <%= form_with(model: @book, local: true ,url: choose_new_or_edit ) do |form| %>
+    <div class="error-message">
+      <% if @book.errors.any? %>
+        <div id="error_explanation">
+          <h3>エラーがあります。</h3>
+          <ul>
+          <% @book.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  
+  
+    <div class="post-contents row">
+      <div class="col-md-1"></div>
+      <div class="post-left form-area col-md-5">
+       <br style="clear:both">
+        <div class="book_title form-group">
+           <li>タイトル</li>
+           <p class="text_area"><%= form.text_field :title ,placeholder: :タイトル,class: "form-control" %></p>
+        </div>
+        <div class="form-group">
+          <li>ジャンル</li>
+          <%= form.select :tag_list, {
+                                      のりもの: "のりもの" ,
+                                      たべもの: "たべもの" ,
+                                      ことば・かず: "ことば・かず" ,
+                                      いきもの・からだ: "いきもの・からだ" ,
+                                      おもしろ・おかしい: "おもしろ・おかしい" ,
+                                      ほっこり・しんみり: "ほっこり・しんみり" ,
+                                      わくわく・ドキドキ: "わくわく・ドキドキ" ,
+                                      こわい・おばけ: "こわい・おばけ" ,
+                                      かがく・ちえ: "かがく・ちえ" ,
+                                      むかしばなし: "むかしばなし" }, 
+                                      {}, { class: "form-control" }
+                                      %>
+        </div>
+
+        <div class="book-up-field form-group">
+          <div class="book_img">
+            <li>絵本の写真</li>
+          <%= form.label :image,"アップロード", class: "btn btn-default form-control" %>
+          <%= form.file_field :image ,id: :book_image, class: "fileInput",style: "display:none;" %>
+          <%= form.hidden_field :image_cache %>
+          </div>
+        </div>
+        <div class="book_content form-group">
+           <li>コメント</li>
+           <p class="text_area"><%= form.text_area :content,placeholder: :コメント（最大２００文字まで）,class: "form-control",:rows =>"7" %></p>
+        </div>
+        <div class="book-new-submit">
+          <%= form.submit "投稿する",class: 'btn btn-default pull-right' %>
+        </div> 
+      </div>
+      <div class="col-md-1"></div>
+      <div class="right-comment col-md-4">
+        <h4>絵本を投稿しましょう。</h4>
+        <li>この絵本にまつわるエピソードや絵本の感想</li>
+        <li>どんな絵本なのか、コメントにて自由にお書きください。</li>
+        <li>*</li>
+        <h5>保存状態があまりにも悪い投稿はご遠慮ください。</h5>
+        <h5>売買目的での投稿はおやめください。</h5>
+        <h5>個人情報に繋がる投稿にはご注意ください。</h5>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  <% end %>
+</div>
+

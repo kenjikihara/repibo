@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>-Re:pibo- 大切に読んだ絵本を "次へ" と引き継ぐサイト </title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <section class="container new-header clearfix">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+              <span class="sr-only">メニュー</span>
+              
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              
+            </button>
+          </div>    
+          <div id="gnavi" class="collapse navbar-collapse">
+            <div class="nav navbar-nav">
+              <div class="nav-left">
+                <ul><%= link_to 'R e : p i b o について', root_path %></ul>
+              </div>
+              <div class="nav-right">
+              <% if logged_in? %>
+                <ol><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></ol>
+                <ol><%= link_to 'アカウント', user_path(current_user.id) %></ol>
+                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
+                <ol><%= link_to '寄付をする', donations_path %></ol>
+                <ol><%= link_to '新規投稿', new_book_path %></ol>
+                <ol><%= link_to 'ＨＯＭＥ', books_path %></ol>
+              <% else %>
+                <ol><%= link_to "ログイン/会員登録", new_user_path %></ol>
+                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
+                <ol><%= link_to '寄付をする', donations_path %></ol>
+                <ol><%= link_to 'ＨＯＭＥ', books_path %></ol>
+              <% end %>
+              </div>
+            </div>
+          </div>
+          <!--<h1>Re:pibo</h1>-->
+          <!--<h3>新規投稿</h3>-->
+        </section>
+      </nav>
+    </header>
+    
+    
+    <!--エラーメッセージ-->
+    <!--<div calss="flash-message">-->
+    <!--  <% flash.each do |key, value| %>-->
+    <!--    <%= content_tag(:div, value, class: "#{key}") %>-->
+    <!--  <% end %>-->
+    <!--</div>-->
+  
+    <%= yield %>
+  
+    <footer>
+      <div>
+        <li><%= link_to '免責事項', disclaimers_path %></li>
+        <li>© 2018 Copyright Re:pibo</li>
+      </div>
+    </footer>
+  </body>
+</html>
+

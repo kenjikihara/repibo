@@ -1,0 +1,59 @@
+<div class="signup-login-field container-fluid">
+	<div class="col-md-1"></div>
+	<div class="signup-field col-md-5">
+		<%= form_with(model: @user, local: true) do |f| %>  
+		  <% if @user.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
+		      <ul>
+		      <% @user.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+    <div class="form-area"> 
+  		<br style="clear:both">
+  		<div class="form-content">
+	  		<h4>サインアップ</h4>
+	      <h5>登録をされていない方はこちら。</h5>
+			</div>
+			<div class="form-group">
+        <li><%= f.text_field :name,placeholder: :名前,class: "form-control" %></li>
+			</div>
+		  <div class="form-group">
+        <li><%= f.email_field :email,placeholder: :Eメール,class: "form-control" %></li>
+			</div>
+			<div class="form-group">
+        <li><%= f.password_field :password ,placeholder: :パスワード,class: "form-control" %></li>		  
+			</div>
+			<div class="form-group">
+        <li><%= f.password_field :password_confirmation ,placeholder: :再度パスワードをご入力ください,class: "form-control" %></li>
+			</div>
+			<%= f.submit "登録", class: "btn btn-default pull-right",style: "margin-top: 6px"  %>
+		</div>
+		<% end %>
+	</div>
+	<!--<div class="col-md-2"></div>-->
+	<!-- ログイン -->
+	<div class="login-field col-md-5">
+
+			<%= form_with(scope: :session, url: sessions_path) do |f| %>
+				<div class="form-area">
+		  		<br style="clear:both">
+		  		<div class="form-content">
+			  		<h4>ログイン</h4>
+  	        <h5>アカウントをお持ち方はこちら。</h5>
+  	      </div>
+					<div class="form-group">
+              <li><%= f.email_field :email ,placeholder: :Eメール,class: "form-control" %></li>
+					</div>
+					<div class="form-group">
+              <li><%= f.password_field :password ,placeholder: :パスワード,class: "form-control"%></li>
+					</div>
+			        <%= f.submit "ログイン", class: "btn btn-default pull-right",style: "margin-top: 6px" %>
+				</div>
+			<% end %>
+	</div>
+	<div class="col-md-1"></div>
+</div>

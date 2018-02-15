@@ -1,0 +1,2 @@
+module DisclaimersHelper
+end

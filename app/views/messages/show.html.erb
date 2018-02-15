@@ -1,0 +1,13 @@
+<div class="message_show">
+  <h4>メッセージ内容</h4>
+  <p><strong>名前</strong></p>
+  <p><%= @message.name %></p>
+  
+  <p><strong>メールアドレス</strong></p>
+  <p><%= @message.email %></p>
+  
+  <p><strong>メッセージ</strong></p>
+  <p><%= @message.content %></p>
+</div>
+
+<%= link_to "絵本の内容に戻る",book_path(@message.book) %>

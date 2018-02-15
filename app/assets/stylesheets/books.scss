@@ -1,0 +1,271 @@
+// main-field ///////////////////////////////////////////
+.main-field{
+    color: #404040;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    background-color: #fdfefe;
+    height: 100%;
+}
+.main-field li{
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+
+// tag ///////////////////////////////////////////
+.tag_field{
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+}
+#tag_cloud {
+    padding: 20px;
+}
+.tag_name{
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+
+
+
+// BOOK /////////////////////////////////////////////
+
+.book-field{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.book-panel{
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+.book-contents{
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // -ms-transform: translate(-50%,-50%);
+  // -webkit-transform: translate(-50%,-50%);
+  // transform: translate(-50%,-50%);
+  // margin:0;
+  // padding:0;
+}
+
+.book-images{
+  margin: 0 auto;
+  padding-bottom: 10px;
+  height: auto;
+  max-width: 100%;
+}
+.book-img{
+  transition: opacity 1s ease-out;
+}
+.book-img:hover{
+  opacity: 0.6;
+  transition: opacity 0.5s ease-out;
+}
+.book-contents{
+  
+}
+.book-contents li{
+  font-size: 14px;
+  padding: 2px;
+}
+
+
+
+
+// .contents li{
+//     background-color:#f4f4f4;
+//     color:#404040;
+//     padding:10% 10%;
+//     box-sizing: border-box;
+//     border: solid 1px #fff;
+// }
+// .topic li{
+//     margin:1%;
+//     border-bottom: dotted 1px #333333;
+// }
+// .container{
+//     margin-top: 20px;
+//     padding-bottom: 100px;
+// }
+
+// #new-book-link{
+//     margin-top: 10px;
+//     padding-bottom: 50px;
+//     color: #404040;
+// }
+
+// .book-up-field{
+//     margin-top: 5px;
+// }
+// .book-field{
+//     width:			100%;
+// 	height:			100%;
+// 	position:		absolute;	/* 絶対位置指定 */
+// 	top:			0;
+// 	left:			0;
+// 	opacity:		0;	/* マスクを表示しない */
+// 	background-color:	rgba(244,244,244,0.6);	/* マスクは半透明 */
+// 	-webkit-transition:	all 0.2s ease;
+// 	transition:		all 0.2s ease;
+// }
+// .book-field:hover{
+//     opacity: 1;
+// }
+
+// .book-img:hover{
+//     opacity: 0.3; 
+// }
+// .book-links{
+//     margin-top:10px;
+//     padding-bottom: 20px;
+// }
+
+// #error_explanation{
+//     margin-top:30px;
+//     padding-bottom: 50px;
+// }
+// .book_title{
+//     margin-top: 10px;
+//     padding-bottom: 10px;
+//     background-color: transparent;
+//     color: #2b2b2b;
+//     font-weight: normal;
+//     -webkit-font-smoothing: antialiased;
+//     text-transform: uppercase;
+//     letter-spacing: 2px;
+//     font-size: 11px;
+//     // padding: 10px 30px;
+//     // height: 32px;
+//     outline: none;
+//     border-radius: 0;
+//     transition: all 0.4s ease-out;
+//     border: none;
+// }
+// .book_title p{
+//     font-family: "Chronicle Text G1 A","Chronicle Text G1 B";
+//     font-style: normal;
+//     font-size: 1rem;
+//     color: #404040;
+// }
+// .book_title_field{
+//     width: 100%;
+//     height: 100px;
+// }
+.new_submit{
+    margin-top:30px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.book-contents{
+    word-wrap: break-word;
+    font-size: 1rem;
+}
+.contents_detail{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.book_show_fav{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+.book_show_image{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.book_show_image p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#book_image{
+    width: 30%;
+    float: center;
+    display: block;
+    margin: 0px auto;
+    
+}
+
+
+// .btn-file {
+//   position: relative;
+//   overflow: hidden;
+// }
+// .btn-file{
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   min-width: 100%;
+//   min-height: 100%;
+//   font-size: 100px;
+//   text-align: right;
+//   filter: alpha(opacity=0);
+//   opacity: 0;
+//   background: red;
+//   cursor: inherit;
+//   display: block;
+// }
+// input[readonly] {
+//   background-color: white !important;
+//   cursor: text !important;
+// }
+
+
+// .file {
+//   display: inline-block;
+//   overflow: hidden;
+//   position: relative;
+//   padding: .5em;
+//   border: 1px solid #999;
+//   background-color: #eee;
+// }
+
+// .file input[type="file"] {
+//   opacity: 0;
+//   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   margin: 0;
+//   font-size: 100px;
+//   cursor: pointer;
+// }
+
+.new-post {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+// 確認画面/////////
+.confirm_field{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px 0px 40px 0px;
+}
+
+
+.confirm_content{
+    
+}
+.confirm_content_book{
+}
+.confirm_btn{
+    // margin-top: 20px;
+    // padding-bottom: 20px;
+}
+.back_btn{
+    text-align: center;
+    padding: 50px 0px 30px 0px;
+}
