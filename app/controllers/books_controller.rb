@@ -53,7 +53,7 @@ class BooksController < ApplicationController
   end
   def update
     if @book.update(book_params)
-      redirect_to book_path(@book), notice: "編集しました"
+      redirect_to book_path(@book), notice: "更新しました"
     else
       render 'edit'
     end

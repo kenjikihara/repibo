@@ -14,21 +14,31 @@
       <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
       <li>投稿者:<%= @book.user.name %> さん</li>
       
-        <% if @book.user == current_user %>
+    <% if @book.user == current_user %>
       <li>
         投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
         <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       </li>
-          <%= form_with(model: @book, local: true ) do |form| %>
-            <li>
-            <label>
-            取引を完了する
-          　<%= form.check_box :transfer_complete, {}, "true", "false" %>
-            <%= form.submit "更新",class: 'btn btn-info' %>
-            </label>
-            </li>
-          <% end %>
-        <% end %>
+
+      <% if @book.transfer_complete == true %>
+        <li>
+            <%= link_to '取引を再開してメッセージを受けつける',
+                        book_path(@book, book: {transfer_complete: false}),
+                        method: :put %>
+        </li>              
+      <% else %>
+        <li>
+            <%= link_to '取引を終了する',
+                        book_path(@book, book: {transfer_complete: true}),
+                        method: :put %>
+        </li>
+      <% end %>
+      
+          
+          
+          
+          
+     <% end %>
  
     </div>
   </div>

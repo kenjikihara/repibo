@@ -1,74 +1,55 @@
 <div class="container-fluid book-show-field">
   
   <div class="book-show-panel">
-    <div class="book-show-img">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-img">
     <%= image_tag(@book.image.url,class:"img-responsive") %>
     </div>
     
-    <div class="book-show-contents">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-contents">
       <h4>タイトル</h4>
       <h1><%= @book.title %></h1>
       <h4>コメント</h4>
       <h2><%= @book.content %></h2>
-      <li>ジャンル</li>
+      <h4>ジャンル</h4>
       <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
-      <li>投稿:<%= @book.user.name %> さん</li>
+      <li>投稿者:<%= @book.user.name %> さん</li>
+      
+    <% if @book.user == current_user %>
       <li>
-        <% if @book.user == current_user %>
-          投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
-          <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
-        <% end %>
+        投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
+        <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       </li>
+      
+      
+      <!--<%= form_with(model: @book, local: true ) do |form| %>-->
+      
+                <%= link_to 'test',
+                      book_path(@book, book: {transfer_complete: false}),
+                      method: :put %>
+      
+      
+      
+      
+      
+      
+           <!-- <li>-->
+           <!-- <label>-->
+           <!-- 取引を完了する-->
+          　<!--<%= form.check_box :transfer_complete, {}, "true", "false" %>-->
+           <!-- <%= form.submit "更新",class: 'btn btn-info' %>-->
+           <!-- </label>-->
+           <!-- </li>-->
+      <!--<% end %>-->
+          
+          
+          
+          
+          
+     <% end %>
+ 
     </div>
   </div>
 </div>
-
-
-
-<!--コメント-->
-<div class="container-fluid comment-field">
-  
-  <%= form_with(model: @comment, local: true) do |form| %>
-    <% if @comment.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-        <ul>
-        <% comment.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <%= form.hidden_field :user_id %>
-    <%= form.hidden_field :book_id %>
-    <div class="comment-contents">
-      <div class="comment-contents-field">
-        <%= form.text_area :body, id: :comment_body, :size=>"100" %>
-      </div>
-      <div class="actions">
-        <%= form.submit "送信",class: 'btn btn-default' %>
-      </div>
-    </div>
-  <% end %>
-  
-  <div class="comment-body">
-  <% @comments.each do |comment| %>
-      <div>
-        <strong><%= comment.user.name %></strong>
-        <br />
-        <p><%= comment.body %></p>
-        <% if comment.user == current_user %>
-            <td><%= link_to '削除', comment, method: :delete, data: { confirm: '削除してよろしいですか?' } %></td>
-        <% end %>
-      </div>
-    <% end %>
-    <% if user_logged_in? %>
-      <%= render 'comments/form' %>
-    <% end %>
-  </div>
-</div>
-
-
 
 </div>
 
@@ -88,25 +69,52 @@
     <%= form.hidden_field :user_id %>
     <%= form.hidden_field :book_id %>
   
-    <div class="message-contents">
-      <div id="name">
-        <%= form.label :name %>
-        <%= form.text_field :name, id: :message_name %>
-      </div>
-    
-      <div class="field">
-        <%= form.label :email %>
-        <%= form.text_field :email, id: :message_email %>
-      </div>
-    
-      <div class="field">
-        <%= form.label :content %>
-        <%= form.text_area :content, id: :message_content %>
-      </div>
-    
-      <div class="actions">
-        <%= form.submit %>
-      </div>
+    <div class="message-contents row">
+        <div class="message-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="message-text_1">
+            <!--<h3>メッセージを送る</h3>-->
+            <h4>この絵本をゆずり受けたい方は<h4>
+            <h4><%= @book.user.name %> さんへメッセージを送りましょう。</h4>
+          </div>
+          <div class="message-text_2">
+            <li>Re:pibo は寄付の考えにもとづいたサイトです。</li>
+            <li>送料は基本的には絵本の受け取り側がお支払いください。</li>
+            <li>メールにてやりとりを行いましょう。</li>
+          </div>
+        </div>
+      
+      <% if logged_in? %>
+        
+        <% if @book.transfer_complete == true %>
+          <li class="complete_message alert alert-info">この絵本の取引は終了しました。</li>
+        <% else %>
+          <div class="message-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="message-form form-area"> 
+              <div id="message-name">
+                <li>名前</li>
+                <%= form.text_field :name, id: :message_name,placeholder: :名前,class: "form-control" %>
+              </div>
+            
+              <div class="message-email">
+                <li>Eメール</li>
+                <%= form.text_field :email, id: :message_email,placeholder: :Eメール,class: "form-control" %>
+              </div>
+            
+              <div class="message-content">
+                <li>メッセージ内容</li>
+                <%= form.text_area :content, id: :message_content,placeholder: :メッセージ（最大300文字）,class: "form-control",:rows =>"7" %>
+              </div>
+              <div class="message-action">
+                <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-right' %>
+              </div>
+  
+            </div>
+          </div>
+        <% end %> 
+      <% else %>
+        <li>メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
+      <% end %>
+      
     </div>
   <% end %>
 </div>
