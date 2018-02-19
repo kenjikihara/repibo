@@ -1,4 +1,4 @@
-<div class="container-fluid book-show-field">
+<div class="container-fluid book-show-field clearfix">
   
   <div class="book-show-panel">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-img">
@@ -6,26 +6,27 @@
     </div>
     
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-contents">
-      <h4>タイトル</h4>
-      <h1><%= @book.title %></h1>
-      <h4>コメント</h4>
-      <h2><%= @book.content %></h2>
-      <h4>ジャンル</h4>
-      <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
-      <li>投稿者:<%= @book.user.name %> さん</li>
-      
-    <% if @book.user == current_user %>
-      <li>
-        投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
-        <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
-      </li>
-      <% if @book.transfer_complete == true %>
-        <li><%= link_to '取引を再開してメッセージを受けつける',book_path(@book, book: {transfer_complete: false}),method: :put %></li>              
-      <% else %>
-        <li><%= link_to '取引を終了する',book_path(@book, book: {transfer_complete: true}),method: :put %></li>
-      <% end %>
-     <% end %>
- 
+      <div class="book-right">
+        <h4>タイトル</h4>
+        <h1><%= @book.title %></h1>
+        <h4>コメント</h4>
+        <h2><%= @book.content %></h2>
+        <h4>ジャンル</h4>
+        <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
+        <li>投稿者:<%= @book.user.name %> さん</li>
+        
+        <% if @book.user == current_user %>
+          <li>
+            投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
+            <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+          </li>
+          <% if @book.transfer_complete == true %>
+            <li><%= link_to '取引を再開してメッセージを受けつける',book_path(@book, book: {transfer_complete: false}),method: :put %></li>              
+          <% else %>
+            <li><%= link_to '取引を終了する',book_path(@book, book: {transfer_complete: true}),method: :put %></li>
+          <% end %>
+         <% end %>
+      </div>
     </div>
   </div>
 </div>
