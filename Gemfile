@@ -58,5 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'carrierwave'
 gem 'mini_magick'
-# gem "fog"
+gem "fog"
 gem 'acts-as-taggable-on'
+
+gem 'dotenv-rails'
