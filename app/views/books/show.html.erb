@@ -19,25 +19,11 @@
         投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
         <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       </li>
-
       <% if @book.transfer_complete == true %>
-        <li>
-            <%= link_to '取引を再開してメッセージを受けつける',
-                        book_path(@book, book: {transfer_complete: false}),
-                        method: :put %>
-        </li>              
+        <li><%= link_to '取引を再開してメッセージを受けつける',book_path(@book, book: {transfer_complete: false}),method: :put %></li>              
       <% else %>
-        <li>
-            <%= link_to '取引を終了する',
-                        book_path(@book, book: {transfer_complete: true}),
-                        method: :put %>
-        </li>
+        <li><%= link_to '取引を終了する',book_path(@book, book: {transfer_complete: true}),method: :put %></li>
       <% end %>
-      
-          
-          
-          
-          
      <% end %>
  
     </div>
