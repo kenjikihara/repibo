@@ -3,6 +3,6 @@ class ContactMailer < ApplicationMailer
     @contact = contact
 
     mail to: contact.email,
-    subject: "お問い合わせの確認メール"
+    subject: "Re:piboへのお問い合わせが完了しました。"
   end
 end

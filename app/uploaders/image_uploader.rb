@@ -9,9 +9,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   else
     storage :file
   end
-  
-  # S3 strage
-  storage :fog
 
   process resize_to_limit: [1024, 768]
 
