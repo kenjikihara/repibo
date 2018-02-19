@@ -20,3 +20,5 @@
 
 #dotenv-rails
 .env
+
+/public/uploads
