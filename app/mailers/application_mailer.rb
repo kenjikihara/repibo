@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'Re:pibo'
+  default from: 'repibo'
   layout 'mailer'
 end
