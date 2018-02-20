@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'homes#index'
   resources :messages
-  resources :contacts
-  resources :comments
+  resources :contacts, only: [:new, :create,]
+  # resources :comments 
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit]
   resources :donations, only: [:index]
