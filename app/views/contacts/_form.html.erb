@@ -1,16 +1,16 @@
 <%= form_with(model: contact, local: true) do |form| %>
-  <% if contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-      <ul>
-      <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-      
+  <div class="error-message">
+    <% if contact.errors.any? %>
+      <div id="error_explanation">
+        <h3>エラーがあります</h3>
+        <ul>
+          <% contact.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>    
   <div class="container contact-content">
     <div class="col-md-3">
     </div>
@@ -20,7 +20,6 @@
       <hr>
       <div class="form-area"> 
         <br style="clear:both">
-          <!--<h3 style="margin-bottom: 30px; text-align: center;">お問い合わせ</h3>-->
     			<div class="form-group">
             <%= form.text_field :name, id: :contact_name,placeholder: :名前,class: "form-control" %>
 					</div>
@@ -34,5 +33,4 @@
       </div>
     </div>
   </div>
-  
 <% end %>

@@ -1,9 +1,22 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.message_show_field{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
 .message_show{
+    text-align: center;
     margin: 30px;
+    margin: 30px auto;
+    height: auto;
+    width: 100%;
+    padding-bottom: 30px;
 }
 .message_show h4{
     padding-bottom: 30px;
+}
+
+.message_end{
+    text-align: center;
+    margin: 0px auto;
+    padding-bottom: 80px;
 }

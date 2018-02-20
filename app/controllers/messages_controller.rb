@@ -29,10 +29,10 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         MessageMailer.message_mail(@message).deliver 
-        format.html { redirect_to books_path, notice: 'メッセージを送信しました' }
+        format.html { render :show, notice: 'メッセージを送信しました' }
         format.json { render :show, status: :created, location: @message }
       else
-        format.html { render :new }
+        format.html { render :show}
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end

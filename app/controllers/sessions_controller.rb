@@ -8,14 +8,12 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to books_path, notice: "ログインしました"
       else
-        # flash[:danger] = 'ログインに失敗しました'
         render 'new', notice: "ログインに失敗しました"
       end
   end
   
   def destroy
     session.delete(:user_id)
-    # flash[:notice] = 'ログアウトしました'
     redirect_to new_user_path, notice: "ログアウトしました"
   end
 end

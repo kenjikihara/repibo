@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--loginform用に追記-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
-    <!---->
   </head>
-  
   <body>
     <header>
       <nav class="navbar navbar-default">
@@ -20,11 +17,9 @@
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
               <span class="sr-only">メニュー</span>
-              
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-              
             </button>
           </div>    
           <div id="gnavi" class="collapse navbar-collapse">
@@ -55,17 +50,13 @@
         </section>
       </nav>
     </header>
-
     <li class="notice"><%= notice %></li>
   <%= yield %>
-  
     <footer>
       <div>
         <li><%= link_to '免責事項', disclaimers_path %></li>
         <li>© 2018 Copyright Re:pibo</li>
       </div>
     </footer>
-  
   </body>
 </html>
-
