@@ -118,8 +118,9 @@ h5{
 .main-header {
   margin: 0 auto;
   padding-bottom: 15%;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
+  background-position: center top;
   background-image: image-url("/home_background.jpg");
   background-attachment: fixed;
   height: 100vh;
