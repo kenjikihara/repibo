@@ -10,6 +10,7 @@ class UsersController < ApplicationController
         redirect_to new_user_path, notice: "会員登録が完了しました"
       else
         render 'new'
+        # redirect_to new_user_path
       end
     end
     

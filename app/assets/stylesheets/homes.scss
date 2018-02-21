@@ -1,4 +1,4 @@
-// animation///////////////////////
+// animation////////////////////////////////////////////////////////////////////
 @keyframes fadeIn {
     0% {opacity: 0}
     100% {opacity: 1}
@@ -7,18 +7,20 @@
     0% {opacity: 0}
     100% {opacity: 1}
 }
-//////////font//////////////////////
+//font//////////////////////////////////////////////////////////////////////////
 @font-face {
   font-family: 'MyFont';
   src: url("/mplus-TESTFLIGHT-063/mplus-1p-light.ttf");
 }
-////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 html {
   position: relative;
   min-height: 100%;
   color: #404040;
   font-weight: normal;
   background-color:#fdfefe;
+
+  // font-size: calc(112.5% + 0.25vw)
 }
 body {
   height: 100%;
@@ -28,7 +30,7 @@ body {
   font-family: 'MyFont';
   font-weight: 300;
   font-style: normal;
-  font-size: 1.2vw;
+  // font-size: 1.2vw;
   letter-spacing: .04em;
   line-height: 1.8em;
   text-transform: none;
@@ -36,9 +38,22 @@ body {
   word-break : break-all;
   animation: fadeIn 3s ease 0s 1 normal;
   -webkit-animation: fadeIn 3s ease 0s 1 normal;
+  
+  font-size: 100%;
+  // 600px以降から、100pxごとに1px大きくなる
+  @media (min-width: 600px) {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400)
+  }
+  // 1,000px以上は、22pxに
+  @media (min-width: 1000px) {
+    font-size: calc(137.5%)
+  }
+  
+  
+  
 }
 a { 
-  font-size: 1.2vw;
+  font-size: 1em;
   color: #999;
   transition: all ease-in-out 200ms;
 }
@@ -47,38 +62,42 @@ a:hover {
   text-decoration: none;
 }
 li{
-  font-size: 1.2vw;
+  font-size: 1.2em;
   letter-spacing: 4px;
   list-style:none;
 }
 p{
-  font-size: 1.2vw;
+  font-size: 1.2em;
   letter-spacing: 2px;
 }
 h1{
-  font-size: 2.8vw;
+  // font-size: 2.8vw;
   letter-spacing: 12px;
-  font-size: 3vm;
+  font-size: 2.2em;
 }
 h2{
-  font-size: 2.4vw;
+  font-size: 2em;
   letter-spacing: 9px;
 }
 h3{
-  font-size: 2vw;
+  font-size: 1.8em;
   letter-spacing: 9px;
 }
 h4{
-  font-size: 1.6vw;
+  font-size: 1.6em;
   letter-spacing: 9px;
 }
-// nav //
+h5{
+  font-size: 1.4em;
+  letter-spacing: 9px;
+}
+// nav /////////////////////////////////////////////////////////////////////////
 .nav{
   padding-top: 22px;
   margin-left: -20px;
   margin-right: 20px;
   color: #404040;
-  font-size: 0.9vw;
+  font-size: 0.9em;
   width: 100%;
 }
 .nav ul{
@@ -95,7 +114,7 @@ h4{
   display: block;
   clear: both;
 }
-// main-header //
+// main-header /////////////////////////////////////////////////////////////////
 .main-header {
   margin: 0 auto;
   padding-bottom: 15%;
@@ -110,7 +129,6 @@ h4{
   margin: 0 auto;
   margin-left: 5%;
   color: #2B2B2B;
-  // font-size: 37px;
   padding-top: 20%;
   letter-spacing: 14px;
 }
@@ -130,7 +148,7 @@ h4{
   color: #999;
   text-decoration: #2F2F2F;
 }
-// other header////////////
+// other header/////////////////////////////////////////////////////////////////
 .other-header {
   margin: 0 auto;
   padding-bottom: 15%;
@@ -169,7 +187,7 @@ h4{
   letter-spacing: 9px;
   text-align: center;
 }
-// about //
+// about ///////////////////////////////////////////////////////////////////////
 .about {
   width: 100%;
   background-color: #fdfefe;
@@ -182,32 +200,35 @@ h4{
 	justify-content: center;
 }
 .about h3 {
-  margin: 0 auto;
+  margin-left: 45px;
+  margin-right: 45px;
   color: grey;
-  padding-bottom: 5%;
+  padding-bottom: 1%;
 }
-// function //
+.text{
+  padding-bottom: 20px;
+  display: inline-block;
+}
+// function ////////////////////////////////////////////////////////////////////
 .function {
   width: 100%;
   background-color: #efefef;
   margin: 0px auto; 
-  margin-bottom: 70px;
-  height: auto;
-  padding-top: 5%;
-  padding-bottom: 200px;
+  height: 768px;
+  padding-top: 10%;
+  padding-bottom: 15%;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	display: flex;
 }
 .function-field{
   margin: 0 auto;
   height: auto;
-  // padding-bottom: 100px;
 }
 .function h1 {
   display: block;
   margin: 0 auto;
-  // padding-top: 1%;
   padding-bottom: 20px;
   color: grey;
   text-align: center;
@@ -215,42 +236,35 @@ h4{
 .function p {
   display: block;
   margin: 0 auto;
-  color: grey;
+  // color: grey;
   padding-bottom: 1%;
 }
 .function-contents{
   text-align: center;
-  // padding-top: 30px;
-  // padding-bottom: 20px;
 }
 .function-images{
   padding: 20px;
-  // size: 100vw;
 }
 .function img{
-  width: 5.3vw;
+  width: 3em;
 }
 .envelope-png{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-// footer //
+// footer //////////////////////////////////////////////////////////////////////
 footer {
   text-align: center;
   background-color:#f8f7f5;
   color: #404040;
+  padding-top: 10px;
   margin: 0px auto;
-  font-size: 12px;
-
   position: absolute;
   bottom: 0;
   width: 100%;
+  font-size: 12px;
 }
-.footer li{
-  // padding-top: 50px;
-  // padding-bottom: 50px;
-}
-// flash-message //
+// flash-message ///////////////////////////////////////////////////////////////
 .flash-message{
   width: 100%;
   margin: 0 auto;
@@ -262,7 +276,13 @@ footer {
   margin: 0 auto;
   text-align: center;
   background-color: #fdfefe;
+  color: red;
+}
+.error-message ul{
+    padding: 0px;
 }
 .notice{
   text-align: center;
+  color: blue;
+  font-size: 1.8em;
 }

@@ -29,6 +29,7 @@
         </div>
         <div class="form-group">
           <li>ジャンル</li>
+          <li>
           <%= form.select :tag_list, {
                                       のりもの: "のりもの" ,
                                       たべもの: "たべもの" ,
@@ -39,9 +40,11 @@
                                       わくわく・ドキドキ: "わくわく・ドキドキ" ,
                                       こわい・おばけ: "こわい・おばけ" ,
                                       かがく・ちえ: "かがく・ちえ" ,
-                                      むかしばなし: "むかしばなし" }, 
-                                      {}, { class: "form-control" }
+                                      むかしばなし: "むかしばなし" },
+                                      {include_blank: true},
+                                      { class: "form-control" }
                                       %>
+          </li>
         </div>
 
         <div class="book-up-field form-group">

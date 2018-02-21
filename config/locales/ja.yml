@@ -1,6 +1,29 @@
 ---
 ja:
   activerecord:
+    models:
+      book: 投稿
+      contact: 問い合わせ
+      message: メッセージ
+      user: ユーザー登録
+    attributes:
+      book:
+        title: タイトル
+        content: コメント
+        image: 絵本の写真
+        tag_list: ジャンル
+      contact:
+        name: 名前
+        content: お問い合わせ内容
+        email: Eメール
+      message:
+        name: 名前
+        content: メッセージ内容
+        email: Eメール
+      user:
+        name: 名前
+        email: Eメール
+        password: パスワード
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
