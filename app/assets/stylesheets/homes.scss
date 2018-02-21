@@ -118,12 +118,15 @@ h5{
 .main-header {
   margin: 0 auto;
   padding-bottom: 15%;
-  width: 100%;
+  width: 100vw;
   background-size: cover;
   background-image: image-url("/home_background.jpg");
   background-attachment: fixed;
-  height: 768px;
+  height: 100vh;
 }
+
+
+
 .main-header h1 {
   display: block;
   margin: 0 auto;
@@ -200,8 +203,8 @@ h5{
 	justify-content: center;
 }
 .about h3 {
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-left: 35px;
+  margin-right: 35px;
   color: grey;
   padding-bottom: 1%;
 }
@@ -215,7 +218,7 @@ h5{
   background-color: #efefef;
   margin: 0px auto; 
   height: 768px;
-  padding-top: 10%;
+  padding-top: 7%;
   padding-bottom: 15%;
 	align-items: center;
 	justify-content: center;
@@ -229,7 +232,7 @@ h5{
 .function h1 {
   display: block;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   color: grey;
   text-align: center;
 }
