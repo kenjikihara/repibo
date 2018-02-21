@@ -119,11 +119,11 @@ h5{
   margin: 0 auto;
   padding-bottom: 15%;
   width: 100%;
+  height: 100vh;
+  background-image: image-url("/home_background.jpg");
   background-size: cover;
   background-position: center top;
-  background-image: image-url("/home_background.jpg");
   background-attachment: fixed;
-  height: 100vh;
 }
 
 
