@@ -21,7 +21,6 @@ class BooksController < ApplicationController
     else
       @book = Book.new
     end
-    render :layout => 'new'
   end
   def show
     @book = Book.includes(:user).find(params[:id])

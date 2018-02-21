@@ -14,10 +14,12 @@
 
 
 // tag ///////////////////////////////////////////
-.tag_field{
+.tag_field{ 
+    font-size: 1vw;
     text-align: center;
     width: 100%;
     margin: 10px auto;
+    white-space: nowrap;
 }
 #tag_cloud {
     padding: 20px;

@@ -56,3 +56,27 @@
     padding-top: 30px;
     text-align: left;
 }
+
+
+
+
+
+/* for Webkit */
+.form-control::-webkit-input-placeholder{
+    font-size: 1.3vw;
+}
+ 
+/* for Firefox */
+.form-control::-moz-placeholder{
+    font-size: 1.3vw;
+}
+ 
+/* for Firefox 18以前 */
+.form-control:-moz-placeholder{
+    font-size: 1.3vw;
+}
+ 
+/* for Windows IE */
+.form-control:-ms-input-placeholder{
+    font-size: 1.3vw;
+}
