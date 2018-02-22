@@ -20,13 +20,13 @@
     }
 }
 .fadeIn_text_up{
-  animation: fadeIn_text 1.5s ease 0s 1 normal;
-  -webkit-animation: fadeIn_text 1.5s ease 0s 1 normal;
+  animation: fadeIn_text 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 2s ease 0s 1 normal;
 }
 @keyframes fadeIn_text {
     0% {
       opacity: 0;
-      transform : translate(0, 10px);
+      transform : translate(0, 30px);
     }
     100% {
       opacity: 1;
@@ -36,7 +36,7 @@
 @-webkit-keyframes fadeIn_text {
     0% {
       opacity: 0;
-      transform : translate(0, 50px);
+      transform : translate(0, 30px);
     }
     100% {
       opacity: 1;
@@ -177,7 +177,8 @@ h5{
 .main-header h1 {
   display: block;
   margin: 0 auto;
-  margin-left: 5%;
+  // margin-left: 5%;
+  margin-left: 70%;
   color: Whitesmoke;
   padding-top: 13%;
   letter-spacing: 14px;
@@ -185,7 +186,8 @@ h5{
 .main-header h3 {
   display: block;
   margin: 0 auto;
-  margin-left: 5%;
+  // margin-left: 5%;
+  margin-left: 70%;
   color: Whitesmoke;
   padding-top: 16px;
   letter-spacing: 9px;
@@ -200,7 +202,7 @@ h5{
 }
 // 投稿一覧 ////////////////////////////////////////////////////////////////////
 .books-index-header {
-  background-image: image-url("/books_index_background.jpg");
+  background-image: image-url("/books-index-background.jpg");
   background-size: cover;
   background-attachment: local;
   height: 100vh;
@@ -215,7 +217,7 @@ h5{
   margin: 0 auto;
   margin-left: 5%;
   color: #404040;
-  padding-top: 20%;
+  padding-top: 13%;
   letter-spacing: 14px;
 }
 .books-index-header h3 {

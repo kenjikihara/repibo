@@ -1,0 +1,448 @@
+@charset "UTF-8";
+/* line 2, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.fadeIn_2sec {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 22, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.fadeIn_text_up {
+  animation: fadeIn_text 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn_text {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes fadeIn_text {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/* 画面外にいる状態 */
+/* line 47, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: all 2500ms;
+}
+
+/* line 52, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.fadein_2 {
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: all 1500ms;
+}
+
+/* 画面内に入ったら */
+/* line 58, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url("/mplus-TESTFLIGHT-063/mplus-1p-light.ttf");
+}
+/* line 68, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 74, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+html {
+  position: relative;
+  min-height: 100%;
+  color: #404040;
+  font-weight: normal;
+  background-color: #fdfefe;
+}
+
+/* line 84, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+body {
+  background-color: #fdfefe;
+  color: #25282a;
+  font-family: 'MyFont';
+  font-weight: 300;
+  font-style: normal;
+  height: 100%;
+  letter-spacing: 1.5px;
+  letter-spacing: .04em;
+  line-height: 1.8em;
+  text-transform: none;
+  word-break: break-all;
+  font-size: 100%;
+}
+@media (min-width: 600px) {
+  /* line 84, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+  body {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+  }
+}
+@media (min-width: 1000px) {
+  /* line 84, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+  body {
+    font-size: calc(137.5%);
+  }
+}
+
+/* line 108, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+a {
+  font-size: 1em;
+  color: #999;
+  transition: all ease-in-out 200ms;
+}
+
+/* line 113, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+a:hover {
+  color: #404040;
+  text-decoration: none;
+}
+
+/* line 117, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+li {
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  list-style: none;
+}
+
+/* line 122, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+p {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+/* line 126, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+h1 {
+  letter-spacing: 12px;
+  font-size: 2.2em;
+}
+
+/* line 130, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+h2 {
+  font-size: 2em;
+  letter-spacing: 9px;
+}
+
+/* line 134, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+h3 {
+  font-size: 1.8em;
+  letter-spacing: 9px;
+}
+
+/* line 138, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+h4 {
+  font-size: 1.6em;
+  letter-spacing: 9px;
+}
+
+/* line 142, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+h5 {
+  font-size: 1.4em;
+  letter-spacing: 9px;
+}
+
+/* line 147, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.nav {
+  padding-top: 22px;
+  margin-left: -20px;
+  margin-right: 20px;
+  color: #404040;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+/* line 155, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.nav ul {
+  float: left;
+  left: -20px;
+  letter-spacing: 2px;
+}
+
+/* line 160, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.nav ol {
+  float: right;
+  letter-spacing: 2px;
+}
+
+/* line 165, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.main-header {
+  background-image: url(/home_background_m.jpg);
+  background-size: cover;
+  background-attachment: local;
+  background-position: center top;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 15%;
+  width: 100%;
+}
+
+/* line 177, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.main-header h1 {
+  display: block;
+  margin: 0 auto;
+  margin-left: 70%;
+  color: Whitesmoke;
+  padding-top: 13%;
+  letter-spacing: 14px;
+}
+
+/* line 186, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.main-header h3 {
+  display: block;
+  margin: 0 auto;
+  margin-left: 70%;
+  color: Whitesmoke;
+  padding-top: 16px;
+  letter-spacing: 9px;
+}
+
+/* line 195, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.main-header a {
+  color: whitesmoke;
+  transition: all ease-in-out 200ms;
+}
+
+/* line 199, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.main-header a:hover {
+  color: #2b2b2b;
+  text-decoration: #2F2F2F;
+}
+
+/* line 204, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.books-index-header {
+  background-image: url(/books-index-background.jpg);
+  background-size: cover;
+  background-attachment: local;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 15%;
+  width: 100%;
+}
+
+/* line 215, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.books-index-header h1 {
+  display: block;
+  margin: 0 auto;
+  margin-left: 5%;
+  color: #404040;
+  padding-top: 13%;
+  letter-spacing: 14px;
+}
+
+/* line 223, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.books-index-header h3 {
+  display: block;
+  margin: 0 auto;
+  margin-left: 5%;
+  color: #404040;
+  padding-top: 16px;
+  letter-spacing: 9px;
+}
+
+/* line 231, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.books-index-header a {
+  color: #404040;
+  transition: all ease-in-out 200ms;
+}
+
+/* line 235, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.books-index-header a:hover {
+  color: #999;
+  text-decoration: #2F2F2F;
+}
+
+/* line 240, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.other-header {
+  background-image: url(/home_background.jpg);
+  background-size: cover;
+  background-attachment: local;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 15%;
+  width: 100%;
+  height: 200px;
+}
+
+/* line 251, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.other-header h3 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 100%;
+  color: grey;
+  padding-top: 10px;
+  letter-spacing: 9px;
+  text-align: center;
+}
+
+/* line 261, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.other-header a {
+  color: #2b2b2b;
+  transition: all ease-in-out 200ms;
+}
+
+/* line 265, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.other-header a:hover {
+  color: #999;
+  text-decoration: #2F2F2F;
+}
+
+/* line 270, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.about {
+  width: 100%;
+  background-color: #fdfefe;
+  color: #404040;
+  margin: 0 auto;
+  height: 768px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 281, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.about h3 {
+  margin-left: 35px;
+  margin-right: 35px;
+  color: grey;
+  padding-bottom: 1%;
+}
+
+/* line 287, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.text {
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+/* line 292, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function {
+  width: 100%;
+  background-color: #efefef;
+  margin: 0px auto;
+  height: 768px;
+  padding-top: 7%;
+  padding-bottom: 15%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+/* line 304, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function-field {
+  margin: 0 auto;
+  height: auto;
+}
+
+/* line 308, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function h1 {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  color: grey;
+  text-align: center;
+}
+
+/* line 315, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function p {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1%;
+}
+
+/* line 321, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function-contents {
+  text-align: center;
+}
+
+/* line 324, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function-images {
+  padding: 20px;
+}
+
+/* line 327, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.function img {
+  width: 3em;
+}
+
+/* line 330, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.envelope-png {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 335, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+footer {
+  text-align: center;
+  background-color: #f8f7f5;
+  color: #404040;
+  padding-top: 10px;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+/* line 347, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.flash-message {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fdfefe;
+}
+
+/* line 353, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.error-message {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fdfefe;
+  color: red;
+}
+
+/* line 360, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.error-message ul {
+  padding: 0px;
+}
+
+/* line 363, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/homes.scss */
+.notice {
+  text-align: center;
+  color: blue;
+  font-size: 1.8em;
+}
