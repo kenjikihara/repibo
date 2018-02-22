@@ -1,0 +1,15 @@
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/users.scss */
+.user_show {
+  margin: 40 auto;
+  text-align: center;
+}
+
+/* line 5, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/users.scss */
+.user_show h3 {
+  padding-bottom: 30px;
+}
+
+/* line 8, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/users.scss */
+.user_show_contents {
+  margin: 30 auto;
+}

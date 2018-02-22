@@ -1,0 +1,13 @@
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.btn-success {
+  background-color: #f4f4f4;
+  border-style: none;
+  color: #404040;
+}
+
+/* line 6, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.btn-default {
+  background-color: #BDBEBF;
+  border-style: none;
+  color: #404040;
+}

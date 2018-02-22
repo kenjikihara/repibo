@@ -1,0 +1,28 @@
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/messages.scss */
+.message_show_field {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+/* line 6, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/messages.scss */
+.message_show {
+  text-align: center;
+  margin: 30px;
+  margin: 30px auto;
+  height: auto;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* line 14, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/messages.scss */
+.message_show h4 {
+  padding-bottom: 30px;
+}
+
+/* line 17, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/messages.scss */
+.message_end {
+  text-align: center;
+  margin: 0px auto;
+  padding-bottom: 80px;
+}

@@ -1,16 +1,74 @@
 // animation////////////////////////////////////////////////////////////////////
+.fadeIn_2sec{
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
 @keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 @-webkit-keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadeIn_text_up{
+  animation: fadeIn_text 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 1.5s ease 0s 1 normal;
+}
+@keyframes fadeIn_text {
+    0% {
+      opacity: 0;
+      transform : translate(0, 10px);
+    }
+    100% {
+      opacity: 1;
+      transform : translate(0, 0);
+    }
+}
+@-webkit-keyframes fadeIn_text {
+    0% {
+      opacity: 0;
+      transform : translate(0, 50px);
+    }
+    100% {
+      opacity: 1;
+      transform : translate(0, 0);
+    }
+}
+/* 画面外にいる状態 */
+.fadein {
+    opacity : 0;
+    transform : translate(0, 50px);
+    transition : all 2500ms;
+}
+.fadein_2 {
+    opacity : 0;
+    transform : translate(0, 10px);
+    transition : all 1500ms;
+}
+/* 画面内に入ったら */
+.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
 }
 //font//////////////////////////////////////////////////////////////////////////
 @font-face {
   font-family: 'MyFont';
   src: url("/mplus-TESTFLIGHT-063/mplus-1p-light.ttf");
+}
+//cleafix///////////////////////////////////////////////////////////////////////
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
 }
 ////////////////////////////////////////////////////////////////////////////////
 html {
@@ -19,26 +77,23 @@ html {
   color: #404040;
   font-weight: normal;
   background-color:#fdfefe;
+  
+      
 
-  // font-size: calc(112.5% + 0.25vw)
 }
 body {
-  height: 100%;
-  color: #404040;
   background-color:#fdfefe;
-  letter-spacing: 1.5px;
+  color: #25282a;
   font-family: 'MyFont';
   font-weight: 300;
   font-style: normal;
-  // font-size: 1.2vw;
+  height: 100%;
+  letter-spacing: 1.5px;
   letter-spacing: .04em;
   line-height: 1.8em;
   text-transform: none;
-  color: #25282a;
   word-break : break-all;
-  animation: fadeIn 3s ease 0s 1 normal;
-  -webkit-animation: fadeIn 3s ease 0s 1 normal;
-  
+  //font-size/////////
   font-size: 100%;
   // 600px以降から、100pxごとに1px大きくなる
   @media (min-width: 600px) {
@@ -48,9 +103,7 @@ body {
   @media (min-width: 1000px) {
     font-size: calc(137.5%)
   }
-  
-  
-  
+
 }
 a { 
   font-size: 1em;
@@ -58,7 +111,7 @@ a {
   transition: all ease-in-out 200ms;
 }
 a:hover {
-  color: #2b2b2b;
+  color: #404040;
   text-decoration: none;
 }
 li{
@@ -71,7 +124,6 @@ p{
   letter-spacing: 2px;
 }
 h1{
-  // font-size: 2.8vw;
   letter-spacing: 12px;
   font-size: 2.2em;
 }
@@ -109,42 +161,76 @@ h5{
   float: right;
   letter-spacing: 2px;
 }
-.nav:after {
-  content: "";
-  display: block;
-  clear: both;
-}
 // main-header /////////////////////////////////////////////////////////////////
 .main-header {
-  background-image: image-url("/home_background.jpg");
+  background-image: image-url("/home_background_m.jpg");
   background-size: cover;
   background-attachment: local;
+  background-position: center top;
   height: 100vh;
   margin: 0 auto;
+  overflow: hidden;
   padding-bottom: 15%;
   width: 100%;
+
 }
 .main-header h1 {
   display: block;
   margin: 0 auto;
   margin-left: 5%;
-  color: #2B2B2B;
-  padding-top: 20%;
+  color: Whitesmoke;
+  padding-top: 13%;
   letter-spacing: 14px;
 }
 .main-header h3 {
   display: block;
   margin: 0 auto;
   margin-left: 5%;
-  color: #2B2B2B;
+  color: Whitesmoke;
   padding-top: 16px;
   letter-spacing: 9px;
 }
 .main-header a {
-  color: #2b2b2b;
+  color: whitesmoke;
   transition: all ease-in-out 200ms;
 }
 .main-header a:hover {
+  color: #2b2b2b;
+  text-decoration: #2F2F2F;
+}
+// 投稿一覧 ////////////////////////////////////////////////////////////////////
+.books-index-header {
+  background-image: image-url("/books_index_background.jpg");
+  background-size: cover;
+  background-attachment: local;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 15%;
+  width: 100%;
+
+}
+.books-index-header h1 {
+  display: block;
+  margin: 0 auto;
+  margin-left: 5%;
+  color: #404040;
+  padding-top: 20%;
+  letter-spacing: 14px;
+}
+.books-index-header h3 {
+  display: block;
+  margin: 0 auto;
+  margin-left: 5%;
+  color: #404040;
+  padding-top: 16px;
+  letter-spacing: 9px;
+}
+.books-index-header a {
+  color: #404040;
+  transition: all ease-in-out 200ms;
+}
+.books-index-header a:hover {
   color: #999;
   text-decoration: #2F2F2F;
 }
@@ -154,9 +240,11 @@ h5{
   background-size: cover;
   background-attachment: local;
   margin: 0 auto;
+  overflow: hidden;
   padding-bottom: 15%;
   width: 100%;
   height: 200px;
+  
 }
 .other-header h3 {
   display: block;
@@ -168,24 +256,13 @@ h5{
   letter-spacing: 9px;
   text-align: center;
 }
-.new-header {
-  background-image: image-url("/home_background.jpg");
-  background-size: cover;
-  background-attachment: local;
-  margin: 0 auto;
-  padding-bottom: 15%;
-  width: 100%;
-  height: 200px;
+.other-header a {
+  color: #2b2b2b;
+  transition: all ease-in-out 200ms;
 }
-.new-header h3 {
-  display: block;
-  margin: 0 auto;
-  margin-top: 3%;
-  width: 100%;
-  color: grey;
-  padding-top: 10px;
-  letter-spacing: 9px;
-  text-align: center;
+.other-header a:hover {
+  color: #999;
+  text-decoration: #2F2F2F;
 }
 // about ///////////////////////////////////////////////////////////////////////
 .about {

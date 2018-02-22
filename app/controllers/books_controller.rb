@@ -8,7 +8,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all.order(created_at: :desc)
     end
-    render :layout => 'home'
+    render :layout => 'books_index'
   end
   def confirm
     @book = Book.new(book_params)

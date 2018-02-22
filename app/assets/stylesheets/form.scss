@@ -1,0 +1,37 @@
+/* for Webkit */
+.form-control::-webkit-input-placeholder{
+    padding-top: 1px;
+    padding-left: 2px;
+}
+/* for Firefox */
+.form-control::-moz-placeholder{
+    padding-top: 2px;
+}
+/* for Firefox 18以前 */
+.form-control:-moz-placeholder{
+    padding-top: 2px;
+}
+/* for Windows IE */
+.form-control:-ms-input-placeholder{
+    padding-top: 2px;
+}
+.form-control{
+    font-size: 1.2em;
+    padding-left: 5px;
+}
+.form-area{
+    background-color: #f4f4f4;
+	padding: 10px 40px 60px;
+	margin: 30px 0px 30px;
+	border: 0.05em solid #FAFAFA;
+	border-radius: 5px 5px 5px 5px;
+}
+.form-content{
+    padding: 10px 0px 30px 0px;
+}
+.signup-login-field{
+    margin: 40px 0px 30px;
+    padding-bottom: 30px;
+    height: auto;
+    text-align: center;
+}

@@ -1,10 +1,9 @@
-<div class="signup-login-field container-fluid">
+<div class="signup-login-field container-fluid fadeIn_text_up">
 	<div class="error-message">
 		<%= form_with(model: @user, local: true) do |f| %>  
 	  <% if @user.errors.any? %>
 	    <div id="error_explanation">
 	    	<h3>エラーがあります</h3>
-	      <!--<h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>-->
 	      <ul>
 	      <% @user.errors.full_messages.each do |message| %>
 	        <li><%= message %></li>
@@ -37,10 +36,8 @@
 		</div>
 		<% end %>
 	</div>
-	<!--<div class="col-md-2"></div>-->
 	<!-- ログイン -->
 	<div class="login-field col-md-5">
-
 			<%= form_with(scope: :session, url: sessions_path) do |f| %>
 				<div class="form-area">
 		  		<br style="clear:both">

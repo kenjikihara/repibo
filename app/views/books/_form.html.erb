@@ -1,9 +1,8 @@
-<div class="books-new container-fluid">
+<div class="books-new container-fluid fadeIn_text_up">
   <div class="row">
     <h3>新規投稿</h3>
     <hr width="17%">
   </div>  
-  
   <%= form_with(model: @book, local: true ,url: choose_new_or_edit ) do |form| %>
     <div class="error-message">
       <% if @book.errors.any? %>
@@ -17,8 +16,6 @@
         </div>
       <% end %>
     </div>
-  
-  
     <div class="post-contents row">
       <div class="col-md-1"></div>
       <div class="post-left form-area col-md-5">
@@ -46,7 +43,6 @@
                                       %>
           </li>
         </div>
-
         <div class="book-up-field form-group">
           <div class="book_img">
             <li>絵本の写真</li>
