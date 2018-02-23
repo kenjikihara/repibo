@@ -14,7 +14,7 @@
   <body>
     <header>
       <nav class="navbar navbar-default">
-        <section class="container main-header fadeIn_2sec clearfix">
+        <section class="container main-header fadeIn_2sec">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
               <span class="sr-only">メニュー</span>
@@ -24,28 +24,28 @@
             </button>
           </div>    
           <div id="gnavi" class="collapse navbar-collapse">
-            <div class="nav navbar-nav clearfix">
+            <div class="nav navbar-nav">
               <div class="nav-left">
                 <ul><%= link_to 'R e : p i b o について', root_path %></ul>
               </div>
               <div class="nav-right">
               <% if logged_in? %>
-                <ol><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></ol>
-                <ol><%= link_to 'アカウント', user_path(current_user.id) %></ol>
+                <ol><%= link_to '投稿一覧', books_path %></ol>
                 <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
-                <ol><%= link_to '寄付をする', donations_path %></ol>
                 <ol><%= link_to '新規投稿', new_book_path %></ol>
-                <ol><%= link_to '投稿一覧', books_path %></ol>
-              <% else %>
-                <ol><%= link_to "ログイン/会員登録", new_user_path %></ol>
-                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
                 <ol><%= link_to '寄付をする', donations_path %></ol>
+                <ol><%= link_to 'アカウント', user_path(current_user.id) %></ol>
+                <ol><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></ol>
+              <% else %>
                 <ol><%= link_to '投稿一覧', books_path %></ol>
+                <ol><%= link_to '寄付をする', donations_path %></ol>
+                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
+                <ol><%= link_to "ログイン/会員登録", new_user_path %></ol>
               <% end %>
               </div>
             </div>
           </div>
-          <div class="fadeIn_text_up">
+          <div class="fadeIn_text_up_3s">
             <h1>Re:pibo</h1>
             <h3>大切に読んだ絵本を</h3>
             <h3>"次へ" 引き継ぐ。</h3>

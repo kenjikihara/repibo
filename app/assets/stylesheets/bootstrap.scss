@@ -8,3 +8,38 @@
     border-style: none;
     color: #404040;
 }
+// nav /////////////////////////////////////////////////////////////////////////
+.nav{
+  padding-top: 22px;
+  margin-left: -20px;
+  margin-right: 20px;
+  color: #404040;
+  font-size: 0.9em;
+  width: 100%;
+}
+.nav-left{
+  float: left;
+  left: -20px;
+  letter-spacing: 2px;
+}
+.nav-right{
+  text-align: right;
+  letter-spacing: 2px;
+}
+.nav-right ol{
+  display: inline-block;
+}
+@media only screen and (max-device-width: 480px) {
+.nav-right ol{
+  display: block;
+}}
+.navbar-collapse{
+  border: none;
+}
+.navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  border: none;
+  background-color: transparent;
+}
