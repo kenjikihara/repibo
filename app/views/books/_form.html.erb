@@ -53,22 +53,22 @@
         </div>
         <div class="book_content form-group">
            <li>コメント</li>
-           <p class="text_area"><%= form.text_area :content,placeholder: :コメント（最大２００文字まで）,class: "form-control",:rows =>"7" %></p>
+           <p class="text_area"><%= form.text_area :content,placeholder: :コメント（最大２００文字まで）,class: "form-control",:rows =>"5" %></p>
         </div>
         <div class="book-new-submit">
           <%= form.submit "投稿する",class: 'btn btn-default pull-right' %>
         </div> 
       </div>
-      <div class="col-md-1"></div>
-      <div class="right-comment col-md-4">
-        <h4>絵本を投稿しましょう。</h4>
-        <li>この絵本にまつわるエピソードや絵本の感想</li>
-        <li>どんな絵本なのか、保存状態についてなど、</li>
+      <!--<div class="col-md-1"></div>-->
+      <div class="right-comment col-md-5">
+        <h4>絵本を投稿しましょう</h4>
+        <li>この絵本にまつわる<br>エピソードや絵本の感想</li>
+        <li>どんな絵本なのか、<br>保存状態についてなど、</li>
         <li>コメントにて自由にお書きください。</li>
-        <li>*</li>
-        <h5>保存状態があまりにも悪い投稿はご遠慮ください。</h5>
-        <h5>売買目的での投稿はおやめください。</h5>
-        <h5>個人情報に繋がる投稿にはご注意ください。</h5>
+        <p>*</p>
+        <p>保存状態があまりにも悪い投稿は<br>ご遠慮ください。</p>
+        <p>売買目的での投稿はおやめください。</p>
+        <p>個人情報に繋がる投稿にはご注意ください。</p>
       </div>
       <div class="col-md-1"></div>
     </div>

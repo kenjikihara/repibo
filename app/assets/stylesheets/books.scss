@@ -135,9 +135,119 @@
     height: auto;
     padding: 10px;
 }
+
+
+.right-comment{
+    padding-top: 20px;
+}
+.right-comment li{
+    padding-top: 10px;
+}
+
+.right-comment p{
+    padding-top: 5px;
+    color: Grey;
+}
+
+
+// books/showページ////////////////////////////////////////////////////////////
+.book-show-field{
+    color: #404040;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fdfefe;
+    height: auto;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.book-show-panel{
+    width: 100%;
+    margin: 0 auto;
+}
+.book-show-img{
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.book-show-contents{
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.book-show-contents li{
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.book-show-contents h1{
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.book-show-contents h2{
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.book-show-contents h3{
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.book-show-contents h4{
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+// メッセージフィールド/////////////
+.message-field{
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  background-color: #fafafa;
+  border-top: solid 0.05ex #f9fafb;
+  padding-bottom: 60px;
+}
+.message-contents{
+  padding-top: 20px;
+  margin: 20px auto;
+  height: 400px;
+}
+.message-left{
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.message-text_2{
+  padding-top: 20px;
+  color: grey;
+}
+.message-right{
+  padding-left: 20px;
+}
+.message-form li{
+  padding-top: 10px;
+}
+.message-action{
+  padding-top: 10px;
+}
+.message_show_field{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+.message_show{
+    text-align: center;
+    margin: 30px;
+    margin: 30px auto;
+    height: auto;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.message_show h4{
+    padding-bottom: 30px;
+}
+.message_end{
+    text-align: center;
+    margin: 0px auto;
+    padding-bottom: 80px;
+}
 .complete_message{
-    float: right;   
-    margin-top: 0 auto;
-    width: 50%;
+    float: left;   
+    margin-top: 30px;
+    width: 90%;
     text-align: center;
 }
