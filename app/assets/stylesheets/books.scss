@@ -151,19 +151,21 @@
 
 
 // books/showページ////////////////////////////////////////////////////////////
-.book-show-field{
+#book-show-field{
     color: #404040;
     font-size: 16px;
     margin: 0 auto;
     width: 100%;
     background-color: #fdfefe;
-    height: auto;
+    height: 100%;
     padding-bottom: 30px;
     overflow: hidden;
+    position: relative;
 }
 .book-show-panel{
     width: 100%;
     margin: 0 auto;
+    
 }
 .book-show-img{
   padding-top: 20px;
@@ -193,6 +195,14 @@
   margin: 0 auto;
   padding-bottom: 5px;
 }
+
+#book-show-field #book_user_contents{
+  // text-align: right;
+  position: absolute;
+  left: 51%;
+  bottom: 25px;
+}
+
 // メッセージフィールド/////////////
 .message-field{
   width: 100%;

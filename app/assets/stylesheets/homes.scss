@@ -164,7 +164,9 @@ h5{
   font-size: 1.4em;
   letter-spacing: 9px;
 }
-
+hr{
+  margin-top: 5px;
+}
 // main-header /////////////////////////////////////////////////////////////////
 .main-header {
   background-image: image-url("/home_background_m.jpg");
@@ -247,7 +249,7 @@ h5{
   overflow: hidden;
   // padding-bottom: 15%;
   width: 100%;
-  height: 50vh;
+  height: 250px;
 }
 .other-header h3 {
   display: block;
@@ -334,8 +336,9 @@ h5{
 }
 // footer //////////////////////////////////////////////////////////////////////
 footer {
+  border-top: 1px solid #eeedec;
   text-align: center;
-  background-color:#f8f7f5;
+  background-color:#fafafa;
   color: #404040;
   padding-top: 10px;
   margin: 0px auto;
@@ -344,25 +347,26 @@ footer {
   width: 100%;
   font-size: 12px;
 }
-// flash-message ///////////////////////////////////////////////////////////////
+// エラーメッセージ,notice /////////////////////////////////////////////////////
 .flash-message{
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  background-color: #fdfefe;
+  color: #f48b94;
+  // background-color: #fdfefe;
 }
 .error-message{
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  background-color: #fdfefe;
-  color: red;
+  // background-color: #fdfefe;
+  color: #f48b94;
 }
 .error-message ul{
     padding: 0px;
 }
 .notice{
   text-align: center;
-  color: blue;
+  color: #acdbc9;
   font-size: 1.8em;
 }

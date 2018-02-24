@@ -32,9 +32,9 @@
               <div class="nav-right">
               <% if logged_in? %>
                 <ol><%= link_to '投稿一覧', books_path %></ol>
-                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
                 <ol><%= link_to '新規投稿', new_book_path %></ol>
                 <ol><%= link_to '寄付をする', donations_path %></ol>
+                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
                 <ol><%= link_to 'アカウント', user_path(current_user.id) %></ol>
                 <ol><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></ol>
               <% else %>

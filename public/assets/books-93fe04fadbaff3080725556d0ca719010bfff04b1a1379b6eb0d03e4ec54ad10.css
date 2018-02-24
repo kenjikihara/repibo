@@ -1,0 +1,351 @@
+/* line 2, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.main-field {
+  color: #404040;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  background-color: #fdfefe;
+  height: 100%;
+}
+
+/* line 10, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.main-field li {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* line 15, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.tag_field {
+  font-size: 1em;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  white-space: nowrap;
+}
+
+/* line 22, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+#tag_cloud {
+  padding: 20px;
+}
+
+/* line 25, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.tag_name {
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+/* line 30, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-field {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/* line 36, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-panel {
+  margin-top: 5px;
+  padding-bottom: 20px;
+}
+
+/* line 40, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-images {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 46, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-img {
+  transition: opacity 1s ease-out;
+}
+
+/* line 49, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-img:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease-out;
+}
+
+/* line 53, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-contents li {
+  font-size: 14px;
+  padding: 2px;
+}
+
+/* line 57, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.new_submit {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* line 61, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-contents {
+  word-wrap: break-word;
+  font-size: 1rem;
+}
+
+/* line 65, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.contents_detail {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 69, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book_show_fav {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 100px;
+}
+
+/* line 74, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book_show_image {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 78, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book_show_image p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 82, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+#book_image {
+  width: 30%;
+  float: center;
+  display: block;
+  margin: 0px auto;
+}
+
+/* line 88, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.new-post {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* line 96, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.confirm_field {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px 0px 40px 0px;
+}
+
+/* line 101, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.back_btn {
+  text-align: center;
+  padding: 50px 0px 30px 0px;
+}
+
+/* line 107, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.books-new {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+}
+
+/* line 113, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.books-new h3 {
+  letter-spacing: 9px;
+}
+
+/* line 116, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.post-contents {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding-bottom: 60px;
+}
+
+/* line 122, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.post-contents {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* line 126, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-up-field {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* line 130, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.text_field.hoge {
+  width: 75%;
+}
+
+/* line 133, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.transfer_complete {
+  margin: 0 auto;
+  height: auto;
+  padding: 10px;
+}
+
+/* line 140, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.right-comment {
+  padding-top: 20px;
+}
+
+/* line 143, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.right-comment li {
+  padding-top: 10px;
+}
+
+/* line 147, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.right-comment p {
+  padding-top: 5px;
+  color: Grey;
+}
+
+/* line 154, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+#book-show-field {
+  color: #404040;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fdfefe;
+  height: 100%;
+  padding-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 165, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-panel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 170, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-img {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/* line 174, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-contents {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+/* line 178, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-contents li {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* line 182, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-contents h1 {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* line 186, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-contents h2 {
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* line 190, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-contents h3 {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* line 194, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.book-show-contents h4 {
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+/* line 199, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+#book-show-field #book_user_contents {
+  position: absolute;
+  left: 51%;
+  bottom: 25px;
+}
+
+/* line 207, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-field {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  background-color: #fafafa;
+  border-top: solid 0.05ex #f9fafb;
+  padding-bottom: 60px;
+}
+
+/* line 215, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-contents {
+  padding-top: 20px;
+  margin: 20px auto;
+  height: 400px;
+}
+
+/* line 220, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-left {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+/* line 224, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-text_2 {
+  padding-top: 20px;
+  color: grey;
+}
+
+/* line 228, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-right {
+  padding-left: 20px;
+}
+
+/* line 231, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-form li {
+  padding-top: 10px;
+}
+
+/* line 234, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message-action {
+  padding-top: 10px;
+}
+
+/* line 237, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message_show_field {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+/* line 242, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message_show {
+  text-align: center;
+  margin: 30px;
+  margin: 30px auto;
+  height: auto;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* line 250, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message_show h4 {
+  padding-bottom: 30px;
+}
+
+/* line 253, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.message_end {
+  text-align: center;
+  margin: 0px auto;
+  padding-bottom: 80px;
+}
+
+/* line 258, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/books.scss */
+.complete_message {
+  float: left;
+  margin-top: 30px;
+  width: 90%;
+  text-align: center;
+}

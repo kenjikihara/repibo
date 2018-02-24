@@ -1,4 +1,4 @@
-<div class="container-fluid book-show-field clearfix fadeIn_text_up_1s">
+<div id="book-show-field" class="container-fluid fadeIn_text_up_1s">
   <div class="book-show-panel">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-img">
     <%= image_tag(@book.image.url,class:"img-responsive") %>
@@ -12,19 +12,22 @@
         <h4>ジャンル</h4>
         <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
         <li>投稿者:<%= @book.user.name %> さん</li>
-        <% if @book.user == current_user %>
-          <li>
-            投稿を<%= link_to '編集する', edit_book_path(@book) %> | 
-            <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
-          </li>
-          <% if @book.transfer_complete == true %>
-            <li><%= link_to '取引を再開してメッセージを受けつける',book_path(@book, book: {transfer_complete: false}),method: :put %></li>              
-          <% else %>
-            <li><%= link_to '取引を終了する',book_path(@book, book: {transfer_complete: true}),method: :put %></li>
-          <% end %>
-         <% end %>
       </div>
     </div>
+  </div>
+  <div id="book_user_contents">
+    <% if @book.user == current_user %>
+      <p>投稿を</p>
+      <p>
+        <%= link_to '編集する', edit_book_path(@book) %> | 
+        <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+      </p>
+      <% if @book.transfer_complete == true %>
+        <p><%= link_to 'メッセージの受付を再開する',book_path(@book, book: {transfer_complete: false}),method: :put %></p>
+      <% else %>
+        <p><%= link_to 'メッセージの受付を終了する',book_path(@book, book: {transfer_complete: true}),method: :put %></p>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <!--メッセージ-->
@@ -64,12 +67,12 @@
                 <%= form.text_area :content, id: :message_content,placeholder: :メッセージ（最大300文字）,class: "form-control",:rows =>"7" %>
               </div>
               <div class="message-action form-group">
-                <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-right' %>
+                <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-left' %>
               </div>
             </div>
           <% end %> 
         <% else %>
-          <li>メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
+          <li class="complete_message alert alert-info">メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
         <% end %>
       </div>
     </div>

@@ -1,27 +1,34 @@
+<h3 id="notice"><%= notice %></h3>
+<div class="error-message">
+    <% if @message.errors.any? %>
+      <div id="error_explanation">
+        <h4>メッセージが送れませんでした</h4>
+        <h3>エラーがあります</h3>
+        <ul>
+        <% @message.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+</div>
+
 <div class="message_show_field container-fluid">
-  <h3 id="notice"><%= notice %></h3>
-  <div class="error-message row">
-      <% if @message.errors.any? %>
-        <div id="error_explanation">
-          <h3>エラーがあります</h3>
-          <ul>
-          <% @message.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-  </div>
   <div class="message_show row fadeIn_text_up_1s">
     <h4>メッセージ内容</h4>
-    <p><strong>名前</strong></p>
-    <p><%= @message.name %></p>
-    <p><strong>メールアドレス</strong></p>
-    <p><%= @message.email %></p>
-    <p><strong>メッセージ</strong></p>
-    <p><%= @message.content %></p>
+    <hr width="17%">
+    <li><strong>名前</strong></li>
+    <hr width="3%">
+    <li><%= @message.name %></li>
+    <li><strong>メールアドレス</strong></li>
+    <hr width="10%">
+    <li><%= @message.email %></li>
+    <li><strong>メッセージ</strong></li>
+    <hr width="7%">
+    <li><%= @message.content %></li>
   </div>
   <div class="message_end row">
-    <p><%= link_to "絵本の内容に戻る",book_path(@message.book) %></p>
+    <li><%= link_to "絵本の内容に戻る",book_path(@message.book) %></li>
+    <hr width="12%">
   </div>
 </div>
