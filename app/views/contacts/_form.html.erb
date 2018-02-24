@@ -1,19 +1,16 @@
-  <div class="error-message">
-    <% if contact.errors.any? %>
-      <div id="error_explanation">
-        <h3>エラーがあります</h3>
-        <ul>
-          <% contact.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>    
-
-
+<div class="error-message">
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h3>エラーがあります</h3>
+      <ul>
+        <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>    
 <%= form_with(model: contact, local: true) do |form| %>
-
   <div class="container contact-content fadeIn_text_up_1s">
     <div class="col-md-3">
     </div>
