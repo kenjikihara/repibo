@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* for Webkit */
+/* line 3, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control::-webkit-input-placeholder {
+  padding-top: 1px;
+  padding-left: 2px;
+}
+
+/* for Firefox */
+/* line 8, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control::-moz-placeholder {
+  padding-top: 2px;
+}
+
+/* for Firefox 18以前 */
+/* line 12, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control:-moz-placeholder {
+  padding-top: 2px;
+}
+
+/* for Windows IE */
+/* line 16, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control:-ms-input-placeholder {
+  padding-top: 2px;
+}
+
+/* line 19, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control {
+  font-size: 1.2em;
+  padding-left: 5px;
+}
+
+/* line 23, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-area {
+  background-color: #f4f4f4;
+  padding: 10px 40px 60px;
+  margin: 30px 0px 30px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+/* line 30, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-content {
+  padding: 10px 0px 30px 0px;
+}
+
+/* line 33, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.signup-login-field {
+  margin: 40px 0px 30px;
+  padding-bottom: 30px;
+  height: auto;
+  text-align: center;
+}

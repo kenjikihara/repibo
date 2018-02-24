@@ -10,7 +10,7 @@
 }
 // nav /////////////////////////////////////////////////////////////////////////
 .nav{
-  padding-top: 22px;
+  padding-top: 20px;
   margin-left: -20px;
   margin-right: 20px;
   color: #404040;
@@ -34,12 +34,28 @@
   display: block;
 }}
 .navbar-collapse{
-  border: none;
+  border-style: none;
 }
 .navbar-toggle {
-  border: none;
+  border-style: none;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  border: none;
+  border-style: none;
   background-color: transparent;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+div.navbar-header::after {
+    background-color: transparent;
+    border-color: transparent;
 }
