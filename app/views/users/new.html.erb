@@ -3,6 +3,7 @@
 		<%= form_with(model: @user, local: true) do |f| %>  
 	  <% if @user.errors.any? %>
 	    <div id="error_explanation">
+	    	<li>会員登録できません</li>
 	    	<h3>エラーがあります</h3>
 	      <ul>
 	      <% @user.errors.full_messages.each do |message| %>
@@ -17,7 +18,7 @@
     <div class="form-area"> 
   		<br style="clear:both">
   		<div class="form-content">
-	  		<h4>サインアップ</h4>
+	  		<h4>会員登録</h4>
 	      <p>登録をされていない方はこちら</p>
 			</div>
 			<div class="form-group">
@@ -32,7 +33,7 @@
 			<div class="form-group">
         <li><%= f.password_field :password_confirmation ,placeholder: :再度パスワードをご入力ください,class: "form-control" %></li>
 			</div>
-			<%= f.submit "登録", class: "btn btn-default pull-right",style: "margin-top: 6px"  %>
+			<%= f.submit "登録", class: "btn btn-default pull-left",style: "margin-top: 6px"  %>
 		</div>
 		<% end %>
 	</div>
@@ -51,7 +52,7 @@
 					<div class="form-group">
               <li><%= f.password_field :password ,placeholder: :パスワード,class: "form-control"%></li>
 					</div>
-			        <%= f.submit "ログイン", class: "btn btn-default pull-right",style: "margin-top: 6px" %>
+			        <%= f.submit "ログイン", class: "btn btn-default pull-left",style: "margin-top: 6px" %>
 				</div>
 			<% end %>
 	</div>

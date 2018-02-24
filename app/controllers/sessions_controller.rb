@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to books_path, notice: "ログインしました"
       else
-        render 'new', notice: "ログインに失敗しました"
+        redirect_to new_user_path, notice: "ログインできません"
       end
   end
   def destroy
