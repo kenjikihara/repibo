@@ -98,13 +98,13 @@
 html {
   position: relative;
   min-height: 100%;
-  color: #404040;
+  color: #2b2b2b;
   font-weight: normal;
   background-color:#fdfefe;
 }
 body {
   background-color:#fdfefe;
-  color: #25282a;
+  color: #2b2b2b;
   font-family: 'MyFont';
   font-weight: 300;
   font-style: normal;
@@ -220,7 +220,7 @@ hr{
   display: block;
   margin: 0 auto;
   margin-left: 5%;
-  color: #404040;
+  color: #2b2b2b;
   padding-top: 13%;
   letter-spacing: 14px;
 }
@@ -228,12 +228,12 @@ hr{
   display: block;
   margin: 0 auto;
   margin-left: 5%;
-  color: #404040;
+  color: #2b2b2b;
   padding-top: 16px;
   letter-spacing: 9px;
 }
 .books-index-header a {
-  color: #404040;
+  color: #2b2b2b;
   transition: all ease-in-out 200ms;
 }
 .books-index-header a:hover {
