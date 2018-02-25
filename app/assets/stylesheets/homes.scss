@@ -19,6 +19,46 @@
       opacity: 1;
     }
 }
+.fadeIn_3sec{
+  animation: fadeIn 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn 3s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadeIn_home{
+  animation: fadeIn 5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 5s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
 .fadeIn_text_up_1s{
   animation: fadeIn_text 1.5s ease 0s 1 normal;
   -webkit-animation: fadeIn_text 1.5s ease 0s 1 normal;
@@ -78,9 +118,23 @@
     transform : translate(0, 10px);
     transition : all 1500ms;
 }
+.fadein_3 {
+    opacity : 0;
+    transform : translate(0, 30px);
+    transition : all 2500ms;
+}
+.fadeout {
+    opacity : 1;
+    transform : translate(0, 0px);
+    transition : all 3000ms;
+}
 /* 画面内に入ったら */
 .scrollin {
     opacity : 1;
+    transform : translate(0, 0);
+}
+.scrollout {
+    opacity : 0;
     transform : translate(0, 0);
 }
 //font//////////////////////////////////////////////////////////////////////////
@@ -98,6 +152,7 @@
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
   color: #2b2b2b;
   font-weight: normal;
   background-color:#fdfefe;
@@ -108,13 +163,11 @@ body {
   font-family: 'MyFont';
   font-weight: 300;
   font-style: normal;
-  height: 100%;
   letter-spacing: 1.5px;
   letter-spacing: .04em;
   line-height: 1.8em;
   text-transform: none;
   word-break : break-all;
-  //font-size/////////
   font-size: 100%;
   // 600px以降から、100pxごとに1px大きくなる
   @media (min-width: 600px) {
@@ -124,7 +177,11 @@ body {
   @media (min-width: 1000px) {
     font-size: calc(137.5%)
   }
-
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
 }
 a { 
   font-size: 1em;
@@ -273,7 +330,7 @@ hr{
   background-color: #fdfefe;
   color: #404040;
   margin: 0 auto;
-  height: 650px;
+  height: 550px;
   text-align: center;
 	display: flex;
 	align-items: center;
@@ -292,9 +349,11 @@ hr{
 // function ////////////////////////////////////////////////////////////////////
 .function {
   width: 100%;
-  background-color: #efefef;
+  // background-color: #efefef;
+  // background-color: #fafafa;
+  background-color: #fdfefe;
   margin: 0px auto; 
-  height: 768px;
+  height: 550px;
   padding-top: 7%;
   padding-bottom: 15%;
 	align-items: center;
@@ -333,16 +392,17 @@ hr{
 }
 // footer //////////////////////////////////////////////////////////////////////
 footer {
-  border-top: 1px solid #eeedec;
-  text-align: center;
-  background-color:#fafafa;
-  color: #404040;
-  padding-top: 10px;
-  margin: 0px auto;
   position: absolute;
-  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color:#fdfefe;
+  color: #404040;
+  padding-top: 100px;
+  margin: 0px auto;
   width: 100%;
   font-size: 12px;
+  height: 100px;
+  bottom: 0;
 }
 // エラーメッセージ,notice /////////////////////////////////////////////////////
 .flash-message{

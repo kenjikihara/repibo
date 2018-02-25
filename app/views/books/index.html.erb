@@ -1,12 +1,14 @@
 <div class="container-fluid main-field fadein_2">
   <div class="row tag_field">
-    <h3>ジャンル</h3>
+    <h5>ジャンル</h5>
     <hr width="17%">
-    <div id="tag_cloud">
-      <%= link_to 'すべて', books_path,class: "tag_name" %>
-      <% tag_cloud Book.tag_counts, %w{s m l} do |tag, css_class| %>
-        <%= link_to tag.name, tag_path(tag.name), class: "tag_name" %>
-      <% end %>
+    <div class="tag_cloud">
+      <ul>
+        <li><%= link_to 'すべて', books_path,class: "tag_name" %></li>
+        <% tag_cloud Book.tag_counts, %w{s m l} do |tag, css_class| %>
+          <li><%= link_to tag.name, tag_path(tag.name), class: "tag_name" %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
   <div class="row book-field"> 

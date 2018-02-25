@@ -1,6 +1,6 @@
 <div class="confirm_field container-fluid fadeIn_text_up_1s">
   <div class="confirm_content">
-    <li>以下の内容で投稿しますか？</li>
+    <h4>以下の内容で投稿しますか？</h4>
     <%= form_with(model: @book, url: books_path, local: true) do |form| %>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-img">
         <%= image_tag(@book.image.url,class:"img-responsive") %>

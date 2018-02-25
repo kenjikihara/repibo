@@ -1,41 +1,47 @@
 // main-field //////////////////////////////////////////////////////////////////
 .main-field{
-    color: #404040;
-    font-size: 1rem;
-    margin: 0 auto;
-    padding-bottom: 70px;
-    background-color: #fdfefe;
-    height: 100%;
-}
-.main-field li{
-    margin: 0 auto;
-    font-size: 1.2rem;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  height: 100%;
 }
 // tag /////////////////////////////////////////////////////////////////////////
 .tag_field{ 
-    font-size: 1em;
-    text-align: center;
-    width: 100%;
-    margin: 10px auto;
-    white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
 }
-#tag_cloud {
-    padding: 20px;
+.tag_cloud {
+  font-size: 0.5em;
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+.tag_cloud ul li{
+  display: inline;
+}
+.tag_cloud ul{
+}
+.tag_cloud li{
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+  // width:200px;
 }
 .tag_name{
-    padding: 20px;
-    font-size: 1.5em;
+  padding: 10px;
+  font-size: 1.8em;
+    
 }
 // BOOK ////////////////////////////////////////////////////////////////////////
 .book-field{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 100px;
 }
 .book-panel{
-    margin-top: 5px;
-    padding-bottom: 20px;
+  margin-top: 5px;
+  padding-bottom: 20px;
 }
 .book-images{
   margin: 0 auto;
@@ -55,16 +61,16 @@
   padding: 2px;
 }
 .new_submit{
-    margin-top:30px;
-    padding-bottom: 20px;
+  margin-top:30px;
+  padding-bottom: 20px;
 }
 .book-contents{
-    word-wrap: break-word;
-    font-size: 1rem;
+  word-wrap: break-word;
+  font-size: 1rem;
 }
 .contents_detail{
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .book_show_fav{
     margin-top: 20px;
@@ -97,6 +103,9 @@
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 30px 0px 40px 0px;
+}
+.confirm_content h4{
+  text-align: center;
 }
 .back_btn{
     text-align: center;
@@ -135,27 +144,25 @@
     height: auto;
     padding: 10px;
 }
-.right-comment{
-    padding-top: 20px;
+.left-comment{
+    padding-top: 55px;
 }
-.right-comment li{
+.left-comment li{
     padding-top: 10px;
 }
-.right-comment p{
+.left-comment p{
     padding-top: 5px;
     color: Grey;
 }
 // books/showページ////////////////////////////////////////////////////////////
 #book-show-field{
     color: #404040;
-    font-size: 16px;
     margin: 0 auto;
     width: 100%;
     background-color: #fdfefe;
-    height: 100%;
-    padding-bottom: 30px;
-    overflow: hidden;
-    position: relative;
+    // height: 100%;
+    padding-bottom: 50px;
+    // overflow: hidden;
 }
 .book-show-panel{
     width: 100%;
@@ -186,69 +193,66 @@
   padding-bottom: 20px;
 }
 .book-show-contents h4{
+  color: grey;
   margin: 0 auto;
   padding-bottom: 5px;
 }
-#book-show-field #book_user_contents{
-  position: absolute;
-  left: 51%;
-  bottom: 25px;
-}
-// メッセージフィールド/////////////
 .message-field{
   width: 100%;
   margin: 0 auto;
-  height: auto;
-  background-color: #fafafa;
-  border-top: solid 0.05ex #f9fafb;
-  padding-bottom: 60px;
+  height: 100%;
+  // background-color: #fafafa;
+  background-color: #fdfefe;
+  // padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 .message-contents{
   padding-top: 20px;
   margin: 20px auto;
-  height: 400px;
 }
-.message-left{
-  padding-top: 30px;
-  padding-left: 20px;
-}
-.message-text_2{
-  padding-top: 20px;
-  color: grey;
-}
-.message-right{
-  padding-left: 20px;
-}
-.message-form li{
-  padding-top: 10px;
-}
-.message-action{
-  padding-top: 10px;
-}
-.message_show_field{
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-}
-.message_show{
-    text-align: center;
-    margin: 30px;
-    margin: 30px auto;
-    height: auto;
-    width: 100%;
-    padding-bottom: 30px;
-}
-.message_show h4{
-    padding-bottom: 30px;
-}
-.message_end{
-    text-align: center;
-    margin: 0px auto;
-    padding-bottom: 80px;
-}
-.complete_message{
-    float: left;   
-    margin-top: 30px;
-    width: 90%;
-    text-align: center;
-}
+// .message-comment{
+//   text-align: center;
+//   padding-top: 30px;
+//   padding-left: 20px;
+// }
+// .message-text_2{
+//   padding-top: 20px;
+//   color: grey;
+// }
+// .message-form-area{
+//   padding-left: 20px;
+// }
+// .message-form li{
+//   padding-top: 10px;
+// }
+// .message-action{
+//   padding-top: 10px;
+// }
+// .message_show_field{
+//     margin: 0 auto;
+//     width: 100%;
+//     height: auto;
+// }
+// .message_show{
+//     text-align: center;
+//     margin: 30px;
+//     margin: 30px auto;
+//     height: auto;
+//     width: 100%;
+//     padding-bottom: 30px;
+// }
+// .message_show h4{
+//     padding-bottom: 30px;
+// }
+// .message_end{
+//     text-align: center;
+//     margin: 0px auto;
+//     padding-bottom: 80px;
+// }
+// .complete_message{
+//     float: left;   
+//     margin-top: 30px;
+//     width: 90%;
+//     text-align: center;
+// }

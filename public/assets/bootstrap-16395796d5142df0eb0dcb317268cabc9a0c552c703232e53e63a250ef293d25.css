@@ -1,0 +1,88 @@
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.btn-default {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 0.5px solid #ccc;
+  border-radius: 1px;
+}
+
+/* line 7, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.alert-info {
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+}
+
+/* line 14, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.nav {
+  padding-top: 20px;
+  margin-left: -20px;
+  margin-right: 20px;
+  color: #404040;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+/* line 22, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.nav-left {
+  float: left;
+  left: -20px;
+  letter-spacing: 2px;
+}
+
+/* line 27, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.nav-right {
+  text-align: right;
+  letter-spacing: 2px;
+}
+
+/* line 31, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.nav-right ol {
+  display: inline-block;
+}
+
+@media only screen and (max-device-width: 480px) {
+  /* line 35, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+  .nav-right ol {
+    display: block;
+  }
+}
+/* line 38, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.navbar-collapse {
+  border-style: none;
+}
+
+/* line 41, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.navbar-toggle {
+  border-style: none;
+}
+
+/* line 44, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  border-style: none;
+  background-color: transparent;
+}
+
+/* line 48, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
+}
+
+/* line 51, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* line 55, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 59, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/bootstrap.scss */
+div.navbar-header::after {
+  background-color: transparent;
+  border-color: transparent;
+}

@@ -9,12 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'scrollin.js' %>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="./footerFixed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-default">
-        <section class="container books-index-header fadeIn_2sec clearfix">
+        <section class="container books-index-header fadeIn_home clearfix">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
               <span class="sr-only">メニュー</span>
@@ -54,9 +55,9 @@
       </nav>
     </header>
     <li class="notice"><%= notice %></li>
-  <%= yield %>
+    <%= yield %>
     <footer>
-      <div class="footer">
+      <div id="footer">
         <p>© 2018 Copyright Re:pibo</p>
       </div>
     </footer>
