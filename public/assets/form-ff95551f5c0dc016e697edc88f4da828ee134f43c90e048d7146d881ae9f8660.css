@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* for Webkit */
+/* line 3, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control::-webkit-input-placeholder {
+  padding-top: 1px;
+  padding-left: 2px;
+  color: #e3e3e3;
+}
+
+/* for Firefox */
+/* line 9, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control::-moz-placeholder {
+  padding-top: 2px;
+}
+
+/* for Firefox 18以前 */
+/* line 13, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control:-moz-placeholder {
+  padding-top: 2px;
+}
+
+/* for Windows IE */
+/* line 17, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control:-ms-input-placeholder {
+  padding-top: 2px;
+}
+
+/* line 20, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control {
+  font-size: 1.2em;
+  padding-left: 5px;
+  border-radius: 1px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 27, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-area {
+  background-color: #fdfefe;
+  padding: 10px 40px 10px;
+  margin: 10px 0px 10px;
+  border-style: none;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* line 36, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-content {
+  padding: 10px 0px 30px 0px;
+}

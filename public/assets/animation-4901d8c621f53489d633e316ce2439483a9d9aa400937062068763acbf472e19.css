@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadeIn_2sec {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 21, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadeIn_3sec {
+  animation: fadeIn 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn 3s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 41, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadeIn_home {
+  animation: fadeIn 5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 61, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadeIn_text_up_1s {
+  animation: fadeIn_text 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 1.5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn_text {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes fadeIn_text {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/* line 85, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadeIn_text_up_3s {
+  animation: fadeIn_text 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 3s ease 0s 1 normal;
+}
+
+@keyframes fadeIn_text {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes fadeIn_text {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/* 画面外にいる状態 */
+/* line 110, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: all 2500ms;
+}
+
+/* line 115, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadein_2 {
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: all 1500ms;
+}
+
+/* line 120, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadein_3 {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 2500ms;
+}
+
+/* line 125, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.fadeout {
+  opacity: 1;
+  transform: translate(0, 0px);
+  transition: all 3000ms;
+}
+
+/* 画面内に入ったら */
+/* line 131, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* line 135, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/animation.scss */
+.scrollout {
+  opacity: 0;
+  transform: translate(0, 0);
+}

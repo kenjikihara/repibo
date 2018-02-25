@@ -10,8 +10,8 @@
     </div>
   <% end %>
 </div>    
-<%= form_with(model: contact, local: true) do |form| %>
-  <div class="container contact-content fadeIn_text_up_1s">
+<div class="container contact-content fadeIn_text_up_1s">
+  <%= form_with(model: contact, local: true) do |form| %>
     <div class="col-md-3">
     </div>
     <div class="col-md-6">
@@ -32,5 +32,5 @@
             <%= form.submit "送信",class: 'btn btn-default pull-left'%>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

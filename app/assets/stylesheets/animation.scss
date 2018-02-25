@@ -1,0 +1,138 @@
+.fadeIn_2sec{
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadeIn_3sec{
+  animation: fadeIn 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn 3s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadeIn_home{
+  animation: fadeIn 5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 5s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadeIn_text_up_1s{
+  animation: fadeIn_text 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 1.5s ease 0s 1 normal;
+}
+@keyframes fadeIn_text {
+    0% {
+      opacity: 0;
+      transform : translate(0, 30px);
+    }
+    100% {
+      opacity: 1;
+      transform : translate(0, 0);
+    }
+}
+@-webkit-keyframes fadeIn_text {
+    0% {
+      opacity: 0;
+      transform : translate(0, 30px);
+    }
+    100% {
+      opacity: 1;
+      transform : translate(0, 0);
+    }
+}
+.fadeIn_text_up_3s{
+  animation: fadeIn_text 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn_text 3s ease 0s 1 normal;
+}
+@keyframes fadeIn_text {
+    0% {
+      opacity: 0;
+      transform : translate(0, 20px);
+    }
+    100% {
+      opacity: 1;
+      transform : translate(0, 0);
+    }
+}
+@-webkit-keyframes fadeIn_text {
+    0% {
+      opacity: 0;
+      transform : translate(0, 20px);
+    }
+    100% {
+      opacity: 1;
+      transform : translate(0, 0);
+    }
+}
+/* 画面外にいる状態 */
+.fadein {
+    opacity : 0;
+    transform : translate(0, 50px);
+    transition : all 2500ms;
+}
+.fadein_2 {
+    opacity : 0;
+    transform : translate(0, 10px);
+    transition : all 1500ms;
+}
+.fadein_3 {
+    opacity : 0;
+    transform : translate(0, 30px);
+    transition : all 2500ms;
+}
+.fadeout {
+    opacity : 1;
+    transform : translate(0, 0px);
+    transition : all 3000ms;
+}
+/* 画面内に入ったら */
+.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+}
+.scrollout {
+    opacity : 0;
+    transform : translate(0, 0);
+}
