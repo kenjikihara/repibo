@@ -1,93 +1,91 @@
-<!--<div id="books_show" class="container-fluid">-->
-  <div id="book-show-field" class="row fadeIn_text_up_1s container-fluid">
-    <div class="book-show-panel">
-      <div class="col-md-6 book-show-img">
-      <%= image_tag(@book.image.url,class:"img-responsive") %>
+<div id="book-show-field" class="row fadeIn_text_up_1s container-fluid">
+  <div class="book-show-panel">
+    <div class="col-md-6 book-show-img">
+    <%= image_tag(@book.image.url,class:"img-responsive") %>
+    </div>
+    <div class="col-md-6 book-show-contents">
+      <div class="book-right">
+        <h4>タイトル</h4>
+        <h1><%= @book.title %></h1>
+        <h4>コメント</h4>
+        <h2><%= @book.content %></h2>
+        <h4>ジャンル</h4>
+        <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
+        <li>投稿者:<%= @book.user.name %> さん</li>
       </div>
-      <div class="col-md-6 book-show-contents">
-        <div class="book-right">
-          <h4>タイトル</h4>
-          <h1><%= @book.title %></h1>
-          <h4>コメント</h4>
-          <h2><%= @book.content %></h2>
-          <h4>ジャンル</h4>
-          <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
-          <li>投稿者:<%= @book.user.name %> さん</li>
-        </div>
-        <div id="book_user_contents">
-          <% if @book.user == current_user %>
-            <hr>
-            <li>こちらから投稿の編集などが行えます</li>
-            <p><%= link_to '編集する', edit_book_path(@book) ,class: 'btn btn-default' %>
-            <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } ,class: 'btn btn-default' %></p>
-            <% if @book.transfer_complete == true %>
-              <p><%= link_to 'メッセージの受付を再開する',book_path(@book, book: {transfer_complete: false}),method: :put ,class: 'btn btn-default' %></p>
-            <% else %>
-              <p><%= link_to 'メッセージの受付を終了する',book_path(@book, book: {transfer_complete: true}),method: :put ,class: 'btn btn-default' %></p>
-            <% end %>
+      <div id="book_user_contents">
+        <% if @book.user == current_user %>
+          <hr>
+          <li>こちらから投稿の編集などが行えます</li>
+          <p><%= link_to '編集する', edit_book_path(@book) ,class: 'btn btn-default' %>
+          <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } ,class: 'btn btn-default' %></p>
+          <% if @book.transfer_complete == true %>
+            <p><%= link_to 'メッセージの受付を再開する',book_path(@book, book: {transfer_complete: false}),method: :put ,class: 'btn btn-default' %></p>
+          <% else %>
+            <p><%= link_to 'メッセージの受付を終了する',book_path(@book, book: {transfer_complete: true}),method: :put ,class: 'btn btn-default' %></p>
           <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
-  <div class="message-field container-fluid">
-    <%= form_with(model: @message, local: true) do |form| %>
-      <%= form.hidden_field :user_id %>
-      <%= form.hidden_field :book_id %>
-      <div class="col-md-2"></div>    
-      <div class="message-contents col-md-8">
-        <div class="message-comment">
-          <div class="message-text_1">
-            <h4>
-              <span class="text fadein_2">この絵本を</span>
-              <span class="text fadein_2">ゆずり受けたい方は</span>
-            <h4>
-            <h4>
-              <span class="text fadein_2"><%= @book.user.name %>さんへ</span>
-              <span class="text fadein_2">メッセージを</span>
-              <span class="text fadein_2">送りましょう</span>
-            </h4>
-          </div>
-          <div class="message-text_2">
-            <li>
-              <span class="text fadein_2">Re:pibo は</span>
-              <span class="text fadein_2">寄付の考えにもとづいたサイトです</span>
-              <span class="text fadein_2">送料は基本的に、</span>
-              <span class="text fadein_2">絵本の受け取り側がお支払いください</span>
-              <span class="text fadein_2">メールにてやりとりを行いましょう</span>
-            </li>
-          </div>
+</div>
+<div class="message-field container-fluid">
+  <%= form_with(model: @message, local: true) do |form| %>
+    <%= form.hidden_field :user_id %>
+    <%= form.hidden_field :book_id %>
+    <div class="col-md-2"></div>    
+    <div class="message-contents col-md-8">
+      <div class="message-comment">
+        <div class="message-text_1">
+          <h4>
+            <span class="text fadein_2">この絵本を</span>
+            <span class="text fadein_2">ゆずり受けたい方は</span>
+          <h4>
+          <h4>
+            <span class="text fadein_2"><%= @book.user.name %>さんへ</span>
+            <span class="text fadein_2">メッセージを</span>
+            <span class="text fadein_2">送りましょう</span>
+          </h4>
         </div>
-        <div class="message-form-area">
-          <% if logged_in? %>
-            <% if @book.transfer_complete == true %>
-              <li class="complete_message alert alert-info fadein_2">この絵本の取引は終了しました。</li>
-            <% else %>
-              <div class="message-form form-area fadein_2"> 
-              <br style="clear:both">
-                <div id="message-name form-group">
-                  <li>名前</li>
-                  <%= form.text_field :name, id: :message_name,placeholder: :名前,class: "form-control" %>
-                </div>
-                <div class="message-email form-group">
-                  <li>Eメール</li>
-                  <%= form.text_field :email, id: :message_email,placeholder: :Eメール,class: "form-control" %>
-                </div>
-                <div class="message-content form-group">
-                  <li>メッセージ内容</li>
-                  <%= form.text_area :content, id: :message_content,placeholder: :メッセージ（最大300文字）,class: "form-control",:rows =>"7" %>
-                </div>
-                <div class="message-action form-group">
-                  <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-left' %>
-                </div>
-              </div>
-            <% end %> 
-          <% else %>
-            <li class="complete_message alert alert-info fadein_2">メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
-          <% end %>
+        <div class="message-text_2">
+          <li>
+            <span class="text fadein_2">Re:pibo は</span>
+            <span class="text fadein_2">寄付の考えにもとづいたサイトです</span>
+            <span class="text fadein_2">送料は基本的に、</span>
+            <span class="text fadein_2">絵本の受け取り側がお支払いください</span>
+            <span class="text fadein_2">メールにてやりとりを行いましょう</span>
+          </li>
         </div>
       </div>
-      <div class="col-md-2"></div> 
-    <% end %>
-  </div>
-<!--</div>-->
+      <div class="message-form-area">
+        <% if logged_in? %>
+          <% if @book.transfer_complete == true %>
+            <li class="complete_message alert alert-info fadein_2">この絵本の取引は終了しました。</li>
+          <% else %>
+            <div class="message-form form-area fadein_2"> 
+            <br style="clear:both">
+              <div id="message-name form-group">
+                <li>名前</li>
+                <%= form.text_field :name, id: :message_name,placeholder: :名前,class: "form-control" %>
+              </div>
+              <div class="message-email form-group">
+                <li>Eメール</li>
+                <%= form.text_field :email, id: :message_email,placeholder: :Eメール,class: "form-control" %>
+              </div>
+              <div class="message-content form-group">
+                <li>メッセージ内容</li>
+                <%= form.text_area :content, id: :message_content,placeholder: :メッセージ（最大300文字）,class: "form-control",:rows =>"7" %>
+              </div>
+              <div class="message-action form-group">
+                <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-left' %>
+              </div>
+            </div>
+          <% end %> 
+        <% else %>
+          <li class="complete_message alert alert-info fadein_2">メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-2"></div> 
+  <% end %>
+</div>
