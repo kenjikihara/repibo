@@ -16,15 +16,21 @@
   <div class="message_show row fadeIn_text_up_1s">
     <h4>メッセージ内容</h4>
     <hr width="17%">
-    <li><strong>名前</strong></li>
-    <hr width="3%">
-    <li><%= @message.name %></li>
-    <li><strong>メールアドレス</strong></li>
-    <hr width="10%">
-    <li><%= @message.email %></li>
-    <li><strong>メッセージ</strong></li>
-    <hr width="7%">
-    <li><%= @message.content %></li>
+    <div class="message_show_contents">
+      <li><strong>名前</strong></li>
+      <hr width="3%">
+      <li><%= @message.name %></li>
+    </div>
+    <div class="message_show_contents">
+      <li><strong>メールアドレス</strong></li>
+      <hr width="10%">
+      <li><%= @message.email %></li>
+    </div>
+    <div class="message_show_contents">
+      <li><strong>メッセージ</strong></li>
+      <hr width="7%">
+      <li><%= @message.content %></li>
+    </div>
   </div>
   <div class="message_end row">
     <li><%= link_to "絵本の内容に戻る",book_path(@message.book) %></li>
