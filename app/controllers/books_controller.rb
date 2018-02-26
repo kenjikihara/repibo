@@ -7,6 +7,7 @@ class BooksController < ApplicationController
       @books = Book.tagged_with(params[:tag]).order(created_at: :desc)
     else
       @books = Book.all.order(created_at: :desc)
+      @books = Book.page(params[:page]).per(8)
     end
     render :layout => 'books_index'
   end

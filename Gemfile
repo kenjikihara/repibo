@@ -63,3 +63,4 @@ gem "fog"
 gem 'acts-as-taggable-on'
 gem 'jquery-rails' 
 gem 'jquery-ui-rails'
+gem 'kaminari'
