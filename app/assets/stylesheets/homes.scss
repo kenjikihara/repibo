@@ -94,7 +94,6 @@ hr{
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 15%;
   width: 100%;
   
   position: relative;
@@ -117,17 +116,7 @@ hr{
   padding-top: 16px;
   letter-spacing: 9px;
 }
-.arrow-down-icon{
-  position: absolute;
-  bottom: 30px;
-  text-align: center;
-  width: 100%;
-  -webkit-filter: invert(30%);
-  -moz-filter: invert(30%);
-  -o-filter: invert(30%);
-  -ms-filter: invert(30%);
-  filter: invert(30%);
-}
+
 .main-header a {
   color: whitesmoke;
   transition: all ease-in-out 200ms;
@@ -144,7 +133,6 @@ hr{
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 15%;
   width: 100%;
   position: relative;
   min-height: 100%;
@@ -275,7 +263,6 @@ footer {
   text-align: center;
   background-color:#fdfefe;
   color: #404040;
-  padding: 10px;
   margin: 0px;
   width: 100%;
   font-size: 12px;
