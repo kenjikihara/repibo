@@ -4,10 +4,10 @@ class BooksController < ApplicationController
   def index
     @tags = ActsAsTaggableOn::Tag.most_used
     if params[:tag]
-      @books = Book.page(params[:page]).per(12).tagged_with(params[:tag]).order(created_at: :desc,transfer_complete: :desc)
+      @books = Book.page(params[:page]).per(8).tagged_with(params[:tag]).order(updated_at: :desc,transfer_complete: :desc)
     else
-      @books = Book.all.order(created_at: :desc,transfer_complete: :desc)
-      @books = Book.page(params[:page]).per(12)
+      @books = Book.all.order(updated_at: :desc,transfer_complete: :desc,)
+      @books = Book.page(params[:page]).per(8)
     end
     render :layout => 'books_index'
   end
