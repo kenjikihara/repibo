@@ -8,7 +8,7 @@
         <h4>タイトル</h4>
         <h1><%= @book.title %></h1>
         <h4>コメント</h4>
-        <h3><%= @book.content %></h3>
+        <li><%= @book.content %></li>
         <h4>ジャンル</h4>
         <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
         <li>投稿者:<%= @book.user.name %> さん</li>
