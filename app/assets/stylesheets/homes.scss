@@ -5,48 +5,46 @@
 }
 //cleafix///////////////////////////////////////////////////////////////////////
 .clearfix:after{
-	content: "";
 	clear: both;
+	content: "";
 	display: block;
 }
 ////////////////////////////////////////////////////////////////////////////////
 html {
-  position: relative;
-  min-height: 100%;
-  height: 100%;
+  background-color:#fdfefe;
   color: #2b2b2b;
   font-weight: normal;
-  background-color:#fdfefe;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 body {
   background-color:#fdfefe;
   color: #2b2b2b;
   font-family: 'MyFont';
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 1.5px;
-  letter-spacing: .04em;
-  line-height: 1.8em;
-  text-transform: none;
-  word-break : break-all;
   font-size: 100%;
-  // 600px以降から、100pxごとに1px大きくなる
-  @media (min-width: 600px) {
-    font-size: calc(112.5% + 4 * (100vw - 600px) / 400)
-  }
-  // 1,000px以上は、22pxに
-  @media (min-width: 1000px) {
-    font-size: calc(137.5%)
-  }
-  position: relative;
-  width: 100%;
+  font-style: normal;
+  font-weight: 300;
   height: auto !important;
   height: 100%;
   min-height: 100%;
+  letter-spacing: 1.5px;
+  letter-spacing: .04em;
+  line-height: 1.8em;
+  position: relative;
+  text-transform: none;
+  width: 100%;
+  word-break : break-all;
+  // 600px以降から、100pxごとに1px大きくなる
+  @media (min-width: 600px) {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400)}
+  // 1,000px以上は、22pxに
+  @media (min-width: 1000px) {
+    font-size: calc(137.5%)}
 }
 a { 
-  font-size: 1em;
   color: #999;
+  font-size: 1em;
   transition: all ease-in-out 200ms;
 }
 a:hover {
@@ -63,8 +61,8 @@ p{
   letter-spacing: 2px;
 }
 h1{
-  letter-spacing: 12px;
   font-size: 2.2em;
+  letter-spacing: 12px;
 }
 h2{
   font-size: 2em;
@@ -86,35 +84,33 @@ hr{
   margin-top: 5px;
 }
 // main-header /////////////////////////////////////////////////////////////////
-.main-header {
+.main-header{
   background-image: image-url("/home_background_m.jpg");
   background-size: cover;
   background-attachment: local;
-  background-position: center top;
+  background-position: center;
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  width: 100%;
-  
   position: relative;
+  width: 100%;
   min-height: 100%;
-
 }
 .main-header h1 {
+  color: Whitesmoke;
   display: block;
+  letter-spacing: 14px;
   margin: 0 auto;
   margin-left: 5%;
-  color: Whitesmoke;
-  padding-top: 13%;
-  letter-spacing: 14px;
+  padding-top: 10%;
 }
 .main-header h3 {
+  color: Whitesmoke;
   display: block;
+  letter-spacing: 9px;
   margin: 0 auto;
   margin-left: 5%;
-  color: Whitesmoke;
   padding-top: 16px;
-  letter-spacing: 9px;
 }
 
 .main-header a {
@@ -131,27 +127,27 @@ hr{
   background-size: cover;
   background-attachment: local;
   height: 100vh;
+  min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  width: 100%;
   position: relative;
-  min-height: 100%;
+  width: 100%;
 }
 .books-index-header h1 {
+  color: #2b2b2b;
   display: block;
+  letter-spacing: 14px;
   margin: 0 auto;
   margin-left: 5%;
-  color: #2b2b2b;
-  padding-top: 13%;
-  letter-spacing: 14px;
+  padding-top: 10%;
 }
 .books-index-header h3 {
+  color: #2b2b2b;
   display: block;
+  letter-spacing: 9px;
   margin: 0 auto;
   margin-left: 5%;
-  color: #2b2b2b;
   padding-top: 16px;
-  letter-spacing: 9px;
 }
 .books-index-header a {
   color: #2b2b2b;
@@ -166,20 +162,20 @@ hr{
   background-image: image-url("/books-index-background.jpg");
   background-size: cover;
   background-attachment: local;
+  height: 250px;
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-  height: 250px;
 }
 .other-header h3 {
+  color: grey;
   display: block;
+  letter-spacing: 9px;
   margin: 0 auto;
   margin-top: 2%;
-  width: 100%;
-  color: grey;
   padding-top: 10px;
-  letter-spacing: 9px;
   text-align: center;
+  width: 100%;
 }
 .other-header a {
   color: #2b2b2b;
@@ -191,51 +187,49 @@ hr{
 }
 // about ///////////////////////////////////////////////////////////////////////
 .about {
-  width: 100%;
+	align-items: center;
   background-color: #fdfefe;
   color: #404040;
-  margin: 0 auto;
-  height: 100%;
-  text-align: center;
 	display: flex;
-	align-items: center;
+  height: 100%;
 	justify-content: center;
+  margin: 0 auto;
 	padding-top: 100px;
+  text-align: center;
+  width: 100%;
 }
 .about h3 {
+  color: grey;
   margin-left: 35px;
   margin-right: 35px;
-  color: grey;
   padding-bottom: 1%;
 }
 .text{
-  padding-bottom: 20px;
   display: inline-block;
+  padding-bottom: 20px;
 }
 // function ////////////////////////////////////////////////////////////////////
 .function {
-  width: 100%;
-  // background-color: #efefef;
-  // background-color: #fafafa;
-  background-color: #fdfefe;
-  margin: 0px auto; 
-  height: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
 	align-items: center;
-	justify-content: center;
-	text-align: center;
+  background-color: #fdfefe;
 	display: flex;
+  height: 100%;
+	justify-content: center;
+  margin: 0px auto; 
+  padding-bottom: 100px;
+  padding-top: 100px;
+	text-align: center;
+  width: 100%;
 }
 .function-field{
-  margin: 0 auto;
   height: auto;
+  margin: 0 auto;
 }
 .function h1 {
+  color: grey;
   display: block;
   margin: 0 auto;
   padding-bottom: 60px;
-  color: grey;
   text-align: center;
 }
 .function p {
@@ -258,38 +252,37 @@ hr{
 }
 // footer //////////////////////////////////////////////////////////////////////
 footer {
-  position: absolute;
-  width: 100%;
-  text-align: center;
   background-color:#fdfefe;
+  bottom: 0;
   color: #404040;
-  margin: 0px;
-  width: 100%;
   font-size: 12px;
   height: 50px;
-  bottom: 0;
+  margin: 0px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 footer p{
-  margin: 0px;
+  margin: 0 auto;
 }
 // エラーメッセージ,notice /////////////////////////////////////////////////////
 .flash-message{
-  width: 100%;
+  color: #f48b94;
   margin: 0 auto;
   text-align: center;
-  color: #f48b94;
+  width: 100%;
 }
 .error-message{
-  width: 100%;
+  color: #f48b94;
   margin: 0 auto;
   text-align: center;
-  color: #f48b94;
+  width: 100%;
 }
 .error-message ul{
-    padding: 0px;
+  padding: 0px;
 }
 .notice{
-  text-align: center;
   color: #b5cdd9;
   font-size: 1.8em;
+  text-align: center;
 }

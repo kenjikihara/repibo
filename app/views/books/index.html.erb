@@ -20,6 +20,9 @@
         <div class="book-contents" ontouchstart="" > 
           <li>タイトル：<%= book.title %></li>
           <li>ジャンル：<%= link_to book.tag_list, tag_path(book.tag_list) %></li>
+        <% if book.transfer_complete == true %>
+          <li class="complete_message alert alert-info">この絵本の取引は終了しました。</li>
+        <% end %>
         </div>
       </div>
     <% end %>

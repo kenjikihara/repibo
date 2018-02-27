@@ -10,11 +10,11 @@
     </div>
   <% end %>
 </div>
-<div class="books-new container-fluid fadeIn_text_up_1s">
-  <div class="row">
-    <h3>新規投稿</h3>
-    <hr width="17%">
-  </div>  
+<!--<div class="books-new container-fluid fadeIn_text_up_1s">-->
+<!--  <div class="row">-->
+<!--    <h3>絵本の投稿</h3>-->
+<!--    <hr width="17%">-->
+<!--  </div>  -->
   <%= form_with(model: @book, local: true ,url: choose_new_or_edit ) do |form| %>
     <div class="post-contents row">
       <div class="col-md-1"></div>
@@ -76,5 +76,5 @@
       <div class="col-md-1"></div>
     </div>
   <% end %>
-</div>
+<!--</div>-->
 

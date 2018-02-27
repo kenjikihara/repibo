@@ -1,0 +1,24 @@
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/donations.scss */
+.donation {
+  background-color: #fdfefe;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 8, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/donations.scss */
+.donation-field {
+  padding-top: 40px;
+}
+
+/* line 11, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/donations.scss */
+.donation-place {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+/* line 15, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/donations.scss */
+.donation-place p {
+  font-size: 12px;
+}

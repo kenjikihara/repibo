@@ -1,8 +1,8 @@
 /* for Webkit */
 .form-control::-webkit-input-placeholder{
-  padding-top: 1px;
-  padding-left: 2px;
   color: #e3e3e3;
+  padding-left: 2px;
+  padding-top: 1px;
 }
 /* for Firefox */
 .form-control::-moz-placeholder{
@@ -17,19 +17,18 @@
   padding-top: 2px;
 }
 .form-control{
+	border-radius: 1px;
+	box-shadow: none;
   font-size: 1.2em;
   padding-left: 5px;
-	border-radius: 1px;
 	-webkit-box-shadow: none;
-	box-shadow: none;
 }
 .form-area{
-  // background-color: #f9fafb;
   background-color: #fdfefe;
-	padding: 10px 40px 10px;
-	margin: 10px 0px 10px;
 	border-style: none;
 	font-size: 12px;
+	padding: 10px 40px 10px;
+	margin: 10px 0px 10px;
 	text-align: left;
 }
 .form-content{

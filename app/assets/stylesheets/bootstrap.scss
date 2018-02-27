@@ -1,22 +1,22 @@
 .btn-default{
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border: 0.5px solid #ccc;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 0.5px solid #ccc;
 	border-radius: 1px;
 }
 .alert-info{
-  background-color: #f4f4f4;
+  background-color: #fdfefe;
   color: #1a1a1a;
   border: 1px solid #ccc;
 	border-radius: 1px;
 }
 // nav /////////////////////////////////////////////////////////////////////////
 .nav{
-  padding-top: 20px;
-  margin-left: -20px;
-  margin-right: 20px;
   color: #404040;
   font-size: 0.9em;
+  margin-left: -20px;
+  margin-right: 20px;
+  padding-top: 20px;
   width: 100%;
 }
 .nav-left{
@@ -42,21 +42,21 @@
   border-style: none;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
   border-style: none;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
   background-color: transparent;
 }
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: transparent;
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: transparent;
-    background-color: transparent;
-}
 .navbar-default {
-    background-color: transparent;
-    border-color: transparent;
+  background-color: transparent;
+  border-color: transparent;
 }
 div.navbar-header::after {
-    background-color: transparent;
-    border-color: transparent;
+  background-color: transparent;
+  border-color: transparent;
 }

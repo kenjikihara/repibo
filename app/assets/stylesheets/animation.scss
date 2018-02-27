@@ -125,7 +125,7 @@
 .fadeout {
     opacity : 1;
     transform : translate(0, 0px);
-    transition : all 3000ms;
+    transition : all 5000ms;
 }
 /* 画面内に入ったら */
 .scrollin {
@@ -134,5 +134,5 @@
 }
 .scrollout {
     opacity : 0;
-    transform : translate(0, 50px);
+    transform : translate(0, 0px);
 }
