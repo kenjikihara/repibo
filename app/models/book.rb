@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   validates :title,  presence: true, length: { maximum: 30 }
-  validates :content,  presence: true, length: { maximum: 200 }
+  validates :content,  presence: true, length: { maximum: 300 }
   validates :image, presence: true
   validates :tag_list, presence: true
   
