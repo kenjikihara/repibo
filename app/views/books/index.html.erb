@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="book-field"> 
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 4 }'>
+    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300,"transitionDuration": "1s","gutter": 5,"fitWidth": true }'>
       <% @books.each do |book| %>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 book-panel grid-item">
           <div class="book-images" ontouchstart="" >
@@ -33,4 +33,3 @@
     <%= paginate @books %>
   </div>
 </div>
-
