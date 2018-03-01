@@ -11,25 +11,5 @@
       </ul>
     </div>
   </div>
-  <div class="book-field"> 
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300,"transitionDuration": "1s","gutter": 5,"fitWidth": true }'>
-      <% @books.each do |book| %>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 book-panel grid-item">
-          <div class="book-images" ontouchstart="" >
-            <%= link_to image_tag(book.image_url,class:"img-responsive book-img"),book_path(book) %>
-          </div>
-          <div class="book-contents" ontouchstart="" > 
-            <li>タイトル：<%= book.title %></li>
-            <li>ジャンル：<%= link_to book.tag_list, tag_path(book.tag_list) %></li>
-          <% if book.transfer_complete == true %>
-            <li class="complete_message alert alert-info">この絵本の取引は終了しました。</li>
-          <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="pagenate">
-    <%= paginate @books %>
-  </div>
+  <%= render 'books_list' %>
 </div>
