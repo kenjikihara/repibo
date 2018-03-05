@@ -53,11 +53,16 @@
         </li>
       </div>
       <div class="book-up-field form-group">
-        <div class="book_img">
-          <li>絵本の写真</li>
-        <%= form.label :image,"アップロード", class: "btn btn-default form-control" %>
-        <%= form.file_field :image ,id: :book_image, class: "fileInput",style: "display:none;" %>
-        <%= form.hidden_field :image_cache %>
+        <li>絵本の写真</li>
+        <div class="input-group book_img">
+            <label class="input-group-btn">
+                <span class="btn btn-default">
+                  <%= form.label :image,"ファイルを選択" %>
+                  <%= form.file_field :image ,id: :book_image ,class: "fileInput",style: "display:none;" %>
+                  <%= form.hidden_field :image_cache %>
+                </span>
+            </label>
+            <input type="text" class="form-control" readonly="">
         </div>
       </div>
       <div class="book_content form-group">

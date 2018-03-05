@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* for Webkit */
+/* line 3, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control::-webkit-input-placeholder {
+  color: #e3e3e3;
+  padding-left: 2px;
+  padding-top: 1px;
+}
+
+/* for Firefox */
+/* line 9, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control::-moz-placeholder {
+  padding-top: 2px;
+}
+
+/* for Firefox 18以前 */
+/* line 13, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control:-moz-placeholder {
+  padding-top: 2px;
+}
+
+/* for Windows IE */
+/* line 17, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control:-ms-input-placeholder {
+  padding-top: 2px;
+}
+
+/* line 20, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-control {
+  border-radius: 1px;
+  box-shadow: none;
+  font-size: 1.2em;
+  padding-left: 5px;
+  -webkit-box-shadow: none;
+}
+
+/* line 27, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-area {
+  background-color: #fdfefe;
+  border-style: none;
+  font-size: 12px;
+  padding: 10px 40px 10px;
+  margin: 10px 0px 10px;
+  text-align: left;
+}
+
+/* line 35, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.form-content {
+  padding: 10px 0px 30px 0px;
+}
+
+/* line 38, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+input.form-control {
+  height: 38px;
+}
+
+/* line 41, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #fdfefe;
+}
+
+/* line 46, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/form.scss */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
