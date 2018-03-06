@@ -9,19 +9,19 @@
           <li><strong>名前</strong></li>
           <hr width="3%">
           <li><%= @message.name %></li>
-        <%= form.hidden_field :name %>
+          <%= form.hidden_field :name %>
         </div>
         <div class="message_show_contents">
           <li><strong>メールアドレス</strong></li>
           <hr width="10%">
           <li><%= @message.email %></li>
-        <%= form.hidden_field :email %>
+          <%= form.hidden_field :email %>
         </div>
         <div class="message_show_contents">
           <li><strong>メッセージ</strong></li>
           <hr width="7%">
           <li><%= @message.content %></li>
-        <%= form.hidden_field :content %>
+          <%= form.hidden_field :content %>
         </div>
         <div class="message_confirm_btn">
         <%= form.submit  "送信する",class: 'btn btn-default pull-center pull-bottom' %>
@@ -39,4 +39,3 @@
     </div>
   </div>
 </div>
-

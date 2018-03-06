@@ -6,21 +6,19 @@ class MessagesController < ApplicationController
   def show
   end
   def new
-    @message = Message.new
+      @message = Message.new
   end
   def edit
   end
   def create
     @message = Message.new(message_params)
     @message.user_id = current_user.id
-    # respond_to do |format|
-      if @message.save
-        MessageMailer.message_mail(@message).deliver 
-        redirect_to message_path(@message), notice: "メッセージを送信しました"
-      else
-        redirect_to book_path(@message.book)
-      end
-    # end
+    if @message.save
+      MessageMailer.message_mail(@message).deliver 
+      redirect_to message_path(@message), notice: "メッセージを送信しました"
+    else
+      redirect_to book_path(@message.book)
+    end
   end
   def confirm
     @message = Message.new(message_params)

@@ -18,6 +18,8 @@ class BooksController < ApplicationController
   def new
     if params[:back]
       @book = Book.new(book_params)
+      # @book.image.cache! unless @book.image.blank?
+      # @book.image.retrieve_from_cache! params[:cache][:image]
     else
       @book = Book.new
     end
@@ -26,6 +28,9 @@ class BooksController < ApplicationController
     @book = Book.includes(:user).find(params[:id])
     @message = Message.new
     @message  = @book.messages.build(user_id: current_user.id) if current_user
+    if params[:back]
+      @message = Message.new(params.require(:message).permit(:name, :email, :content, :user_id, :book_id))
+    end
     #コメント機能今後実装予定
     # @comment = Comment.new
     # @comment  = @book.comments.build(user_id: current_user.id) if current_user
@@ -62,9 +67,9 @@ class BooksController < ApplicationController
   
   private
   def book_params
-    params.require(:book).permit(:title, :content, :image, :transfer_complete, :tag_list)
+    params.require(:book).permit(:title, :content, :image, :transfer_complete, :tag_list, :image_cache)
   end
   def set_book
-      @book = Book.find(params[:id])
+    @book = Book.find(params[:id])
   end
 end
