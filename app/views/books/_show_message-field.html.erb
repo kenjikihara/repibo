@@ -61,12 +61,10 @@
               <br style="clear:both">
                 <div id="message-name form-group">
                   <li>名前</li>
-                  <!--<%= current_user.name %>-->
                   <%= form.text_field :name, id: :message_name, value:current_user.name,placeholder: :名前,class: "form-control" %>
                 </div>
                 <div class="message-email form-group">
                   <li>Eメール</li>
-                  <!--<%= current_user.email %>-->
                   <%= form.text_field :email,id: :message_email, value:current_user.email,placeholder: :Eメール,class: "form-control" %>
                 </div>
                 <div class="message-content form-group">
