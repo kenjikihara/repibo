@@ -7,5 +7,9 @@
       <h4>Eメール</h4>
       <li><%= @user.email %></li>
     </div>
+    <div class="user_edit">
+      <li><%= link_to 'アカウントを編集する', edit_user_path(@user) ,class: 'btn btn-default' %>
+      <%= link_to '削除する', @user, method: :delete, data: { confirm: '本当に削除しますか?' } ,class: 'btn btn-default' %></li>
+    </div>
   <% end %>
 </div>

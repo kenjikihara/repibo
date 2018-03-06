@@ -13,18 +13,21 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.user_id = current_user.id
-    respond_to do |format|
+    # respond_to do |format|
       if @message.save
         MessageMailer.message_mail(@message).deliver 
-        format.html { render :show, notice: 'メッセージを送信しました' }
-        format.json { render :show, status: :created, location: @message }
+        redirect_to message_path(@message), notice: "メッセージを送信しました"
       else
-        format.html { render :show}
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+        redirect_to book_path(@message.book)
       end
-    end
+    # end
   end
-
+  def confirm
+    @message = Message.new(message_params)
+    @message.user_id = current_user.id
+    render :show if @message.invalid?
+  end
+  
   private
     def set_message
       @message = Message.find(params[:id])

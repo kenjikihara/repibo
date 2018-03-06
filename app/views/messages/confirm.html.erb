@@ -1,0 +1,42 @@
+<div class="message_show_field container-fluid">
+  <div class="message_show row fadeIn_text_up_1s">
+    <h4>以下の内容で送信しますか？</h4>
+    <hr width="40%">
+    <%= form_with(model: @message,local: true,url: messages_path) do |form| %>
+      <%= form.hidden_field :user_id %>
+      <%= form.hidden_field :book_id %>
+        <div class="message_show_contents">
+          <li><strong>名前</strong></li>
+          <hr width="3%">
+          <li><%= @message.name %></li>
+        <%= form.hidden_field :name %>
+        </div>
+        <div class="message_show_contents">
+          <li><strong>メールアドレス</strong></li>
+          <hr width="10%">
+          <li><%= @message.email %></li>
+        <%= form.hidden_field :email %>
+        </div>
+        <div class="message_show_contents">
+          <li><strong>メッセージ</strong></li>
+          <hr width="7%">
+          <li><%= @message.content %></li>
+        <%= form.hidden_field :content %>
+        </div>
+        <div class="message_confirm_btn">
+        <%= form.submit  "送信する",class: 'btn btn-default pull-center pull-bottom' %>
+        </div>
+    <% end %>
+    <div class="message_back_btn">
+    <%= form_with(model: @message, url: book_path(@message.book), local: true, method: 'get') do |form| %>
+      <%= form.hidden_field :user_id %>
+      <%= form.hidden_field :book_id %>
+      <%= form.hidden_field :name %>
+      <%= form.hidden_field :email %>
+      <%= form.hidden_field :content %>
+      <%= form.submit "もどる/修正する", name: 'back',class: 'btn btn-default pull-center' %>
+    <% end %>
+    </div>
+  </div>
+</div>
+

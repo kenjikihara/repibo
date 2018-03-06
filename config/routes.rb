@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resources :disclaimers, only: [:index]
   resources :donations, only: [:index]
   resources :messages, only: [:new, :create, :show]
+  resources :messages do
+    collection do
+      post :confirm
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy, :edit]
   resources :users
   get 'tags/:tag', to: 'books#index', as: :tag
