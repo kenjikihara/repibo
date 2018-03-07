@@ -1,5 +1,10 @@
 <div class="message-field container-fluid">
   <% if @book.user == current_user %>
+    <% if @book.transfer_complete == true %>
+    <div class="col-md-3"></div>
+    <li class="col-md-6 complete_message alert alert-info fadein_2">現在メッセージの受付を終了しています。</li>
+    <div class="col-md-3"></div>
+    <% else %>
     <div class="col-md-2"></div>    
       <div class="message-contents col-md-8">
         <div class="message-comment">
@@ -24,6 +29,7 @@
         </div>
       </div>
     <div class="col-md-2"></div>  
+    <% end %>
   <% else %>
     <%= form_with(model: @message, local: true,url: confirm_messages_path) do |form| %>
       <%= form.hidden_field :user_id %>
