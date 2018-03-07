@@ -1,34 +1,34 @@
 <div class="message-field container-fluid">
   <% if @book.user == current_user %>
     <% if @book.transfer_complete == true %>
-    <div class="col-md-3"></div>
-    <li class="col-md-6 complete_message alert alert-info fadein_2">現在メッセージの受付を終了しています。</li>
-    <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <li class="col-md-6 complete_message alert alert-info fadein_2">現在メッセージの受付を終了しています。</li>
+      <div class="col-md-3"></div>
     <% else %>
-    <div class="col-md-2"></div>    
-      <div class="message-contents col-md-8">
-        <div class="message-comment">
-          <div class="message-text_1">
-            <h4>
-              <span class="text">ゆずり受けたい方から</span>
-              <span class="text">メッセージが届きます。</span>
-            <h4>
-          </div>
-          <div class="message-text_2 fadein_2">
-            <h5 class="fadein_2">
-              <span class="text">届きましたら、</span>
-              <span class="text">メールにてやりとりを行いましょう。</span>
-            </h5>
-            <li class="fadein_2">
-              <span class="text">Re:pibo は</span>
-              <span class="text">寄付の考えにもとづいたサイトです</span>
-              <span class="text">売買目的の投稿は</span>
-              <span class="text">ご遠慮ください</span>
-            </li>
+      <div class="col-md-2"></div>    
+        <div class="message-contents col-md-8">
+          <div class="message-comment">
+            <div class="message-text_1">
+              <h4>
+                <span class="text">ゆずり受けたい方から</span>
+                <span class="text">メッセージが届きます。</span>
+              <h4>
+            </div>
+            <div class="message-text_2 fadein_2">
+              <h5 class="fadein_2">
+                <span class="text">届きましたら、</span>
+                <span class="text">メールにてやりとりを行いましょう。</span>
+              </h5>
+              <li class="fadein_2">
+                <span class="text">Re:pibo は</span>
+                <span class="text">寄付の考えにもとづいたサイトです</span>
+                <span class="text">売買目的の投稿は</span>
+                <span class="text">ご遠慮ください</span>
+              </li>
+            </div>
           </div>
         </div>
-      </div>
-    <div class="col-md-2"></div>  
+      <div class="col-md-2"></div>  
     <% end %>
   <% else %>
     <%= form_with(model: @message, local: true,url: confirm_messages_path) do |form| %>
