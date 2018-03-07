@@ -63,7 +63,7 @@
                 </span>
             </label>
             <% if @book.image? %>
-              <%= text_field_tag 'image', @book.image.filename, class: "form-control" %>
+              <%= text_field_tag 'image',File.basename(@book.image.path), class: "form-control", :readonly => true %>
             <% else %>
               <input type="text" class="form-control" readonly="">
             <% end %>
