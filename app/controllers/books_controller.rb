@@ -18,8 +18,7 @@ class BooksController < ApplicationController
   def new
     if params[:back]
       @book = Book.new(book_params)
-      # @book.image.cache! unless @book.image.blank?
-      # @book.image.retrieve_from_cache! params[:cache][:image]
+      @book.image.retrieve_from_cache! params[:cache][:image]
     else
       @book = Book.new
     end

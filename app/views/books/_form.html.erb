@@ -58,12 +58,15 @@
             <label class="input-group-btn">
                 <span class="btn btn-default">
                   <%= form.label :image,"ファイルを選択" %>
-                  <%= form.file_field :image ,id: :book_image ,class: "fileInput",style: "display:none;" %>
+                  <%= form.file_field :image ,id: :book_image,class: "fileInput",style: "display:none;" %>
                   <%= form.hidden_field :image_cache %>
                 </span>
             </label>
-            <input type="text" class="form-control" readonly="">
-        </div>
+            <% if @book.image? %>
+              <%= text_field_tag 'image', @book.image.filename, class: "form-control" %>
+            <% else %>
+              <input type="text" class="form-control" readonly="">
+            <% end %>
       </div>
       <div class="book_content form-group">
          <li>コメント</li>
