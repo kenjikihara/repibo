@@ -1,15 +1,20 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
+  
   def index
     @messages = Message.all
   end
+  
   def show
   end
+  
   def new
       @message = Message.new
   end
+  
   def edit
   end
+  
   def create
     @message = Message.new(message_params)
     @message.user_id = current_user.id
@@ -20,6 +25,7 @@ class MessagesController < ApplicationController
       redirect_to book_path(@message.book)
     end
   end
+  
   def confirm
     @message = Message.new(message_params)
     @message.user_id = current_user.id
@@ -27,10 +33,11 @@ class MessagesController < ApplicationController
   end
   
   private
-    def set_message
-      @message = Message.find(params[:id])
-    end
-    def message_params
-      params.require(:message).permit(:name, :email, :content, :user_id, :book_id)
-    end
+  
+  def set_message
+    @message = Message.find(params[:id])
+  end
+  def message_params
+    params.require(:message).permit(:name, :email, :content, :user_id, :book_id)
+  end
 end

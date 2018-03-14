@@ -4,6 +4,7 @@ class Message < ApplicationRecord
   validates :email, presence: true, length: { maximum: 100 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   before_save { email.downcase! }
+  
   belongs_to :user
   belongs_to :book
 end
