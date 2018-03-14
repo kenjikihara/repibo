@@ -12,15 +12,15 @@
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 book-show-contents">
         <h4>タイトル</h4>
         <h1 class="confirm_content_book"><%= @book.title %></h1>
-        <%= form.hidden_field :title %>
         <h4>コメント</h4>
         <li class="confirm_content_book"><%= @book.content %></li>
-        <%= form.hidden_field :content %>
         <h4>ジャンル</h4>
         <li class="confirm_content_book"><%= @book.tag_list %></li>
+        <%= form.hidden_field :title %>
+        <%= form.hidden_field :content %>
         <%= form.hidden_field :tag_list %>
         <div class="confirm_btn">
-        <%= form.submit  "投稿する",class: 'btn btn-default pull-left pull-bottom' %>
+        <%= form.submit "投稿する",class: 'btn btn-default pull-left pull-bottom' %>
         </div>
       </div>      
     <% end %>

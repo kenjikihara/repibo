@@ -15,6 +15,7 @@ class BooksController < ApplicationController
   def confirm
     @book = Book.new(book_params)
     @book.user_id = current_user.id
+    # @book = current_user.books.build(book_params)
     render :new if @book.invalid?
   end
   
@@ -39,6 +40,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
+    # @book = current_user.books.build(book_params)
     @book.image.retrieve_from_cache! params[:cache][:image]
     @book.tag_list.add
     if @book.save
@@ -65,7 +67,6 @@ class BooksController < ApplicationController
   end
   
   def tag_cloud
-    # order('count DESC')でカウントの多い順にタグを並べています
     @tags = Book.tag_counts_on(:tags).order('count DESC')
   end
   
