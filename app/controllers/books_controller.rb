@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all.page(params[:page]).per(20).order(created_at: :desc)
     end
-    render :layout => 'books_index'
+    render layout: 'books_index'
   end
   
   def confirm
