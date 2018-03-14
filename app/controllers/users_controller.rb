@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       UserMailer.user_mail(@user).deliver
       redirect_to new_user_path, notice: "登録が完了しました"
     else
-      render 'new'
+      render :new
     end
   end
   
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), notice: "更新しました"
     else
-      render 'edit'
+      render :edit
     end
   end
   

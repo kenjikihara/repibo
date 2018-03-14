@@ -42,7 +42,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to book_path(@book), notice: "投稿しました"
     else
-      render 'new'
+      render :new
     end
   end
   
@@ -53,7 +53,7 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       redirect_to book_path(@book), notice: "更新しました"
     else
-      render 'edit'
+      render :edit
     end
   end
   
