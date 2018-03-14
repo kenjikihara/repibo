@@ -13,9 +13,7 @@ class BooksController < ApplicationController
   end
   
   def confirm
-    @book = Book.new(book_params)
-    @book.user_id = current_user.id
-    # @book = current_user.books.build(book_params)
+    @book = current_user.books.build(book_params)
     render :new if @book.invalid?
   end
   
@@ -38,9 +36,7 @@ class BooksController < ApplicationController
   end
   
   def create
-    @book = Book.new(book_params)
-    @book.user_id = current_user.id
-    # @book = current_user.books.build(book_params)
+    @book = current_user.books.build(book_params)
     @book.image.retrieve_from_cache! params[:cache][:image]
     @book.tag_list.add
     if @book.save

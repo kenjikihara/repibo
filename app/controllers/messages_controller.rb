@@ -16,8 +16,7 @@ class MessagesController < ApplicationController
   end
   
   def create
-    @message = Message.new(message_params)
-    @message.user_id = current_user.id
+    @message = current_user.messages.build(message_params)
     if @message.save
       MessageMailer.message_mail(@message).deliver 
       redirect_to message_path(@message), notice: "メッセージを送信しました"
@@ -27,8 +26,7 @@ class MessagesController < ApplicationController
   end
   
   def confirm
-    @message = Message.new(message_params)
-    @message.user_id = current_user.id
+    @message = current_user.messages.build(message_params)
     render :show if @message.invalid?
   end
   
