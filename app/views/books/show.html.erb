@@ -1,7 +1,7 @@
 <div id="book-show-field" class="row fadeIn_text_up_1s container-fluid">
   <div class="book-show-panel">
     <div class="col-md-6 book-show-img">
-    <%= image_tag(@book.image.url,class:"img-responsive") %>
+    <%= image_tag(@book.image.url, class:"img-responsive") %>
     </div>
     <div class="col-md-6 book-show-contents">
       <div class="book-right">
@@ -17,12 +17,12 @@
         <% if @book.user == current_user %>
           <hr>
           <li>こちらから投稿の編集などが行えます</li>
-          <p><%= link_to '編集する', edit_book_path(@book) ,class: 'btn btn-default' %>
-          <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } ,class: 'btn btn-default' %></p>
+          <p><%= link_to '編集する', edit_book_path(@book), class: 'btn btn-default' %>
+          <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } , class: 'btn btn-default' %></p>
           <% if @book.transfer_complete == true %>
-            <p><%= link_to 'メッセージの受付を再開する',book_path(@book, book: {transfer_complete: false}),method: :put ,class: 'btn btn-default' %></p>
+            <p><%= link_to 'メッセージの受付を再開する', book_path(@book, book: { transfer_complete: false }),method: :put , class: 'btn btn-default' %></p>
           <% else %>
-            <p><%= link_to 'メッセージの受付を終了する',book_path(@book, book: {transfer_complete: true}),method: :put ,class: 'btn btn-default' %></p>
+            <p><%= link_to 'メッセージの受付を終了する', book_path(@book, book: { transfer_complete: true }),method: :put , class: 'btn btn-default' %></p>
           <% end %>
         <% end %>
       </div>

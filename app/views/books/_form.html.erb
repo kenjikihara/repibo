@@ -10,7 +10,7 @@
     </div>
   <% end %>
 </div>
-<%= form_with(model: @book, local: true ,url: choose_new_or_edit ) do |form| %>
+<%= form_with(model: @book, local: true , url: choose_new_or_edit ) do |form| %>
   <div class="post-contents row">
     <div class="col-md-1"></div>
     <div class="left-comment col-md-5">
@@ -31,7 +31,7 @@
      <br style="clear:both">
       <div class="book_title form-group">
          <li>タイトル</li>
-         <p class="text_area"><%= form.text_field :title ,placeholder: :はらぺこあおむし,class: "form-control" %></p>
+         <p class="text_area"><%= form.text_field :title, placeholder: :はらぺこあおむし, class: "form-control" %></p>
       </div>
       <div class="form-group">
         <li>ジャンル</li>
@@ -55,25 +55,25 @@
       <div class="book-up-field form-group">
         <li>絵本の写真</li>
         <div class="input-group book_img">
-            <label class="input-group-btn">
-                <span class="btn btn-default">
-                  <%= form.label :image,"ファイルを選択" %>
-                  <%= form.file_field :image ,id: :book_image,class: "fileInput",style: "display:none;" %>
-                  <%= form.hidden_field :image_cache %>
-                </span>
-            </label>
-            <% if @book.image? %>
-              <%= text_field_tag 'image',File.basename(@book.image.path), class: "form-control", :readonly => true %>
-            <% else %>
-              <input type="text" class="form-control" readonly="">
-            <% end %>
-      </div>
+          <label class="input-group-btn">
+            <span class="btn btn-default">
+              <%= form.label :image, "ファイルを選択" %>
+              <%= form.file_field :image ,id: :book_image, class: "fileInput", style: "display:none;" %>
+              <%= form.hidden_field :image_cache %>
+            </span>
+          </label>
+          <% if @book.image? %>
+            <%= text_field_tag 'image', File.basename(@book.image.path), class: "form-control", :readonly => true %>
+          <% else %>
+            <input type="text" class="form-control" readonly="">
+          <% end %>
+        </div>
       <div class="book_content form-group">
          <li>コメント</li>
-         <p class="text_area"><%= form.text_area :content,placeholder: :コメント（最大３００文字まで）,class: "form-control",:rows =>"5" %></p>
+         <p class="text_area"><%= form.text_area :content, placeholder: :コメント（最大３００文字まで）, class: "form-control", :rows =>"5" %></p>
       </div>
       <div class="book-new-submit">
-        <%= form.submit "投稿する",class: 'btn btn-default pull-left' %>
+        <%= form.submit "投稿する", class: 'btn btn-default pull-left' %>
       </div> 
     </div>
     <div class="col-md-1"></div>

@@ -12,24 +12,23 @@
 </div>    
 <div class="container contact-content fadeIn_text_up_1s">
   <%= form_with(model: contact, local: true) do |form| %>
-    <div class="col-md-3">
-    </div>
+    <div class="col-md-3"></div>
     <div class="col-md-6">
       <h5>Re:piboに関するお問い合わせは</h5>
       <h5>こちらからお願いいたします。</h5>
       <hr>
       <div class="form-area"> 
         <br style="clear:both">
-    			<div class="form-group">
-            <%= form.text_field :name, id: :contact_name,placeholder: :名前,class: "form-control" %>
-					</div>
-					<div class="form-group">
-						<%= form.text_field :email, id: :contact_email,placeholder: :Eメール,class: "form-control" %>
-					</div>
-          <div class="form-group">
-            <%= form.text_area :content, id: :contact_content ,placeholder: :お問い合わせ内容（３００文字まで）,class: "form-control",:rows =>"7" %>
-          </div>
-            <%= form.submit "送信",class: 'btn btn-default pull-left'%>
+  			<div class="form-group">
+          <%= form.text_field :name, id: :contact_name, placeholder: :名前, class: "form-control" %>
+				</div>
+				<div class="form-group">
+					<%= form.text_field :email, id: :contact_email, placeholder: :Eメール, class: "form-control" %>
+				</div>
+        <div class="form-group">
+          <%= form.text_area :content, id: :contact_content, placeholder: :お問い合わせ内容（３００文字まで）, class: "form-control", :rows =>"7" %>
+        </div>
+        <%= form.submit "送信", class: 'btn btn-default pull-left'%>
       </div>
     </div>
   <% end %>

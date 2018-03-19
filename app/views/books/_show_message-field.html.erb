@@ -31,7 +31,7 @@
       <div class="col-md-2"></div>  
     <% end %>
   <% else %>
-    <%= form_with(model: @message, local: true,url: confirm_messages_path) do |form| %>
+    <%= form_with(model: @message, local: true, url: confirm_messages_path) do |form| %>
       <%= form.hidden_field :user_id %>
       <%= form.hidden_field :book_id %>
       <div class="col-md-2"></div>    
@@ -67,18 +67,18 @@
               <br style="clear:both">
                 <div id="message-name form-group">
                   <li>名前</li>
-                  <%= form.text_field :name, id: :message_name, value:current_user.name,placeholder: :名前,class: "form-control" %>
+                  <%= form.text_field :name, id: :message_name, value:current_user.name, placeholder: :名前, class: "form-control" %>
                 </div>
                 <div class="message-email form-group">
                   <li>Eメール</li>
-                  <%= form.text_field :email,id: :message_email, value:current_user.email,placeholder: :Eメール,class: "form-control" %>
+                  <%= form.text_field :email, id: :message_email, value:current_user.email, placeholder: :Eメール, class: "form-control" %>
                 </div>
                 <div class="message-content form-group">
                   <li>メッセージ内容</li>
-                  <%= form.text_area :content, id: :message_content,placeholder: :メッセージ（最大300文字）,class: "form-control",:rows =>"7" %>
+                  <%= form.text_area :content, id: :message_content, placeholder: :メッセージ（最大300文字）, class: "form-control", :rows =>"7" %>
                 </div>
                 <div class="message-action form-group">
-                  <%= form.submit "メッセージを送る",class: 'btn btn-default btn-outline pull-left' %>
+                  <%= form.submit "メッセージを送る", class: 'btn btn-default btn-outline pull-left' %>
                 </div>
               </div>
             <% end %> 

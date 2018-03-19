@@ -6,9 +6,9 @@
 		    	<li>会員登録できません</li>
 		    	<h3>エラーがあります</h3>
 		      <ul>
-		      <% @user.errors.full_messages.each do |message| %>
-		        <li><%= message %></li>
-		      <% end %>
+  		      <% @user.errors.full_messages.each do |message| %>
+  		        <li><%= message %></li>
+  		      <% end %>
 		      </ul>
 		    </div>
 		  <% end %>
@@ -21,16 +21,16 @@
   		  	<h4>登録情報の編集</h4>
   			</div>
   			<div class="form-group">
-          <li><%= f.text_field :name,placeholder: :名前,class: "form-control" %></li>
+          <li><%= f.text_field :name, placeholder: :名前, class: "form-control" %></li>
   			</div>
   			<div class="form-group">
-          <li><%= f.email_field :email,placeholder: :Eメール,class: "form-control" %></li>
+          <li><%= f.email_field :email, placeholder: :Eメール, class: "form-control" %></li>
   			</div>
   			<div class="form-group">
-          <li><%= f.password_field :password ,placeholder: :パスワード,class: "form-control" %></li>		  
+          <li><%= f.password_field :password, placeholder: :パスワード, class: "form-control" %></li>		  
   			</div>
         <% f.hidden_field :password_confirmation %>
-    		<%= f.submit "登録", class: "btn btn-default pull-left",style: "margin-top: 6px"  %>
+    		<%= f.submit "登録", class: "btn btn-default pull-left", style: "margin-top: 6px"  %>
 		  </div>
 		</div>
 		<div class="col-md-3"></div>

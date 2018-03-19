@@ -4,7 +4,7 @@
     <hr width="17%">
     <div class="tag_cloud">
       <ul>
-        <li><%= link_to 'すべて', books_path,class: "tag_name" %></li>
+        <li><%= link_to 'すべて', books_path, class: "tag_name" %></li>
         <% tag_cloud Book.tag_counts, %w{s m l} do |tag, css_class| %>
           <li><%= link_to tag.name, tag_path(tag.name), class: "tag_name" %></li>
         <% end %>
