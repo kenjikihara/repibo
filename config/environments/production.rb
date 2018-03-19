@@ -15,7 +15,7 @@ Rails.application.configure do
   config.assets.compile = false
   config.assets.precompile += ['*.js']
 
-  config.log_level = :debug
+  config.log_level = :info
 
   config.log_tags = [ :request_id ]
 
