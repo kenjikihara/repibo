@@ -5,14 +5,8 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
   
-  def show
-  end
-  
   def new
     @message = Message.new
-  end
-  
-  def edit
   end
   
   def create
