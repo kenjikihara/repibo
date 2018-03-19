@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'repibo'
+  default from: 're.picture.books@gmail.com'
   layout 'mailer'
 end
