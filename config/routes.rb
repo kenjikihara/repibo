@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  # scope "(:locale)" do
   root 'homes#index'
   scope "/:locale" do
     resources :books do

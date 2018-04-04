@@ -3,7 +3,7 @@ Rails.application.configure do
 
   config.eager_load = true
 
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   config.read_encrypted_secrets = true
@@ -12,7 +12,7 @@ Rails.application.configure do
 
   config.assets.js_compressor = :uglifier
 
-  config.assets.compile = true
+  config.assets.compile = false
   config.assets.precompile += ['*.js']
 
   config.log_level = :info
