@@ -1,10 +1,10 @@
-<p><%= @message.name %> さんより</p>
-<p>投稿した絵本へのメッセージが届きました。</p>
+<p><%= I18n.t('message_mailer.message_mail.text_1', message_name: @message.name) %></p>
+<p><%= I18n.t('message_mailer.message_mail.text_2') %></p>
 <hr>
-<h4>メッセージ内容</h4>
+<h4><%= I18n.t('message_mailer.message_mail.text_3') %></h4>
 <li><%= @message.content %></li>
-<p><%= @message.email %> にメールをして</p>
-<p><%= @message.name %> さんとやりとりをしましょう。</p>
+<p><%= I18n.t('message_mailer.message_mail.text_4', message_email: @message.email) %></p>
+<p><%= I18n.t('message_mailer.message_mail.text_5', message_name: @message.name) %></p>
 <hr>
-<p>このメールは送信専用となっております。</p>
-<p>Re:piboへのお問い合わせは re.picture.books@gmail.com までお願いいたします。</p>
+<p><%= I18n.t('message_mailer.message_mail.text_6') %></p>
+<p><%= I18n.t('message_mailer.message_mail.text_7') %></p>

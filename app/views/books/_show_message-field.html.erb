@@ -2,7 +2,7 @@
   <% if @book.user == current_user %>
     <% if @book.transfer_complete == true %>
       <div class="col-md-3"></div>
-      <li class="col-md-6 complete_message alert alert-info fadein_2">現在メッセージの受付を終了しています。</li>
+      <li class="col-md-6 complete_message alert alert-info fadein_2"><%= t '.end_message_reception' %></li>
       <div class="col-md-3"></div>
     <% else %>
       <div class="col-md-2"></div>    
@@ -10,20 +10,20 @@
           <div class="message-comment">
             <div class="message-text_1">
               <h4>
-                <span class="text">ゆずり受けたい方から</span>
-                <span class="text">メッセージが届きます。</span>
+                <span class="text"><%= t '.text_1' %></span>
+                <span class="text"><%= t '.text_2' %></span>
               <h4>
             </div>
             <div class="message-text_2 fadein_2">
               <h5 class="fadein_2">
-                <span class="text">届きましたら、</span>
-                <span class="text">メールにてやりとりを行いましょう。</span>
+                <span class="text"><%= t '.text_3' %></span>
+                <span class="text"><%= t '.text_4' %></span>
               </h5>
               <li class="fadein_2">
-                <span class="text">Re:pibo は</span>
-                <span class="text">寄付の考えにもとづいたサイトです</span>
-                <span class="text">売買目的の投稿は</span>
-                <span class="text">ご遠慮ください</span>
+                <span class="text"><%= t '.text_5' %></span>
+                <span class="text"><%= t '.text_6' %></span>
+                <span class="text"><%= t '.text_7' %></span>
+                <span class="text"><%= t '.text_8' %></span>
               </li>
             </div>
           </div>
@@ -39,51 +39,51 @@
         <div class="message-comment">
           <div class="message-text_1">
             <h4>
-              <span class="text">この絵本を</span>
-              <span class="text">ゆずり受けたい方は</span>
+              <span class="text"><%= t '.text_a' %></span>
+              <span class="text"><%= t '.text_b' %></span>
             <h4>
             <h4 class="fadein_2">
-              <span class="text"><%= @book.user.name %>さんへ</span>
-              <span class="text">メッセージを</span>
-              <span class="text">送りましょう</span>
+              <span class="text"><%= @book.user.name %><%= t '.text_c' %></span>
+              <span class="text"><%= t '.text_d' %></span>
+              <span class="text"><%= t '.text_e' %></span>
             </h4>
           </div>
           <div class="message-text_2 fadein_2">
             <li>
-              <span class="text">Re:pibo は</span>
-              <span class="text">寄付の考えにもとづいたサイトです</span>
-              <span class="text">送料は基本的に、</span>
-              <span class="text">絵本の受け取り側がお支払いください</span>
-              <span class="text">メールにてやりとりを行いましょう</span>
+              <span class="text"><%= t '.text_f' %></span>
+              <span class="text"><%= t '.text_g' %></span>
+              <span class="text"><%= t '.text_h' %></span>
+              <span class="text"><%= t '.text_i' %></span>
+              <span class="text"><%= t '.text_j' %></span>
             </li>
           </div>
         </div>
         <div class="message-form-area">
           <% if logged_in? %>
             <% if @book.transfer_complete == true %>
-              <li class="complete_message alert alert-info fadein_2">この絵本の取引は終了しました。</li>
+              <li class="complete_message alert alert-info fadein_2"><%= t '.trade_book_end' %></li>
             <% else %>
               <div class="message-form form-area fadein_2"> 
               <br style="clear:both">
                 <div id="message-name form-group">
-                  <li>名前</li>
+                  <li><%= t '.message_name' %></li>
                   <%= form.text_field :name, id: :message_name, value:current_user.name, placeholder: :名前, class: "form-control" %>
                 </div>
                 <div class="message-email form-group">
-                  <li>Eメール</li>
+                  <li><%= t '.message_email' %></li>
                   <%= form.text_field :email, id: :message_email, value:current_user.email, placeholder: :Eメール, class: "form-control" %>
                 </div>
                 <div class="message-content form-group">
-                  <li>メッセージ内容</li>
-                  <%= form.text_area :content, id: :message_content, placeholder: :メッセージ（最大300文字）, class: "form-control", :rows =>"7" %>
+                  <li><%= t '.message_content' %></li>
+                  <%= form.text_area :content, id: :message_content, placeholder: t('helpers.placeholder.content'), class: "form-control", :rows =>"7" %>
                 </div>
                 <div class="message-action form-group">
-                  <%= form.submit "メッセージを送る", class: 'btn btn-default btn-outline pull-left' %>
+                  <%= form.submit t('.submit_message'), class: 'btn btn-default btn-outline pull-left' %>
                 </div>
               </div>
             <% end %> 
           <% else %>
-            <li class="complete_message alert alert-info fadein_2">メッセージを送る場合は<%= link_to "ログイン/会員登録", new_user_path %>を行ってください。</li>
+            <li class="complete_message alert alert-info fadein_2"><%= t '.message_announcement_1' %><%= link_to (t'.message_announcement_2'), new_user_path %><%= t '.message_announcement_3' %></li>
           <% end %>
         </div>
       </div>

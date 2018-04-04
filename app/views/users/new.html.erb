@@ -3,8 +3,6 @@
 		<div class="error-message">
 		  <% if @user.errors.any? %>
 		    <div id="error_explanation">
-		    	<li>会員登録できません</li>
-		    	<h3>エラーがあります</h3>
 		      <ul>
 			      <% @user.errors.full_messages.each do |message| %>
 			        <li><%= message %></li>
@@ -18,22 +16,22 @@
 	    <div class="form-area"> 
 	  		<br style="clear:both">
 	  		<div class="form-content">
-		  		<h4>会員登録</h4>
-		      <p>登録をされていない方はこちら</p>
+		  		<h4><%= t '.member_registration' %></h4>
+		      <p><%= t '.member_registration_text' %></p>
 				</div>
 				<div class="form-group">
-	        <li><%= f.text_field :name, placeholder: :名前, class: "form-control" %></li>
+	        <li><%= f.text_field :name, placeholder: t('helpers.placeholder.name'), class: "form-control" %></li>
 				</div>
 			  <div class="form-group">
-	        <li><%= f.email_field :email, placeholder: :Eメール, class: "form-control" %></li>
+	        <li><%= f.email_field :email, placeholder: t('helpers.placeholder.email'), class: "form-control" %></li>
 				</div>
 				<div class="form-group">
-	        <li><%= f.password_field :password, placeholder: :パスワード, class: "form-control" %></li>		  
+	        <li><%= f.password_field :password, placeholder: t('helpers.placeholder.password'), class: "form-control" %></li>		  
 				</div>
 				<div class="form-group">
-	        <li><%= f.password_field :password_confirmation, placeholder: :再度パスワードをご入力ください, class: "form-control" %></li>
+	        <li><%= f.password_field :password_confirmation, placeholder: t('helpers.placeholder.password_confirmation'), class: "form-control" %></li>
 				</div>
-				<%= f.submit "登録", class: "btn btn-default pull-left", style: "margin-top: 6px" %>
+				<%= f.submit t('.submit_register'), class: "btn btn-default pull-left", style: "margin-top: 6px" %>
 			</div>
 		</div>
 	<% end %>
@@ -42,16 +40,16 @@
 			<div class="form-area">
 	  		<br style="clear:both">
 	  		<div class="form-content">
-		  		<h4>ログイン</h4>
-	        <p>アカウントをお持ち方はこちら</p>
+		  		<h4><%= t '.login' %></h4>
+	        <p><%= t '.login_text' %></p>
 	      </div>
 				<div class="form-group">
-          <li><%= f.email_field :email, placeholder: :Eメール, class: "form-control" %></li>
+          <li><%= f.email_field :email, placeholder: t('helpers.placeholder.email'), class: "form-control" %></li>
 				</div>
 				<div class="form-group">
-          <li><%= f.password_field :password, placeholder: :パスワード, class: "form-control"%></li>
+          <li><%= f.password_field :password, placeholder: t('helpers.placeholder.password'), class: "form-control"%></li>
 				</div>
-        <%= f.submit "ログイン", class: "btn btn-default pull-left", style: "margin-top: 6px" %>
+        <%= f.submit t('.submit_login'), class: "btn btn-default pull-left", style: "margin-top: 6px" %>
 			</div>
 		<% end %>
 	</div>

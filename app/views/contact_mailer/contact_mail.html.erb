@@ -1,7 +1,7 @@
-<li>お問い合わせ</li>
-<p><%= @contact.email %></p>
-<p><%= @contact.name %> さんから</p>
-<p>Re:piboへのお問い合わせがあります。</p>
+<li><%= I18n.t('contact_mailer.contact_mail.contact') %></li>
+<p><%= I18n.t('contact_mailer.contact_mail.text_1', contact_name: @contact.name) %></p>
+<p>Email: <%= @contact.email %></p>
+<p><%= I18n.t('contact_mailer.contact_mail.text_2') %></p>
 <hr>
-<h4>お問い合わせ内容の確認</h4>
+<h4><%= I18n.t('contact_mailer.contact_mail.text_3') %></h4>
 <li><%= @contact.content %></li>

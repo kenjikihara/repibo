@@ -1,0 +1,120 @@
+en:
+  books:
+    new:
+      new_post: "New Post"
+    edit:
+      edit_post: "Edit Post"
+    form:
+      comment1_html: "<h5>Post a picture book</h5>"
+      comment2_html: "<li>Episodes related to this picture book and impressions of picture books</li>"
+      comment3_html: "<li>What kind of picture book, what about preservation state,</li>"
+      comment4_html: "<li>Please write freely in the comments.</li>"
+      comment5_html: "<p>Please refrain from posts whose storage status is too bad.</p>"
+      comment6_html: "<p>Do not post for trading purpose.</p>"
+      comment7_html: "<p>Please be aware of posts that lead to personal information.</p>"
+      book_title: "Book Title"
+      book_genre: "Book Genre"
+      book_image: "Book Image"
+      book_comment: "Comment"
+      submit_post: "Post"
+    confirm:
+      text: "Do you post with the following content?"
+      title: "Title"
+      comment: "Comment"
+      genre: "Genre"
+      submit_confirm: "Post"
+      submit_back: "Back / Modify"
+    index:
+      genre: "Genre"
+      all_genre: "All"
+    books_list:
+      title: "Title："
+      genre: "Genre："
+      finished_message: "The transaction of this picture book has ended."      
+    show:
+      title: "Title"
+      comment: "Commnent"
+      genre: "Genre"
+      contributor: "Contributor： %{book_user_name}"
+      edit_comment: "You can edit/delete post from here"
+      edit: "Edit post"
+      delete: "Delete post"
+      delete_message: "Do you really want to delete this?"
+      reception_restart: "Resume accepting the message"
+      reception_end: "End reception of the message"
+    show_message-field:
+      end_message_reception: "End_message_reception."
+      trade_book_end: "The transaction of this picture book has ended."
+      text_1: "From those who want to receive it"
+      text_2: "a message arrives."
+      text_3: "Once you receive it,"
+      text_4: "Let's exchange mails."
+      text_5: "Re:pibo is"
+      text_6: "a site based on the idea of donation."
+      text_7: "Posting for trading purpose"
+      text_8: "please do not."
+      text_a: "This picture book"
+      text_b: "Who would you like to receive"
+      text_c: ""
+      text_d: "Let's send"
+      text_e: "message"
+      text_f: "Re:pibo is"
+      text_g: "a site based on the idea of donation."
+      text_h: "Shipping fee basically,"
+      text_i: "Please pay the recipient of the picture book"
+      text_j: "Let's exchange with mail "
+      message_name: "Name"
+      message_email: "Email"
+      message_content: "Message"
+      message_announcement_1: "When sending a message" 
+      message_announcement_2: "Login / Registration" 
+      message_announcement_3: "Please do."
+      submit_message: "Send Message"
+  donations:
+    index:
+      text_1: "Re: pibo is also promoting donating picture books"
+      text_2: "to children's halls and libraries."
+      text_3: "If you are thinking of donating,"
+      text_4: "please contact the following place."
+      text_5: "We are currently looking for a receptionist. Please contact us from inquiries."
+  contacts:
+    form:
+      text_1: "For inquiries about Re: pibo"
+      text_2: "please here."
+      submit_contact: "Send Message"
+  disclaimers:
+    index:
+      disclaimer: "disclaimer"
+      text_1: "Regarding trouble in this site"
+      text_2: "Re: pibo does not take any responsibility."
+      text_3: "Please understand."
+  users:
+    show:
+      acount: "acount"
+      name: "name"
+      email: "Email"
+      edit: "Edit"
+      delete: "Delete"
+    new:
+      member_registration: "Member Registration"
+      member_registration_text: "If you are not registered please here"
+      login: "Login"
+      login_text: "Have an account here"
+      submit_register: "Register"
+      submit_login: "Login"
+    edit:
+      edit_title: "Registration Info"
+      submit_edit: "Edit"      
+  helpers:
+    label:
+      book:
+        image: "Choose File"
+    placeholder:
+      name: "Name"
+      email: "Email"    
+      title: "Example: The Very Hungry Caterpillar"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      content: "Enter comments (max. 300 letters)"
+      message_content: "Message（max. 300 letters）"
+      contact_content: "Contact content（max. 300 letters）"

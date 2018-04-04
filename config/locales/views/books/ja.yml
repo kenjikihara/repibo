@@ -1,0 +1,121 @@
+ja:
+  books:
+    new:
+      new_post: "新規投稿"
+    edit:
+      edit_post: "編集する"
+    form:
+      comment1_html: "<h5>絵本を投稿しましょう</h5>"
+      comment2_html: "<li>この絵本にまつわる<br>エピソードや絵本の感想</li>"
+      comment3_html: "<li>どんな絵本なのか、<br>保存状態についてなど、</li>"
+      comment4_html: "<li>コメントにて自由にお書きください。</li>"
+      comment5_html: "<p>保存状態があまりにも悪い投稿は<br>ご遠慮ください。</p>"
+      comment6_html: "<p>売買目的での投稿はおやめください。</p>"
+      comment7_html: "<p>個人情報に繋がる投稿にはご注意ください。</p>"
+      book_title: "タイトル"
+      book_genre: "ジャンル"
+      book_image: "絵本の写真"
+      book_comment: "コメント"
+      submit_post: "投稿する"
+    confirm:
+      text: "以下の内容で投稿しますか？"
+      title: "タイトル"
+      comment: "コメント"
+      genre: "ジャンル"
+      submit_confirm: "投稿する"
+      submit_back: "戻る/修正する"
+      
+    index:
+      genre: "ジャンル"
+      all_genre: "すべて"
+    books_list:
+      title: "タイトル："
+      genre: "ジャンル："
+      finished_message: "この絵本の取引は終了しました。"
+    show:
+      title: "タイトル"
+      comment: "コメント"
+      genre: "ジャンル"
+      contributor: "投稿者： %{book_user_name} さん"
+      edit_comment: "こちらから投稿の編集などが行えます"
+      edit: "編集する"
+      delete: "削除する"
+      delete_message: "本当に削除しますか?"
+      reception_restart: "メッセージの受付を再開する"
+      reception_end: "メッセージの受付を終了する"
+    show_message-field:
+      end_message_reception: "現在メッセージの受付を終了しています。"
+      trade_book_end: "この絵本の取引は終了しました。"
+      text_1: "ゆずり受けたい方から"
+      text_2: "メッセージが届きます。"
+      text_3: "届きましたら、"
+      text_4: "メールにてやりとりを行いましょう。"
+      text_5: "Re:pibo は"
+      text_6: "寄付の考えにもとづいたサイトです"
+      text_7: "売買目的の投稿は"
+      text_8: "ご遠慮ください"
+      text_a: "この絵本を"
+      text_b: "ゆずり受けたい方は"
+      text_c: "さんへ"
+      text_d: "メッセージを"
+      text_e: "送りましょう"
+      text_f: "Re:pibo は"
+      text_g: "寄付の考えにもとづいたサイトです"
+      text_h: "送料は基本的に、"
+      text_i: "絵本の受け取り側がお支払いください"
+      text_j: "メールにてやりとりを行いましょう"
+      message_name: "名前"
+      message_email: "Eメール"
+      message_content: "メッセージ内容"
+      message_announcement_1: "メッセージを送る場合は" 
+      message_announcement_2: "ログイン/会員登録" 
+      message_announcement_3: "を行ってください。" 
+      submit_message: "メッセージを送る"
+  donations:
+    index:
+      text_1: "Re:piboは絵本を児童館や図書館へ"
+      text_2: "寄付することも推進しています。"
+      text_3: "寄付をお考えの方は"
+      text_4: "下記の場所へコンタクトをとってみましょう。"
+      text_5: "現在受付先を募集中しております。お問い合わせよりご連絡ください。"
+  contacts:
+    form:
+      text_1: "Re:piboに関するお問い合わせは"
+      text_2: "こちらからお願いいたします。"
+      submit_contact: "送信"
+  disclaimers:
+    index:
+      disclaimer: "免責事項"
+      text_1: "当サイト内でのトラブル等につきまして"
+      text_2: "Re:piboでは一切責任を負いません。"
+      text_3: "ご了承ください。"
+  users:
+    show:
+      acount: "アカウント"
+      name: "名前"
+      email: "Eメール"
+      edit: "アカウントを編集する"
+      delete: "削除する"
+    new:
+      member_registration: "会員登録"
+      member_registration_text: "登録をされていない方はこちら"
+      login: "ログイン"
+      login_text: "アカウントをお持ち方はこちら"
+      submit_register: "登録する"
+      submit_login: "ログイン"
+    edit:
+      edit_title: "登録情報の編集"
+      submit_edit: "更新する"
+  helpers:
+    label:
+      book:
+        image: "ファイルを選択"
+    placeholder:
+      name: "名前"
+      email: "Eメール"
+      password: "パスワード"
+      password_confirmation: "再度パスワードをご入力ください"
+      title: "例：はらぺこあおむし"
+      content: "コメントを入力（最大３００文字まで）"
+      message_content: "メッセージ（最大300文字）"
+      contact_content: "お問い合わせ内容（最大300文字）"

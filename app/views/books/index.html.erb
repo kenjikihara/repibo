@@ -1,12 +1,12 @@
 <div class="container-fluid main-field fadeIn_home">
   <div class="row tag_field">
-    <h5>ジャンル</h5>
+    <h5><%= t '.genre' %></h5>
     <hr width="17%">
     <div class="tag_cloud">
       <ul>
-        <li><%= link_to 'すべて', books_path, class: "tag_name" %></li>
+        <li><%= link_to (t '.all_genre'), books_path, class: "tag_name" %></li>
         <% tag_cloud Book.tag_counts, %w{s m l} do |tag, css_class| %>
-          <li><%= link_to tag.name, tag_path(tag.name), class: "tag_name" %></li>
+          <li><%= link_to Book.tag_enum_name(tag.name), tag_path(tag.name), class: "tag_name" %></li>
         <% end %>
       </ul>
     </div>

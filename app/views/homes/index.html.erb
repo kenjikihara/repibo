@@ -1,32 +1,32 @@
 <section class="about container-fluid">
   <div class="row">
     <h3 class="fadein">
-      <span class="text">小さなころ</span>
-      <span class="text">大好きだった絵本</span>
+      <span class="text"><%= t '.about_text1' %></span>
+      <span class="text"><%= t '.about_text2' %></span>
     </h3>
     <h3 class="fadein">
-      <span class="text">子供が寝る前に</span>
-      <span class="text">よく読んであげた絵本</span>
+      <span class="text"><%= t '.about_text3' %></span>
+      <span class="text"><%= t '.about_text4' %></span>
     </h3>
-    <h3 class="fadein">そんな大切な絵本を</h3>
+    <h3 class="fadein"><%= t '.about_text5' %></h3>
     <h3 class="fadein">
-      <span class="text">楽しんでくれる誰かに</span>
-      <span class="text">ゆずってみませんか？</span>
-    </h3>
-    <h3 class="fadein">
-      <span class="text">自分の大切な</span>
-      <span class="text">思い出と一緒に投稿して</span>
+      <span class="text"><%= t '.about_text6' %></span>
+      <span class="text"><%= t '.about_text7' %></span>
     </h3>
     <h3 class="fadein">
-      <span class="text">読んでくれる子供たちに</span>
-      <span class="text">送ってあげましょう。</span>
+      <span class="text"><%= t '.about_text8' %></span>
+      <span class="text"><%= t '.about_text9' %></span>
+    </h3>
+    <h3 class="fadein">
+      <span class="text"><%= t '.about_text10' %></span>
+      <span class="text"><%= t '.about_text11' %></span>
     </h3>
   </div>
 </section>
 <section class="container-fluid function">
   <div class="function-field">
     <div class="row fadein_3">
-      <h1>Re:piboについて</h1>
+      <h1><%= t '.about_repibo' %></h1>
     </div>
     <div class="row function-contents">
       <div class="col-xs-12 col-sm-6 col-md-3 fadein_3">
@@ -34,10 +34,10 @@
           <img src="male-user.png" sizes="10vw">
         </div>
         <p>
-          <span class="text">Re:piboを使用する場合は</span>
-          <span class="text">会員登録を行いましょう。</span>
-          <span class="text">登録後 絵本の投稿などのお取引ができます。</span>
-          <span class="text">会員登録は<%= link_to "こちら", new_user_path %>から。</span>
+          <span class="text"><%= t '.function_text1' %></span>
+          <span class="text"><%= t '.function_text2' %></span>
+          <span class="text"><%= t '.function_text3' %></span>
+          <span class="text"><%= link_to (t '.function_text4'), new_user_path %></span>
         </p>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 fadein_3">
@@ -45,8 +45,8 @@
           <img src="paper-plane.png">
         </div>
         <p>
-          自宅に眠っている絵本を投稿しましょう。<br>
-          投稿は<%= link_to 'こちら', new_book_path %>から。
+          <%= t '.function_text5' %><br>
+          <%= link_to (t '.function_text6'), new_book_path %>
         </p>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 fadein_3">
@@ -54,8 +54,8 @@
           <img src="envelope.png" class="envelope-png">
         </div>
         <p>
-          譲り受けたい方からメッセージが届きます。<br>
-          やり取りを行いましょう。
+          <%= t '.function_text7' %><br>
+          <%= t '.function_text8' %>
         </p>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 fadein_3">
@@ -63,9 +63,9 @@
           <img src="info.png">
         </div>
         <p>
-          Re:piboは寄付することをベースに作られています。<br>
-          売買目的の投稿は行わないようお願いいたします。<br>
-          <li><%= link_to '免責事項', disclaimers_path %></li>
+          <%= t '.function_text9' %><br>
+          <%= t '.function_text10' %><br>
+          <li><%= link_to (t '.function_text11'), disclaimers_path %></li>
         </p>
       </div>
     </div>

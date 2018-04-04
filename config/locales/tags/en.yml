@@ -1,0 +1,32 @@
+en:
+  activerecord:
+    attributes:
+      book:
+        tag_list: "Genre"
+    enums:
+      book:
+        tag_list:
+          vehicle: "Vehicle"
+          food: "Food"
+          words_numbers: "Words/Numbers"
+          creatures_body: "Creatures/Body"
+          funny: "Funny"
+          wandering_melancholy: "Wandering/Melancholy"
+          thrilled_exciting: "Thrilled/Exciting"
+          scary_ghosts: "Scary/Ghosts"
+          science_wisdom: "Science/Wisdom"
+          old_story: "Old story"
+  activerecord:
+    attributes:        
+      book:
+        tag_lists:
+          vehicle: "Vehicle"
+          food: "Food"
+          words_numbers: "Words/Numbers"
+          creatures_body: "Creatures/Body"
+          funny: "Funny"
+          wandering_melancholy: "Wandering/Melancholy"
+          thrilled_exciting: "Thrilled/Exciting"
+          scary_ghosts: "Scary/Ghosts"
+          science_wisdom: "Science/Wisdom"
+          old_story: "Old story"

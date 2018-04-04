@@ -7,10 +7,10 @@
           <%= link_to image_tag(book.image_url, class:"img-responsive book-img"), book_path(book) %>
         </div>
         <div class="book-contents" ontouchstart="" > 
-          <li>タイトル：<%= book.title %></li>
-          <li>ジャンル：<%= link_to book.tag_list, tag_path(book.tag_list) %></li>
+          <li><%= t '.title' %><%= book.title %></li>
+          <li><%= t '.genre' %><%= link_to Book.tag_enum_name(book.tag_list), tag_path(book.tag_list) %></li>
         <% if book.transfer_complete == true %>
-          <li class="complete_message alert alert-info">この絵本の取引は終了しました。</li>
+          <li class="complete_message alert alert-info"><%= t '.finished_message' %></li>
         <% end %>
         </div>
       </div>

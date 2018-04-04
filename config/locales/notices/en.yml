@@ -1,0 +1,10 @@
+en:
+  logged_in: "You are now logged"
+  can_not_login: "You can not login"
+  logged_out: "logged out"
+  registration_complete: "Registration has been completed"
+  edit_complete: "Edit Complete"
+  delete: "Deleted"
+  post_create: "Posted"
+  contact_create: "Your inquiry is complete"
+  message_create: "Message sent"

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>-Re:pibo- 大切に読んだ絵本を "次へ" と引き継ぐサイト </title>
+    <title><%= t '.title_head' %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -26,29 +26,37 @@
           <div id="gnavi" class="collapse navbar-collapse">
             <div class="nav navbar-nav clearfix">
               <div class="nav-left">
-                <ul><%= link_to 'R e : p i b o について', root_path %></ul>
+                <ul><%= link_to (t '.about'), root_path %></ul>
               </div>
               <div class="nav-right">
               <% if logged_in? %>
-                <ol><%= link_to '投稿一覧', books_path %></ol>
-                <ol><%= link_to '新規投稿', new_book_path %></ol>
-                <ol><%= link_to '寄付をする', donations_path %></ol>
-                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
-                <ol><%= link_to 'アカウント', user_path(current_user.id) %></ol>
-                <ol><%= link_to 'ログアウト', session_path(current_user.id), method: :delete %></ol>
+                <ol><%= link_to (t '.books_list'), books_path %></ol>
+                <ol><%= link_to (t '.new'), new_book_path %></ol>
+                <ol><%= link_to (t '.donation'), donations_path %></ol>
+                <ol><%= link_to (t '.contact'), new_contact_path %></ol>
+                <ol><%= link_to (t '.acount'), user_path(current_user.id) %></ol>
+                <ol><%= link_to (t '.logout'), session_path(current_user.id), method: :delete %></ol>
+                <ol>
+                  <%= link_to_if params[:locale].present?, '日本語',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'ja') %> |
+                  <%= link_to_if params[:locale] != 'en',  'English',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'en') %>
+                </ol>                
               <% else %>
-                <ol><%= link_to '投稿一覧', books_path %></ol>
-                <ol><%= link_to '寄付をする', donations_path %></ol>
-                <ol><%= link_to 'お問い合わせ', new_contact_path %></ol>
-                <ol><%= link_to 'ログイン/会員登録', new_user_path %></ol>
+                <ol><%= link_to (t '.books_list'), books_path %></ol>
+                <ol><%= link_to (t '.donation'), donations_path %></ol>
+                <ol><%= link_to (t '.contact'), new_contact_path %></ol>
+                <ol><%= link_to (t '.login_signin'), new_user_path %></ol>
+                <ol>
+                  <%= link_to_if params[:locale].present?, '日本語',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'ja') %> |
+                  <%= link_to_if params[:locale] != 'en',  'English',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'en') %>
+                </ol>                
               <% end %>
               </div>
             </div>
           </div>
           <div class="fadeIn_home">
-            <h1 class="fadeout">Re:pibo</h1>
-            <h3 class="fadeout">大切に読んだ絵本を</h3>
-            <h3 class="fadeout">"次へ" 引き継ぐ。</h3>
+            <h1 class="fadeout"><%= t '.title1' %></h1>
+            <h3 class="fadeout"><%= t '.title2' %></h3>
+            <h3 class="fadeout"><%= t '.title3' %></h3>
           </div>
         </section>
       </nav>

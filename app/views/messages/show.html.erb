@@ -1,8 +1,6 @@
 <div class="error-message">
   <% if @message.errors.any? %>
     <div id="error_explanation">
-      <h4>メッセージが送れませんでした</h4>
-      <h3>エラーがあります</h3>
       <ul>
         <% @message.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -13,26 +11,26 @@
 </div>
 <div class="message_show_field container-fluid">
   <div class="message_show row fadeIn_text_up_1s">
-    <h4>メッセージ内容</h4>
+    <h4><%= t '.message_content' %></h4>
     <hr width="17%">
     <div class="message_show_contents">
-      <li><strong>名前</strong></li>
+      <li><strong><%= t '.name' %></strong></li>
       <hr width="3%">
       <li><%= @message.name %></li>
     </div>
     <div class="message_show_contents">
-      <li><strong>メールアドレス</strong></li>
+      <li><strong><%= t '.email' %></strong></li>
       <hr width="10%">
       <li><%= @message.email %></li>
     </div>
     <div class="message_show_contents">
-      <li><strong>メッセージ</strong></li>
+      <li><strong><%= t '.message' %></strong></li>
       <hr width="7%">
       <li><%= @message.content %></li>
     </div>
   </div>
   <div class="message_end row">
-    <li><%= link_to "絵本の内容に戻る", book_path(@message.book) %></li>
+    <li><%= link_to t('.back_to_book'), book_path(@message.book) %></li>
     <hr width="12%">
   </div>
 </div>

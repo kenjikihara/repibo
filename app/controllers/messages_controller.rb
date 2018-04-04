@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
     @message = current_user.messages.build(message_params)
     if @message.save
       MessageMailer.message_mail(@message).deliver 
-      redirect_to message_path(@message), notice: "メッセージを送信しました"
+      redirect_to message_path(@message), notice: t(:message_create)
     else
       redirect_to book_path(@message.book)
     end

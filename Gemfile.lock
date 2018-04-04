@@ -84,6 +84,8 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubi (1.7.0)
     excon (0.60.0)
     execjs (2.7.0)
@@ -422,6 +424,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   dotenv-rails
+  enum_help
   fog
   jbuilder (~> 2.5)
   jquery-rails

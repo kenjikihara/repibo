@@ -1,0 +1,21 @@
+ja:
+  contact_mailer:
+    contact_mail:
+      subject: "Re:piboへのお問い合わせメール"
+      contact: "お問い合わせ"
+      text_1: "%{contact_name} さんから"
+      text_2: "Re:piboへのお問い合わせがあります。"
+      text_3: "お問い合わせ内容の確認"
+  message_mailer:
+    message_mail:
+      subject: "投稿した絵本へ、メッセージが届きました"
+      text_1: "%{message_name} さんから"
+      text_2: "投稿した絵本へ、メッセージが届きました。"
+      text_3: "メッセージ内容"
+      text_4: "%{message_email} に返信をして"
+      text_5: "%{message_name} さんとやりとりをしましょう。"
+      text_6: "このメールは送信専用となっております。"
+      text_7: "Re:piboへのお問い合わせは re.picture.books@gmail.com までお願いいたします。"
+  user_mailer:
+    user_mail:
+      subject: "Re:piboへの登録が完了しました"

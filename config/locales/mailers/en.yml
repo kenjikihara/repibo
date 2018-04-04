@@ -1,0 +1,21 @@
+en:
+  contact_mailer:
+    contact_mail:
+      subject: "An inquiry mail arrived"
+      contact: "Contact"
+      text_1: "From: %{contact_name}"
+      text_2: "have an inquiry."
+      text_3: "Confirmation of inquiry contents"
+  message_mailer:
+    message_mail:
+      subject: "You received a message to the picture book you posted"
+      text_1: "From %{message_name}"
+      text_2: "You received a message to the picture book you posted."
+      text_3: "Message contents"
+      text_4: "Mail to :  %{message_email}"
+      text_5: "Let's interact with %{message_name}"
+      text_6: "This mail is only for sending."
+      text_7: "For inquiries to Re:pibo please contact re.picture.books@gmail.com"
+  user_mailer:
+    user_mail:
+      subject: "Registration to Re:pibo is complete"

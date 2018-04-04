@@ -1,0 +1,15 @@
+en:
+  messages:
+    confirm:
+      name: "Name"
+      email: "Email"
+      message: "Message"
+      submit_confirm: "Send Message"
+      submit_back: "Back"
+      text: "Do you transmit with the following contents?"
+    show:
+      message_content: "Message Content"
+      name: "Name"
+      email: "Email"
+      message: "Message"
+      back_to_book: "Back to Book"

@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    attributes:
+      book:
+        tag_list: "ジャンル"
+  enums:
+    book:
+      tag_list:
+        vehicle: "のりもの"
+        food: "たべもの"
+        words_numbers: "ことば・かず"
+        creatures_body: "いきもの・からだ"
+        funny: "おもしろ・おかしい"
+        wandering_melancholy: "ほっこり・しんみり"
+        thrilled_exciting: "わくわく・ドキドキ"
+        scary_ghosts: "こわい・おばけ"
+        science_wisdom: "かがく・ちえ"
+        old_story: "むかしばなし・みんわ"
+  activerecord:
+    attributes:        
+      book:
+        tag_lists:
+          vehicle: "のりもの"
+          food: "たべもの"
+          words_numbers: "ことば・かず"
+          creatures_body: "いきもの・からだ"
+          funny: "おもしろ・おかしい"
+          wandering_melancholy: "ほっこり・しんみり"
+          thrilled_exciting: "わくわく・ドキドキ"
+          scary_ghosts: "こわい・おばけ"
+          science_wisdom: "かがく・ちえ"
+          old_story: "むかしばなし・みんわ"

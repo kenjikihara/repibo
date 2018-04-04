@@ -1,0 +1,10 @@
+ja:
+  logged_in: "ログインしました"
+  can_not_login: "ログインできません"
+  logged_out: "ログアウトしました"
+  registration_complete: "登録が完了しました"
+  edit_complete: "更新しました"
+  delete: "削除しました"
+  post_create: "投稿しました"
+  contact_create: "お問い合わせが完了しました"
+  message_create: "メッセージを送信しました"

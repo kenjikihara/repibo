@@ -1,0 +1,15 @@
+ja:
+  messages:
+    confirm:
+      name: "名前"
+      email: "Eメール"
+      message: "メッセージ"
+      submit_confirm: "送信する"
+      submit_back: "戻る/修正する"
+      text: "以下の内容で送信しますか？"
+    show:
+      message_content: "メッセージ内容"
+      name: "名前"
+      email: "Eメール"
+      message: "メッセージ"
+      back_to_book: "絵本の内容に戻る"

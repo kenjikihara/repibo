@@ -1,8 +1,6 @@
 <div class="error-message">
   <% if @book.errors.any? %>
     <div id="error_explanation">
-      <h3>エラーがあります</h3>
-      <ul>
         <% @book.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
@@ -15,49 +13,36 @@
     <div class="col-md-1"></div>
     <div class="left-comment col-md-5">
       <div class="left-comment-top">
-        <h5>絵本を投稿しましょう</h5>
-        <li>この絵本にまつわる<br>エピソードや絵本の感想</li>
-        <li>どんな絵本なのか、<br>保存状態についてなど、</li>
-        <li>コメントにて自由にお書きください。</li>
+        <%= t '.comment1_html' %>
+        <%= t '.comment2_html' %>
+        <%= t '.comment3_html' %>
+        <%= t '.comment4_html' %>
       </div>
         <hr width="60%">
       <div>
-        <p>保存状態があまりにも悪い投稿は<br>ご遠慮ください。</p>
-        <p>売買目的での投稿はおやめください。</p>
-        <p>個人情報に繋がる投稿にはご注意ください。</p>
+        <%= t '.comment5_html' %>
+        <%= t '.comment6_html' %>
+        <%= t '.comment7_html' %>
       </div>
     </div>
     <div class="form-area col-md-5">
      <br style="clear:both">
       <div class="book_title form-group">
-         <li>タイトル</li>
-         <p class="text_area"><%= form.text_field :title, placeholder: :はらぺこあおむし, class: "form-control" %></p>
+         <li><%= t '.book_title' %></li>
+         <p class="text_area"><%= form.text_field :title, placeholder: t('helpers.placeholder.title'), class: "form-control" %></p>
       </div>
       <div class="form-group">
-        <li>ジャンル</li>
+        <li><%= t '.book_genre' %></li>
         <li>
-        <%= form.select :tag_list, {
-                                    のりもの: "のりもの" ,
-                                    たべもの: "たべもの" ,
-                                    ことば・かず: "ことば・かず" ,
-                                    いきもの・からだ: "いきもの・からだ" ,
-                                    おもしろ・おかしい: "おもしろ・おかしい" ,
-                                    ほっこり・しんみり: "ほっこり・しんみり" ,
-                                    わくわく・ドキドキ: "わくわく・ドキドキ" ,
-                                    こわい・おばけ: "こわい・おばけ" ,
-                                    かがく・ちえ: "かがく・ちえ" ,
-                                    むかしばなし・みんわ: "むかしばなし・みんわ" },
-                                    {include_blank: true},
-                                    { class: "form-control" }
-                                    %>
+         <%= form.select :tag_list, Book.tag_lists.map { |s| [t("enums.book.tag_list.#{s[0]}"), s[1]] },{include_blank: true},{ class: "form-control" } %>
         </li>
       </div>
       <div class="book-up-field form-group">
-        <li>絵本の写真</li>
+        <li><%= t '.book_image' %></li>
         <div class="input-group book_img">
           <label class="input-group-btn">
             <span class="btn btn-default">
-              <%= form.label :image, "ファイルを選択" %>
+              <%= form.label :image %>
               <%= form.file_field :image ,id: :book_image, class: "fileInput", style: "display:none;" %>
               <%= form.hidden_field :image_cache %>
             </span>
@@ -69,11 +54,11 @@
           <% end %>
         </div>
       <div class="book_content form-group">
-         <li>コメント</li>
-         <p class="text_area"><%= form.text_area :content, placeholder: :コメント（最大３００文字まで）, class: "form-control", :rows =>"5" %></p>
+         <li><%= t '.book_comment' %></li>
+         <p class="text_area"><%= form.text_area :content, placeholder: t('helpers.placeholder.content'), class: "form-control", :rows =>"5" %></p>
       </div>
       <div class="book-new-submit">
-        <%= form.submit "投稿する", class: 'btn btn-default pull-left' %>
+        <%= form.submit t('.submit_post'), class: 'btn btn-default pull-left' %>
       </div> 
     </div>
     <div class="col-md-1"></div>

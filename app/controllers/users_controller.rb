@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       UserMailer.user_mail(@user).deliver
-      redirect_to new_user_path, notice: "登録が完了しました"
+      redirect_to new_user_path, notice: t(:registration_complete)
     else
       render :new
     end
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user), notice: "更新しました"
+      redirect_to user_path(@user), notice: t(:edit_complete)
     else
       render :edit
     end
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   
   def destroy
     @user.destroy
-    redirect_to books_path, notice:"ユーザー情報を削除しました"
+    redirect_to books_path, notice: t(:delete)
   end
   
   private

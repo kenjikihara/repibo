@@ -1,7 +1,6 @@
 <div class="error-message">
   <% if contact.errors.any? %>
     <div id="error_explanation">
-      <h3>エラーがあります</h3>
       <ul>
         <% contact.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -14,21 +13,21 @@
   <%= form_with(model: contact, local: true) do |form| %>
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <h5>Re:piboに関するお問い合わせは</h5>
-      <h5>こちらからお願いいたします。</h5>
+      <h5><%= t '.text_1' %></h5>
+      <h5><%= t '.text_2' %></h5>
       <hr>
       <div class="form-area"> 
         <br style="clear:both">
   			<div class="form-group">
-          <%= form.text_field :name, id: :contact_name, placeholder: :名前, class: "form-control" %>
+          <%= form.text_field :name, id: :contact_name, placeholder: t('helpers.placeholder.name'), class: "form-control" %>
 				</div>
 				<div class="form-group">
-					<%= form.text_field :email, id: :contact_email, placeholder: :Eメール, class: "form-control" %>
+					<%= form.text_field :email, id: :contact_email, placeholder: t('helpers.placeholder.email'), class: "form-control" %>
 				</div>
         <div class="form-group">
-          <%= form.text_area :content, id: :contact_content, placeholder: :お問い合わせ内容（３００文字まで）, class: "form-control", :rows =>"7" %>
+          <%= form.text_area :content, id: :contact_content, placeholder: t('helpers.placeholder.contact_content'), class: "form-control", :rows =>"7" %>
         </div>
-        <%= form.submit "送信", class: 'btn btn-default pull-left'%>
+        <%= form.submit t('.submit_contact'), class: 'btn btn-default pull-left'%>
       </div>
     </div>
   <% end %>

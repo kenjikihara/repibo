@@ -5,24 +5,24 @@
     </div>
     <div class="col-md-6 book-show-contents">
       <div class="book-right">
-        <h4>タイトル</h4>
+        <h4><%= t '.title' %></h4>
         <h1><%= @book.title %></h1>
-        <h4>コメント</h4>
+        <h4><%= t '.comment' %></h4>
         <li><%= @book.content %></li>
-        <h4>ジャンル</h4>
-        <li><%= link_to @book.tag_list, tag_path(@book.tag_list) %></li>
-        <li>投稿者:<%= @book.user.name %> さん</li>
+        <h4><%= t '.genre' %></h4>
+        <li><%= link_to Book.tag_enum_name(@book.tag_list), tag_path(@book.tag_list) %></li>
+        <li><%= I18n.t('books.show.contributor', book_user_name: @book.user.name) %></li>
       </div>
       <div id="book_user_contents">
         <% if @book.user == current_user %>
           <hr>
-          <li>こちらから投稿の編集などが行えます</li>
-          <p><%= link_to '編集する', edit_book_path(@book), class: 'btn btn-default' %>
-          <%= link_to '削除する', @book, method: :delete, data: { confirm: '本当に削除しますか?' } , class: 'btn btn-default' %></p>
+          <li><%= t '.edit_comment' %></li>
+          <p><%= link_to (t '.edit'), edit_book_path(@book), class: 'btn btn-default' %>
+          <%= link_to (t '.delete'), @book, method: :delete, data: { confirm: (t '.delete_message') } , class: 'btn btn-default' %></p>
           <% if @book.transfer_complete == true %>
-            <p><%= link_to 'メッセージの受付を再開する', book_path(@book, book: { transfer_complete: false }),method: :put , class: 'btn btn-default' %></p>
+            <p><%= link_to (t '.reception_restart'), book_path(@book, book: { transfer_complete: false }),method: :put , class: 'btn btn-default' %></p>
           <% else %>
-            <p><%= link_to 'メッセージの受付を終了する', book_path(@book, book: { transfer_complete: true }),method: :put , class: 'btn btn-default' %></p>
+            <p><%= link_to (t '.reception_end'), book_path(@book, book: { transfer_complete: true }),method: :put , class: 'btn btn-default' %></p>
           <% end %>
         <% end %>
       </div>
