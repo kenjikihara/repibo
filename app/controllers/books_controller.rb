@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy,]
   before_action :user_logged_in?, only: [:new, :edit,]
+  before_action :correct_user, only: [:edit, :update, :destroy,]
   
   def index
     @tags = ActsAsTaggableOn::Tag.most_used
@@ -72,4 +73,11 @@ class BooksController < ApplicationController
   def set_book
     @book = Book.find(params[:id])
   end
+  
+  def correct_user
+    @user = User.find(Book.find(params[:id]).user_id)
+    if @user != current_user
+      redirect_to(root_path)
+    end
+  end  
 end

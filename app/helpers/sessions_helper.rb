@@ -15,4 +15,3 @@ module SessionsHelper
     end
   end
 end
-
