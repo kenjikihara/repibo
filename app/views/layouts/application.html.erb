@@ -28,27 +28,20 @@
                 <ul><%= link_to (t '.about'), root_path %></ul>
               </div>
               <div class="nav-right">
-              <% if logged_in? %>
-                <ol><%= link_to (t '.books_list'), books_path %></ol>
-                <ol><%= link_to (t '.new'), new_book_path %></ol>
-                <ol><%= link_to (t '.donation'), donations_path %></ol>
-                <ol><%= link_to (t '.contact'), new_contact_path %></ol>
-                <ol><%= link_to (t '.acount'), user_path(current_user.id) %></ol>
-                <ol><%= link_to (t '.logout'), session_path(current_user.id), method: :delete %></ol>
+                <ol><%= link_to (t '.books_list'), books_path if logged_in? %></ol>
+                <ol><%= link_to (t '.new'), new_book_path if logged_in? %></ol>
+                <ol><%= link_to (t '.donation'), donations_path if logged_in? %></ol>
+                <ol><%= link_to (t '.contact'), new_contact_path if logged_in? %></ol>
+                <ol><%= link_to (t '.acount'), user_path(current_user.id) if logged_in? %></ol>
+                <ol><%= link_to (t '.logout'), session_path(current_user.id), method: :delete if logged_in? %></ol>
+                <ol><%= link_to (t '.books_list'), books_path unless logged_in? %></ol>
+                <ol><%= link_to (t '.donation'), donations_path unless logged_in? %></ol>
+                <ol><%= link_to (t '.contact'), new_contact_path unless logged_in? %></ol>
+                <ol><%= link_to (t '.login_signin'), new_user_path unless logged_in? %></ol>
                 <ol>
                   <%= link_to_if params[:locale].present?, '日本語',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'ja') %> |
                   <%= link_to_if params[:locale] != 'en',  'English',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'en') %>
-                </ol>                
-              <% else %>
-                <ol><%= link_to (t '.books_list'), books_path %></ol>
-                <ol><%= link_to (t '.donation'), donations_path %></ol>
-                <ol><%= link_to (t '.contact'), new_contact_path %></ol>
-                <ol><%= link_to (t '.login_signin'), new_user_path %></ol>
-                <ol>
-                  <%= link_to_if params[:locale].present?, '日本語',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'ja') %> |
-                  <%= link_to_if params[:locale] != 'en',  'English',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'en') %>
-                </ol>                
-              <% end %>
+                </ol>
               </div>
             </div>
           </div>
