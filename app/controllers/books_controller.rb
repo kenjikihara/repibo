@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy,]
-  before_action :user_logged_in?, only: [:new, :edit,]
-  before_action :correct_user, only: [:edit, :update, :destroy,]
+  before_action :set_book, only: %i[show edit update destroy]
+  before_action :user_logged_in?, only: %i[new edit]
+  before_action :correct_user, only: %i[edit update destroy]
   
   def index
     @tags = ActsAsTaggableOn::Tag.most_used
