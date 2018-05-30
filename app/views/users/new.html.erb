@@ -1,11 +1,11 @@
 <div class="signup-login-field container-fluid fadeIn_text_up_1s">
-	<%= form_with(model: @user, local: true) do |f| %>
-		<div class="error-message">
-			<% if @user.errors.any? %>
-				<div id="error_explanation">
-					<ul>
-					  <% @user.errors.full_messages.each do |message| %>
-							<li><%= message %></li>
+  <%= form_with(model: @user, local: true) do |f| %>
+    <div class="error-message">
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
 						<% end %>
 					</ul>
 				</div>
