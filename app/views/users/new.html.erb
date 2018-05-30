@@ -6,52 +6,52 @@
           <ul>
             <% @user.errors.full_messages.each do |message| %>
               <li><%= message %></li>
-						<% end %>
-					</ul>
-				</div>
-			<% end %>
-		</div>
-		<div class="col-md-1"></div>
-		<div class="signup-field col-md-5">
-			<div class="form-area"> 
-			<br style="clear:both">
-				<div class="form-content">
-					<h4><%= t '.member_registration' %></h4>
-				  <p><%= t '.member_registration_text' %></p>
-				</div>
-				<div class="form-group">
-					<li><%= f.text_field :name, placeholder: t('helpers.placeholder.name'), class: "form-control" %></li>
-				</div>
-			  <div class="form-group">
-					<li><%= f.email_field :email, placeholder: t('helpers.placeholder.email'), class: "form-control" %></li>
-				</div>
-				<div class="form-group">
-					<li><%= f.password_field :password, placeholder: t('helpers.placeholder.password'), class: "form-control" %></li>		  
-				</div>
-				<div class="form-group">
-	        <li><%= f.password_field :password_confirmation, placeholder: t('helpers.placeholder.password_confirmation'), class: "form-control" %></li>
-				</div>
-				<%= f.submit t('.submit_register'), class: "btn btn-default pull-left", style: "margin-top: 6px" %>
-			</div>
-		</div>
-	<% end %>
-	<div class="login-field col-md-5">
-		<%= form_with(scope: :session, url: sessions_path) do |f| %>
-			<div class="form-area">
-	  		<br style="clear:both">
-	  		<div class="form-content">
-		  		<h4><%= t '.login' %></h4>
-	        <p><%= t '.login_text' %></p>
-	      </div>
-				<div class="form-group">
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="signup-field col-md-5">
+      <div class="form-area"> 
+      <br style="clear:both">
+        <div class="form-content">
+          <h4><%= t '.member_registration' %></h4>
+          <p><%= t '.member_registration_text' %></p>
+        </div>
+        <div class="form-group">
+          <li><%= f.text_field :name, placeholder: t('helpers.placeholder.name'), class: "form-control" %></li>
+        </div>
+        <div class="form-group">
           <li><%= f.email_field :email, placeholder: t('helpers.placeholder.email'), class: "form-control" %></li>
-				</div>
-				<div class="form-group">
+        </div>
+        <div class="form-group">
+          <li><%= f.password_field :password, placeholder: t('helpers.placeholder.password'), class: "form-control" %></li>		  
+        </div>
+        <div class="form-group">
+          <li><%= f.password_field :password_confirmation, placeholder: t('helpers.placeholder.password_confirmation'), class: "form-control" %></li>
+        </div>
+        <%= f.submit t('.submit_register'), class: "btn btn-default pull-left", style: "margin-top: 6px" %>
+      </div>
+    </div>
+  <% end %>
+  <div class="login-field col-md-5">
+    <%= form_with(scope: :session, url: sessions_path) do |f| %>
+      <div class="form-area">
+        <br style="clear:both">
+        <div class="form-content">
+          <h4><%= t '.login' %></h4>
+          <p><%= t '.login_text' %></p>
+        </div>
+        <div class="form-group">
+          <li><%= f.email_field :email, placeholder: t('helpers.placeholder.email'), class: "form-control" %></li>
+        </div>
+        <div class="form-group">
           <li><%= f.password_field :password, placeholder: t('helpers.placeholder.password'), class: "form-control"%></li>
-				</div>
+        </div>
         <%= f.submit t('.submit_login'), class: "btn btn-default pull-left", style: "margin-top: 6px" %>
-			</div>
-		<% end %>
-	</div>
-	<div class="col-md-1"></div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-1"></div>
 </div>
