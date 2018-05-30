@@ -8,9 +8,7 @@ module SessionsHelper
   end
   
   def user_logged_in?
-    if logged_in? == true
-      return
-    else
+    unless logged_in?
       redirect_to new_user_path
     end
   end
