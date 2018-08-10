@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     end
     resources :sessions, only: [:new, :create, :destroy, :edit]
     resources :users
+    get '/auth/:provider/callback', to: 'sessions#create'
+    get 'auth/failure', to: redirect('/')
+    get 'signout', to: 'sessions#destroy', as: 'signout'
     
     get 'tags/:tag', to: 'books#index', as: :tag
   end
