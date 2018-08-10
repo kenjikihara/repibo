@@ -1,0 +1,13 @@
+/* line 1, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/masonry.scss */
+.grid {
+  margin: 0 auto;
+}
+
+/* line 4, /home/ubuntu/workspace/mepibo/app/assets/stylesheets/masonry.scss */
+.grid-item {
+  width: 300px;
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
